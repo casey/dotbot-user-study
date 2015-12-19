@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import sys, requests
+import sys, requests, glob
 
 conf_template = 'https://raw.githubusercontent.com/{}/master/{}'
 
@@ -16,12 +16,19 @@ names = [
 
 for line in sys.stdin:
   repo = line.strip()
+  config_prefix = 'configs/{}_'.format(repo.replace('/', '-'))
+  if glob.glob(config_prefix + '*'):
+    sys.stderr.write("already fetched config for {}, skipping\n".format(repo))
+    continue
   for name in names:
     conf_url = conf_template.format(repo, name)
     sys.stderr.write("getting: {}\n".format(conf_url))
     r = requests.get(conf_url)
     sys.stderr.write("status code: {}\n".format(r.status_code))
     if r.status_code == 200:
-      f = open('configs/{}_{}'.format(repo.replace('/','-'), name), 'w+')
+      f = open(conifg_prefix + name, 'w+')
       f.write(r.text)
       f.close()
+      break
+  else:
+    sys.stderr.write("failed to find config in {}\n".format(repo))
