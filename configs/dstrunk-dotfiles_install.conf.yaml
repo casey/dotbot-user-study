@@ -1,0 +1,35 @@
+- clean: ['~']
+
+- link:
+    ~/.vim:
+        force: true
+        path: vim/
+    ~/.vimrc: vim/vimrc
+    ~/.vimrc.bundles: vim/vimrc.bundles
+    ~/.vim/ftplugin/php.vim: vim/ftplugin/php.vim
+    ~/.vim/ftplugin/ruby.vim: vim/ftplugin/ruby.vim
+    ~/.vim/ftplugin/eruby.vim: vim/ftplugin/eruby.vim
+    ~/.vim/ftplugin/html.vim: vim/ftplugin/html.vim
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.gemrc: ruby/gemrc
+    ~/.irbrc: ruby/irbrc
+    ~/.railsrc: ruby/railsrc
+    ~/.rspec: ruby/rspec
+    ~/.gitconfig:
+        force: true
+        path: git/config
+    ~/.gitconfig.local: git/config.local
+    ~/.gitignore: git/ignore
+    ~/.gitmessage: git/message
+    ~/.git_template: git/git_template
+    ~/.bin: bin/
+    ~/.bash_profile: bash/bash_profile
+    ~/.bashrc:
+        force: true
+        path: bash/bashrc
+    ~/.bashrc.local: bash/bashrc.local
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - git config --global init.templatedir '~/.git_template'
+    - git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim

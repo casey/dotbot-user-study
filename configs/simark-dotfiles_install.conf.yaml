@@ -1,0 +1,13 @@
+- clean: ['~']
+- link:
+        ~/.vimrc: vimrc
+        ~/.oh-my-zsh: oh-my-zsh
+        ~/.zshrc: zshrc
+        ~/.zshrc.aliases: zshrc.aliases
+        ~/.oh-my-zsh/custom/crunch.zsh-theme: oh-my-zsh-custom/crunch.zsh-theme
+- shell:
+        - ["dconf write /org/gnome/shell/overrides/attach-modal-dialogs false", "Disable attaching gnome modal dialogs"]
+        - ["dconf write /org/gnome/shell/overrides/button-layout close,minimize,maximize:", "Show all window buttons"]
+        - ["curl -o ~/bin/sss https://raw.githubusercontent.com/simark/sss/master/sss && chmod +x ~/bin/sss", "Installing sss"]
+        - ["curl -o ~/bin/tig-rebase.sh https://raw.githubusercontent.com/Nattfarinn/tig-rebase/master/tig-rebase.sh && chmod +x ~/bin/tig-rebase.sh", "Installing tig-rebase.sh"]
+        - ["curl -o ~/bin/mklog https://raw.githubusercontent.com/gcc-mirror/gcc/master/contrib/mklog && chmod +x ~/bin/mklog", "Installing mklog"]

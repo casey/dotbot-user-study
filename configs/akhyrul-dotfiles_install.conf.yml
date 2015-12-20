@@ -1,0 +1,18 @@
+# Used by Dotbot
+
+- clean: ['~', '~/.vimperator', '~/.ncmpcpp']
+
+- link:
+    ~/.vimrc: rc/vimrc
+    ~/.tmux.conf: rc/tmux.conf
+    ~/.ncmpcpp/bindings: rc/ncmpcpp/bindings
+    ~/.ncmpcpp/config: rc/ncmpcpp/config
+    ~/.vimperatorrc: rc/vimperator/vimperatorrc
+    ~/.vimperator/colors: rc/vimperator/colors/
+    ~/.vimperator/plugin: rc/vimperator/plugin/
+    ~/.wgetrc: rc/wgetrc
+
+- shell:
+    - ["install.d/git-alias.sh", "Setting up git aliases"]
+    - ["install.d/composer.sh", "Installing composer"]
+    - ["install.d/rbenv.sh", "Installing rbenv"]

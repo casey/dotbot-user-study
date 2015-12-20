@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- shell:
+  - [mkdir -p ~/.config]
+  - [ln -s -f vim ~/.config/nvim]
+
+- link:
+    ~/.vim_session: vim_session
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.config/nvim/init.vim: vimrc
+    ~/.config/nvim/UltiSnips: snippets
+
+    ~/.bashrc: bashrc
+    ~/.bash_aliases: bash_aliases
+
+    ~/.zshrc: zshrc
+    ~/.zgen: zgen
+
+    ~/.tmux.conf: tmux.conf
+
+    ~/.virtualenvs: virtualenvs
+
+    ~/.git_functions: git_functions

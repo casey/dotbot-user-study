@@ -1,0 +1,17 @@
+#removes symlinks
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.bash_profile: bash_profile
+    ~/.git-completion.bash: git-completion.bash
+    ~/.bashrc: bashrc
+
+- shell:
+  -
+    - git submodule update
+    - Installing/updating submodules

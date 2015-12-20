@@ -1,0 +1,21 @@
+ - clean: ['~']
+
+ - link:
+     ~/.dotfiles: ''
+     ~/.gitconfig: gitconfig
+     ~/.vim: vim/
+     ~/.vimrc: vimrc
+     ~/.antigen: zsh/antigen/
+     ~/.zsh: zsh/
+     ~/.zshrc: zshrc
+     ~/.tmux.conf: tmux.conf
+
+ - shell:
+     # - sudo apt-get update -y && sudo apt-get upgrade -y
+     - git submodule update --remote --merge --init
+     # Vim setup
+     - vim +PluginInstall +qall
+     # Zsh setup
+     - echo "Make sure that you've installed zsh"
+     - sudo chsh -s /bin/zsh `whoami`
+     - source ~/.zshrc

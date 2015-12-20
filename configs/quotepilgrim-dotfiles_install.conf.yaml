@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.aliases: aliases
+    ~/.config/openbox: openbox/
+    ~/.dosbox/dosbox-0.74.conf dosbox-0.74.conf
+    ~/.grafx2: grafx2/
+    ~/.nanorc: nanorc
+    ~/.nethackrc: nethackrc
+    ~/.slashemrc: slashemrc
+    ~/.slashemx11rc: slashemx11rc
+    ~/.unnethackrc: unnethackrc
+    ~/.Xresources: Xresources
+    ~/.zshrc: zshrc    
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

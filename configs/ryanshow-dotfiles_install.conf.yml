@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: 'vimrc'
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ["mkdir -p ~/.vim", Creating vim config directory]
+  - ["mkdir -p $HOME/.config}", Creating config directory]
+  - ["ln -s ~/.vim $HOME/.config/nvim", Creating symlink from vim to nvim config]
+  - ["ln -s ~/.vimrc $HOME/.config/nvim/init.vim", Creating symlink from vimrc for nvim]

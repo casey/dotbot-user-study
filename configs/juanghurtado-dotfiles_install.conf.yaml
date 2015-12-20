@@ -1,0 +1,85 @@
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- shell:
+    - [cp -f $PWD/powerline-fonts/**/*.ttf $HOME/Library/Fonts, Installing TTF fonts]
+    - [cp -f $PWD/powerline-fonts/**/*.otf $HOME/Library/Fonts, Installing OTF fonts]
+
+- shell:
+    - ["ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"", Installing Homebrew…]
+    - [brew install caskroom/cask/brew-cask, Installing Homebrew Cask…]
+    - [brew tap homebrew/services, Installing Homebrew Services…]
+    - [brew cask install iterm2, Installing iTerm2]
+    - [brew cask install firefox, Installing Firefox]
+    - [brew cask install google-chrome, Installing Google Chrome]
+    - [brew cask install java, Installing latest Java]
+    - [brew tap caskroom/versions && brew cask install java7, Installing Java 1.7]
+    - [brew cask install eclipse-jee, Installing Eclipse]
+    - [brew cask install the-unarchiver, Installing The Unarchiver]
+    - [brew cask install calibre, Installing Calibre]
+    - [brew cask install spectacle, Installing Spectacle]
+    - [brew install git git-extras, Installing Git and Git extras]
+    - [brew install zsh, Installing ZSH]
+    - [brew install maven, Installing Maven]
+    - [brew install pandoc, Installing Pandoc]
+    - [brew cask install wkhtmltopdf, Installing HTML to PDF conversor]
+    - [brew cask install dropbox, Installing Dropbox]
+    -
+        command: [echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells, Add ZSH as a valid system shell]
+        stdin: true
+        stdout: true
+        stderr: true
+    -
+        command: [chsh -s /usr/local/bin/zsh, Changing shell for current user]
+        stdin: true
+        stdout: true
+        stderr: true
+    -
+        command: [sudo chsh -s /usr/local/bin/zsh, Changing shell for root user]
+        stdin: true
+        stdout: true
+        stderr: true
+    - [brew install reattach-to-user-namespace, Installing sane copy&paste for terminal]
+    - [brew install node, Installing NodeJS]
+    - [npm install -g grunt-cli bower, Installing Grunt and Bower]
+    - [brew install ruby-build rbenv, Installing rbenv]
+    -
+        command: [rbenv install 2.2.3 && rbenv rehash && rbenv global 2.2.3, Installing Ruby 2.2.3]
+        stdin: true
+        stdout: true
+        stderr: true
+    -
+        command: [gem install bundler rake, Installing Bundler and Rake]
+        stdin: true
+        stdout: true
+        stderr: true
+    - [brew install rbenv-bundler rbenv-gem-rehash rbenv-gemset, Installing Ruby utils]
+    - [brew install vim --override-system-vim --with-lua --with-tcl, Installing Vim]
+    - [brew install tmux, Installing Tmux]
+    - [gem install tmuxinator, Installing Tmuxinator]
+    - [brew install ag, Installing The Silver Searcher]
+    - [brew install todo-txt, Installing Todo.txt]
+
+- link:
+    ~/.dotfiles: ''
+    ~/coffeelint.json: coffeescript/coffeelint.json
+    ~/.gitconfig: git/gitconfig
+    ~/.githelpers: git/githelpers
+    ~/.gitignore: git/gitignore
+    ~/.gemrc: rubygems/gemrc
+    ~/.timrc: tim/timrc
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.todo.cfg: todo-txt/todo.cfg
+    ~/.todo.actions.d: todo-txt/todo.actions.d/
+    ~/.vimrc: vim/vimrc
+    ~/.vim: vim/vim/
+    ~/.zlogin: zsh/zlogin
+    ~/.zlogout: zsh/zlogout
+    ~/.zprezto-themes: zsh/zprezto-themes/
+    ~/.zprezto: zsh/zprezto/
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zprofile: zsh/zprofile
+    ~/.zshenv: zsh/zshenv
+    ~/.zshrc: zsh/zshrc

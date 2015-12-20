@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- link:
+    ~/.amethyst: amethyst
+    ~/.atom: atom
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/Library/Application Support/Karabiner: karabiner
+    ~/.config/aria2/aria2.conf:
+        create: true
+        path: aria2.conf
+    ~/Library/LaunchAgents/sh.update.init.plist: sh.update.init.plist
+    /private/etc/hosts:
+        force: true
+        path: hosts
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p ~/workspace, Make workspace directory]
+  - [launchctl start sh.update.init, Loading initial script]
+  - [dscacheutil -flushcache, Flushing DNS cache]

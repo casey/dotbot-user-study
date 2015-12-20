@@ -1,0 +1,13 @@
+- shell:
+    - [git submodule init, sets up .git/config to have submodules in the repo]
+    - [git submodule update --recursive, clones the submodules]
+- link:
+    ~/.vim:
+        force: true
+        path: vim/
+    ~/.gitconfig:
+        force: true
+        path: gitconfig
+    ~/.vimrc:
+        force: true
+        path: vimrc

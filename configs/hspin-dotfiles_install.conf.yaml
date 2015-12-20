@@ -1,0 +1,13 @@
+- clean: ["~"]
+- link:
+    ~/.bashrc: bashrc
+    ~/.profile: profile
+    ~/.bash_aliases: bash_aliases
+    ~/.bcrc: bcrc 
+    ~/.dircolors: dircolors
+    ~/.gemrc: gemrc
+    ~/.git.scmbrc: git.scmbrc
+    ~/.gitignore: gitignore
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.bin: bin

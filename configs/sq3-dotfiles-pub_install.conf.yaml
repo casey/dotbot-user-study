@@ -1,0 +1,15 @@
+- clean: [‘~‘]
+- link:
+    ~/.brew_list: .brew_list
+    ~/.dircolors-solarized: dircolors-solarized
+    ~/.gitignore_global: .gitignore_global
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.oh-my-zsh/themes/sq3.zsh-theme: sq3.zsh-theme
+    ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist: prefs/com.divisiblebyzero.Spectacle.plist
+    ~/.tmux: tmux
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.vim: .vim/
+    ~/.vimrc: .vim/.vimrc
+    ~/.zshrc: .zshrc
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

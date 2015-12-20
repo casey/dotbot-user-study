@@ -1,0 +1,14 @@
+- clean: []
+- shell:
+    - bash install.d/brew.sh
+    - mkdir -p ~/.shellrc
+    - cp bashrc ~/.bashrc
+    - cp bash_profile ~/.bash_profile
+- link:
+    ~/.shellrc/bashrc.d: 
+        create: true
+        path: bashrc.d/
+    ~/.shellrc/bin:
+        create: true
+        path: bin
+    ~/.vimrc: vimrc

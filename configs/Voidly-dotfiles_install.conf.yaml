@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"]
+  - [mkdir -p ~/.config/mpv ]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bashrc: bash/.bashrc
+    ~/.bash_profile: bash/.bash_profile    
+    ~/.config/mpv/mpv.conf: mpv/mpv.conf
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.vim: vim/.vim    
+    ~/.vimrc: vim/.vimrc
+    ~/.zshrc: zsh/.zshrc
+    ~/.screenrc: screen/.screenrc     

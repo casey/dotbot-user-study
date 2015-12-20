@@ -1,0 +1,20 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.dotfiles": "",
+            "~/.ackrc": "ackrc",
+            "~/.tmux.conf": "tmux.conf",
+            "~/.antigen": "antigen/",
+            "~/.vimrc": "vimrc",
+            "~/.zshrc": "zshrc"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing submodules"]
+        ]
+    }
+]

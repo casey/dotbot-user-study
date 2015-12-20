@@ -1,0 +1,30 @@
+- clean: ['~']
+
+- link:
+    ~/.config/fish/config.fish:
+        create: true
+        path: .config/fish/config.fish
+    ~/.config/fish/functions/prompt_pwd.fish:
+        create: true
+        path: .config/fish/functions/prompt_pwd.fish
+    ~/.vim/bundle/Vundle.vim:
+        create: true
+        path: subrepos/vim-vundle/
+    ~/.vim/dotfiles-symlink:
+        create: true
+        path: .vim/
+    ~/.bash_aliases: .bash_aliases
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.gitconfig: .gitconfig
+    ~/.hgignore: .hgignore
+    ~/.hgrc: .hgrc
+    ~/.tmux.conf: .tmux.conf
+    ~/.vimrc: .vimrc
+    ~/.Xresources: .Xresources
+
+- shell:
+  - [vim +PluginInstall +qall, Installing vim plugins]
+  - [./subrepos/fontinstall/fontinstall.sh subrepos/powerline-fonts/DejaVuSansMono/*.ttf, Installing powerline fonts]
+  - [./subrepos/fontinstall/fontinstall.sh subrepos/hack-fonts/build/ttf/*.ttf, Installing hack fonts]
+  - [./subrepos/gitignore-boilerplates/gibo Linux OSX Python Vim > ~/.gitignore, Setting up gitignore]

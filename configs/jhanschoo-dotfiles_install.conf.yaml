@@ -1,0 +1,32 @@
+- clean: []
+- shell:
+  #- [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p prelude/vendor, Create ./prelude/vendor]
+  - [mkdir -p prelude/personal, Create ./prelude/personal]
+  - [mkdir -p prelude/themes, Create ./prelude/themes]
+  - [mkdir -p prelude/savefile, Create ./prelude/savefile]
+  - [mkdir -p rbenv/plugins, Create ./rbenv/plugins]
+- link:
+    ~/.emacs.d: prelude/
+    ~/.emacs.d/prelude-modules.el: prelude-modules.el
+    ~/.emacs.d/personal/init.el: emacs.d-personal-init.el
+    ~/.gitconfig: gitconfig
+    ~/.gvm: gvm/
+    ~/.nvm: nvm/
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting/
+    ~/.rbenv: rbenv/
+    ~/.rbenv/default-gems: default-gems
+    ~/.rbenv/plugins/rbenv-default-gems: rbenv-default-gems/
+    ~/.rbenv/plugins/rbenv-gemset: rbenv-gemset/
+    ~/.rbenv/plugins/rbenv-gem-rehash: rbenv-gem-rehash/
+    ~/.rbenv/plugins/ruby-build: ruby-build/
+    ~/.ruby-version: ruby-version
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: janus/
+    ~/.vimrc.after: vimrc.after
+    ~/.zshrc: zshrc
+    ~/.z.sh: z/z.sh
+- shell: []
+  #- ['cd janus && rake', Run rake in ./janus]
+

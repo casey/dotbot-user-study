@@ -1,0 +1,22 @@
+[
+    {
+        "link": {
+            "~/.bash_profile": "bash_profile",
+            "~/.tmux.conf": "tmux.conf",
+            "~/.vimrc": "vimrc",
+            "~/.zshrc": "zshrc",
+            "~/.vim": "vim/",
+            "~/.todo.cfg": "todo.cfg",
+            "~/.config/powerline": "powerline",
+            "~/.atom": "atom/"
+        }
+    },
+    {
+        "shell": [
+            [
+                "git submodule update --init --recursive",
+                "Installing submodules"
+            ]
+        ]
+    }
+]

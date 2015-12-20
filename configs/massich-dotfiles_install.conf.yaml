@@ -1,0 +1,12 @@
+- clean: ['~']
+
+- link:
+#    ~/.dotfiles: ''
+    ~/.tmux: _tmux
+    ~/.tmux.conf: _tmux.conf
+    ~/.vim: _vim
+    ~/.vimencrypt: _vimencrypt
+    ~/.vimrc.lite: _vimrc.lite
+    ~/.vimrc: _vimrc
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig

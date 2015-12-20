@@ -1,0 +1,7 @@
+- clean: []
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+- shell: 
+    - [git submodule update --init --recursive]

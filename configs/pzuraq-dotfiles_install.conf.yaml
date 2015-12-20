@@ -1,0 +1,25 @@
+- clean: ['~']
+
+- shell:
+  - ['ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"', Installing brew]
+  - [brew tap Homebrew/bundle]
+  - [brew bundle]
+  - [chsh -s /bin/zsh]
+  - [rbenv install 2.2.2 && rbenv global 2.2.2]
+  - [nave install 0.12.7 && nave usemain 0.12.7]
+  - [npm install -g ember-cli bower grunt-cli gulp-cli nombom]
+  - [apm install file-icons language-babel linter linter-jscs linter-jshint pigments proton-light oceanic-next]
+  - [rm -f ~/Library/Application\ Support/Karabiner/private.xml]
+  - [mkdir ~/Code ~/.atom]
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.zshrc:     prezto/zshrc
+    ~/.gitignore_global: gitignore_global
+    ~/.grails: ticketfly/grails
+    ~/.artifactory: ticketfly/artifactory
+    ~/.atom/keymap.cson: atom/keymap.cson
+    ~/.atom/styles.less: atom/styles.less
+    ~/.atom/init.coffee: atom/init.coffee
+    ~/.atom/snippets.cson: atom/snippets.cson
+    ~/Library/Application\ Support/Karabiner/private.xml: karabiner.xml

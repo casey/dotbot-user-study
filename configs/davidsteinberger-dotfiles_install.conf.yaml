@@ -1,0 +1,33 @@
+- clean: ['~']
+
+- shell:
+  - [touch vim/user.vim, create user.vim]
+  - [touch vim/NERDTreeBookmarks, create NERDTreeBookmarks]
+  - [touch viminfo, create viminfo]
+  - [touch gitconfig, create gitconfig]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bashrc: bashrc
+    ~/.zshrc: zshrc
+    ~/.zsh: zsh
+    ~/.zshrc.zni: zshrc.zni
+    ~/.bash_profile: bash_profile
+    ~/.common_profile: common_profile
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.iTerm2: iterm2/
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.viminfo: viminfo
+    ~/.vimrc: vimrc
+    ~/.vim/init.vim: vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  -
+    command: ['./misc_install_script.sh', miscellaneous installs]
+    stdout: true
+  -
+    command: ['./post_install_message.sh', post install message]
+    stdout: true

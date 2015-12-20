@@ -1,0 +1,46 @@
+
+
+- clean: ['~']
+
+- link:
+    ~/.profile: profile.sh
+    ~/.bash_profile: bash_profile.sh
+    ~/.bashrc: bashrc.sh
+    ~/.bash_logout: bash_logout.sh
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.vimrc: vimrc
+    ~/.vim:
+        path: vim/
+        create: true
+    ~/.conkyrc: conkyrc
+    ~/.screenrc: screenrc
+    ~/.psqlrc: psqlrc
+    ~/.sqliterc: sqliterc
+    ~/.zshrc: zshrc
+    ~/.tmux.conf: tmux.conf
+    ~/.oh-my-zsh:
+        path: oh-my-zsh/
+        create: true
+    ~/.tmuxinator:
+        path: tmuxinator/
+        create: true
+    ~/bin:
+        path: bin/
+        create: true
+    ~/.config/openbox:
+        path: config/openbox/
+        create: true
+    ~/.config/terminator:
+        path: config/terminator
+        create: true
+    ~/.config/tint2:
+        path: config/tint2/
+        create: true
+    ~/.config/sublime-text-2/Packages/User:
+        path: config/sublime-text-2/Packages/User
+        create: true
+    /home/bob/projects/alces/aviator/.tern-project:
+        path: tern/aviator-tern-project.json
+        create: false
+

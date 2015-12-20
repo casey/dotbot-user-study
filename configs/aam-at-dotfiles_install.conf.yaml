@@ -1,0 +1,35 @@
+- clean: ['~']
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [curl -L github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish, Installing oh-my-fish]
+    - [curl -L github.com/techwizrd/fishmarks/raw/master/install.fish | fish, Installing fishmarks]
+    - [ln -s ~/.vim $HOME/.nvim, Link neovim to vim]
+- link:
+    ~/.ssh/config: config/ssh/config
+    ~/.theanorc: config/python/theanorc
+    ~/.fuelrc: config/python/fuelrc
+    ~/.gitconfig: git/gitconfig
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.tmux/plugins/tpm:
+        create: true
+        path: tmux/plugins/tpm
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.vim/bundle/neobundle.vim:
+        create: true
+        path: vim/bundle/neobundle.vim
+    ~/.vimrc: vim/vimrc
+    ~/.nvimrc: vim/vimrc
+    ~/.ideavimrc: idea/ideavimrc
+    ~/.spacemacs: spacemacs/spacemacs
+    ~/.emacs.d/private/aam: spacemacs/aam
+    ~/.emacs.d/core/pymacs.el: spacemacs/pymacs.el
+    ~/.taskrc: task/taskrc
+    ~/.profile: bash/profile
+    ~/.bashrc: bash/bashrc
+    ~/.aliases: general/aliases
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.bash_logout: bash/bash_logout
+    ~/.dircolors: bash/dircolors-solarized/dircolors.ansi-light
+    ~/.env: general/env
+    ~/.xmodmap: general/xmodmap
+    ~/.latexmkrc: general/latexmkrc

@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.config/nvim:
+      create: true
+      path: nvim
+    ~/.nvimrc: nvim/init.vim
+    ~/.zshrc: zshrc
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.zsh_custom: zsh_custom
+    ~/.tmux.conf: tmux.conf
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

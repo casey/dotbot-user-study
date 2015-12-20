@@ -1,0 +1,16 @@
+- clean: [ ~ ]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+    ~/.config/awesome:
+        create: true
+        path: config/awesome/
+    ~/.tmux.conf: tmux.conf
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+
+- shell: []

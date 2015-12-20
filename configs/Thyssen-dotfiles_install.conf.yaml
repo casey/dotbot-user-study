@@ -1,0 +1,26 @@
+- clean: ['~', '~/.vim/autoload']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.zshrc:
+        force: true
+        path: zsh/zshrc
+    ~/.zpreztorc:
+        force: true
+        path: zsh/zpreztorc
+    ~/.zprezto:
+        create: true
+        path: prezto/
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.vim/autoload/plug.vim:
+        create: true
+        path: vim-plug/plug.vim
+    ~/.vimrc:
+        force: true
+        path: vimrc
+    ~/.editorconfig: editorconfig

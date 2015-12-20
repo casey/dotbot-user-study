@@ -1,0 +1,32 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.dotfiles": "",
+            "~/.vimrc": "vimrc",
+            "~/.vim": "vim/",
+            "~/.gitconfig": "gitconfig",
+            "~/.gitignore": "gitignore",
+            "~/.ackrc": "ackrc",
+            "~/.ctags": "ctags"
+        }
+    },
+    {
+        "link": {
+            "~/.bashrc": "bash/bashrc",
+            "~/.bash_profile": "bash/bash_profile",
+            "~/.bash_prompt": "bash/bash_prompt",
+            "~/.aliases": "bash/aliases",
+            "~/.exports": "bash/exports",
+            "~/.functions": "bash/functions"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Instalando/atualizando submodules"]
+        ]
+    }
+]
+

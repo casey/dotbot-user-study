@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.gitignore: gitignore
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ["setxkbmap -option caps:swapescape", Swapped escape & caps]

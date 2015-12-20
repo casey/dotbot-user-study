@@ -1,0 +1,32 @@
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.z.sh: 'z.sh'
+    ~/.agignore: 'agignore'
+    #~/.dotfiles: ''
+    ~/.gnupg/gpg.conf: 'gnupg/gpg.conf'
+    ~/.links2: 'links2'
+    ~/.bashrc: 'bashrc'
+    ~/.bash_aliases: 'bash_aliases'
+    ~/.bash_logout: 'bash_logout'
+    ~/.bash_profile: 'bash_profile'
+    ~/.profile: 'profile'
+    ~/.antigen.zsh: 'antigen.zsh'
+    ~/.gitconfig: 'gitconfig'
+    ~/.gitignore: 'gitignore'
+    ~/.zshrc: 'zshrc'
+    ~/.zshenv: 'zshenv'
+    ~/.zpreztorc: 'zpreztorc'
+    ~/.tmux.conf: 'tmux.conf'
+    ~/.config/fish/config.fish: 'config.fish'
+    ~/.vim: 'vim/'
+
+- shell:
+  - 'sudo install -m 644 z.1 /usr/local/share/man/man1'
+  - 'if [ -d ${HOME}/.rbenv ]; then cd ${HOME}/.rbenv && git pull --depth=1; else git clone https://github.com/sstephenson/rbenv.git ~/.rbenv; fi'
+  - 'if [ -d ${HOME}/.rbenv/plugins/ruby-build ]]; then cd ${HOME}/.rbenv/plugins/ruby-build && git pull --depth=1; else git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build; fi'
+  - 'if [ -d ${HOME}/.rbenv/plugins ]; then cd ${HOME}/.rbenv/plugins/rbenv-default-gems && git pull --depth=1; else git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems; fi'
+  - 'if [ -d ${HOME}/.rbenv/plugins/rbenv-vars ]; then cd ${HOME}/.rbenv/plugins/rbenv-vars && git pull --depth=1; else git clone https://github.com/sstephenson/rbenv-vars.git ~/.rbenv/plugins/rbenv-vars; fi'
+  - 'if [ -d ${HOME}/.liquidprompt ]; then cd ${HOME} && git pull --depth=1; else git clone https://github.com/nojhan/liquidprompt.git ~/.liquidprompt; fi'
+  - 'curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+  - git submodule update --init --recursive

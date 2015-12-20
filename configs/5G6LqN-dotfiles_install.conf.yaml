@@ -1,0 +1,17 @@
+# check the home dir for dead symlinks into dotfiles and delete them
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.private_aliases: private/aliases
+    ~/.aliases: aliases
+    ~/.profile: profile
+    ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
+    ~/.bash_prompt: bash_prompt
+    ~/.dotfiles/zsh/custom/myzshrc.zsh: myzshrc.zsh
+
+- shell:
+    - ['git submodule update --init --recursive', 'Installing submodules']
+    - ['curl -L github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | ZSH=~/.dotfiles/zsh sh', 'Installing zsh']
+

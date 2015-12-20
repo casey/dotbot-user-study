@@ -1,0 +1,42 @@
+- clean: ['~']
+
+- link:
+    ~/.bashrc:
+        create: true
+        force: true
+        path: bash/bashrc
+    ~/.byobu/status:
+        create: true
+        force: true
+        path: byobu/status
+    ~/.byobu/statusrc:
+        create: true
+        force: true
+        path: byobu/statusrc
+    ~/.byobu/profile.tmux:
+        create: true
+        force: true
+        path: byobu/profile.tmux
+    ~/.dircolors:
+        create: true
+        force: true
+        path: bash/dircolors/
+    ~/.flexget/config.yml:
+        create: true
+        force: true
+        path: flexget/config.yml
+    ~/.gitconfig:
+        create: true
+        force: true
+        path: git/gitconfig
+    ~/.vim:
+        create: true
+        force: true
+        path: vim/vim/
+    ~/.vimrc:
+        create: true
+        force: true
+        path: vim/vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vim: vim/
+    ~/.vimrc: vim/vimrc
+    ~/.nvimrc: vim/vimrc
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.zprezto: prezto/
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: prezto/runcoms/zpreztorc
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: prezto/runcoms/zshrc

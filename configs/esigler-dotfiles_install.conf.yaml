@@ -1,0 +1,8 @@
+- clean: ['~']
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    "~/.atom/config.cson": ".atom/config.cson"
+    "~/.atom/keymap.cson": ".atom/keymap.cson"
+    "~/.atom/styles.less": ".atom/styles.less"

@@ -1,0 +1,53 @@
+- clean: ['~']
+
+- link:
+    ~/.ansiweatherrc: ansiweatherrc
+    ~/bin/tmx: bin/tmx
+    ~/.config/fontconfig/conf.d:
+      path: fonts.conf.d
+      create: true
+    ~/.fonts:
+      path: fonts/
+      relink: true
+    ~/.gitconfig: gitconfig
+#    ~/.gnupg/gpg.conf:
+#      path: gnupg/gpg.conf
+#      create: true
+#      force: true
+#    ~/.gnupg/sks-keyservers.netCA.pem:
+#      path: gnupg/sks-keyservers.netCA.pem
+#      create: true
+    ~/.lessrc: lessrc
+    ~/.npmrc: npmrc
+#    ~/.rvmrc: rvmrc
+#    ~/.rbenv/version:
+#      path: rbenv-version
+#      create: true
+    ~/.ssh/rc: ssh_rc
+    ~/.ssh/.xinitrc: xinitrc
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux:
+      path: tmux/
+      relink: true
+    ~/.vimrc: vimrc
+    ~/.vim:
+      path: vim/
+      relink: true
+    ~/.weechat: weechat/
+    ~/.zlogin: zsh-configs/zlogin
+    ~/.zlogout: zsh-configs/zlogout
+    ~/.zprezto:
+      path: prezto/
+      relink: true
+    ~/.zpreztorc: zsh-configs/zpreztorc
+    ~/.zprofile: zsh-configs/zprofile
+    ~/.zshenv: zsh-configs/zshenv
+    ~/.zshrc:
+      path: zsh-configs/zshrc
+      force: true
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [vim +PluginInstall +qall, Installing vim plugins]
+  - [~/.tmux/plugins/tpm/bin/install_plugins, Installing tmux plugins]
+  - [~/.weechat/fetch-ca.sh, Fetching latest CA certificates for weechat]

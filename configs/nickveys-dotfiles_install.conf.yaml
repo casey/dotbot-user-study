@@ -1,0 +1,20 @@
+- clean: ['~']
+- link:
+    ~/.bash_profile:
+      force: true
+      path: bash_profile
+    ~/.hgrc:
+      force: true
+      path: hgrc
+    ~/.gitconfig:
+      force: true
+      path: gitconfig
+    ~/.gitignore_global:
+      force: true
+      path: gitignore_global
+    ~/.profile:
+      force: true
+      path: profile
+    ~/.vimrc:
+      force: true
+      path: vimrc

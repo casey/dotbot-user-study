@@ -1,0 +1,27 @@
+- clean: ['~']
+
+- link:
+    # Davmail
+    ~/.davmail.properties: conf/davmail.properties
+    # Git
+    ~/.gitignore_global: conf/git/gitignore_global
+    ~/.gitconfig: conf/git/gitconfig
+    # Zsh/Prezto setup
+    ~/.zprezto: prezto
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: prezto/runcoms/zpreztorc
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: prezto/runcoms/zshrc
+    # Nano
+    ~/.nanorc: conf/nanorc
+    # NPM
+    ~/.npmrc: conf/npmrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [./awesome-terminal-fonts/install.sh, Installing terminal fonts]
+    - [cd ./nanorc && make install, Installing Nano syntax highlighting]
+    - [cp ~/Dropbox/Config/id_rsa ~/.ssh/]
+

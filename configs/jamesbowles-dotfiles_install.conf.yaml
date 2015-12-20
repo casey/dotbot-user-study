@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.zshrc.pre-oh-my-zsh: zshrc.pre-oh-my-zsh
+    ~/.rspec: rspec
+    ~/.agignore: agignore
+    ~/bin:
+        path: bin/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+
+

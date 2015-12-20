@@ -1,0 +1,17 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.config/fish/config.fish": "fish/config.fish",
+            "~/.config/fish/functions": "fish/functions",
+            "~/.dotfiles": "",
+            "~/.gitconfig": "gitconfig",
+            "~/.gitconfig_local": "gitconfig_local",
+            "~/.gitignore_global": "gitignore_global",
+            "~/.vim": "vim/",
+            "~/.vimrc": "vimrc"
+        }
+    }
+]

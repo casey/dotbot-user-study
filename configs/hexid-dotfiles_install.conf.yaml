@@ -1,0 +1,49 @@
+- clean: ['~']
+
+- shell:
+  - mkdir -p $XDG_CACHE_HOME $XDG_CONFIG_HOME $XDG_DATA_HOME
+
+- link:
+    $HOME/.bash_profile: config/bash_profile
+    $HOME/.bashrc: config/bashrc
+
+    $XDG_BIN_HOME: bin/
+
+    $XDG_CONFIG_HOME/aliases: config/aliases
+    $XDG_CONFIG_HOME/chromium-flags.conf: config/chromium-flags.conf
+    $XDG_CONFIG_HOME/git: config/git/
+    $XDG_CONFIG_HOME/gtk-2.0: config/gtk-2.0/
+    $XDG_CONFIG_HOME/gtk-3.0: config/gtk-3.0/
+    $XDG_CONFIG_HOME/herbstluftwm: config/herbstluftwm/
+    $XDG_CONFIG_HOME/htop: config/htop/
+    $XDG_CONFIG_HOME/inputrc: config/inputrc
+    $XDG_CONFIG_HOME/mpd/mpd.conf:
+      create: true
+      path: config/mpd/mpd.conf
+    $XDG_CONFIG_HOME/ncmpcpp/config:
+      create: true
+      path: config/ncmpcpp/config
+    $XDG_CONFIG_HOME/nvim/init.vim:
+      create: true
+      path: config/nvim/init.vim
+    $XDG_CONFIG_HOME/pacaur: config/pacaur/
+    $XDG_CONFIG_HOME/pacman: config/pacman/
+    $XDG_CONFIG_HOME/sxhkd: config/sxhkd/
+    $XDG_CONFIG_HOME/systemd: config/systemd/
+    $XDG_CONFIG_HOME/tmux/tmux.conf:
+      create: true
+      path: config/tmux/tmux.conf
+    $XDG_CONFIG_HOME/user-dirs.dirs: config/user-dirs.dirs
+    $XDG_CONFIG_HOME/weechat: config/weechat/
+    $XDG_CONFIG_HOME/X11: config/X11/
+    $XDG_CONFIG_HOME/xdg.sh: config/xdg.sh
+
+    $XDG_DATA_HOME/backgrounds: data/backgrounds/
+
+- shell:
+  - curl -fLo $XDG_CONFIG_HOME/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  - nvim -c 'PlugUpdate | qall'
+  - nvim -c 'TmuxlineSnapshot! $XDG_CONFIG_HOME/tmux/tmuxline.vim.conf | q'
+  - mkdir -p $XDG_CACHE_HOME/nvim/swp
+  - mkdir -p $XDG_DATA_HOME/tmux
+  - "[[ ! $(command -v xrdb >/dev/null 2>&1) ]] || xrdb -load $XDG_CONFIG_HOME/X11/Xresources"

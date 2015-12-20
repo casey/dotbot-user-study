@@ -1,0 +1,21 @@
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.vimrc.bundles: vimrc.bundles
+    ~/.bash_aliases: bash_aliases
+    ~/.zprezto: prezto
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: prezto/runcoms/zpreztorc
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: prezto/runcoms/zshrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [vim +PluginInstall +qall, Installing Vim bundles]

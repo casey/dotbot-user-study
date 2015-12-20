@@ -1,0 +1,29 @@
+--- 
+- 
+  clean: 
+    - "~"
+- 
+  link: 
+    ~/Library/Application Support/Sublime Text 3: 
+      create: true
+      path: sublime-text-3
+    ~/.dotfiles: ""
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.ssh/config: sshconfig
+    ~/.bash_profile: bash_profile
+    ~/.config/iterm2:
+      create: true
+      path: iterm2
+    ~/.config/sublime-text-3:
+      create: true
+      path: sublime-text-3
+- 
+  shell: 
+    - 
+      - "curl https://sublime.wbond.net/Package%20Control.sublime-package -o ~/.config/sublime-text-3/Installed\\\ Packages/Package\\\ Control.sublime-package"
+      - "Installing Package Control"
+    -
+      - "defaults write com.googlecode.iterm2 PrefsCustomFolder -string \"~/.config/iterm2\""
+      - "Point iterm preferences at the dotfiles version"
+

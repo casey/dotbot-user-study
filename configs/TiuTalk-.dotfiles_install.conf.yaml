@@ -1,0 +1,49 @@
+- clean: ['~']
+
+- link:
+    # Profile
+    ~/.profile: config/.profile
+    ~/.bash_profile: config/.bash_profile
+    ~/.bashrc: config/.bashrc
+    ~/.zshrc: config/.zshrc
+    ~/.editorconfig: config/.editorconfig
+    ~/.rspec: config/.rspec
+    ~/.monitrc: config/.monitrc
+
+    # Bin
+    ~/bin: bin/
+
+    # Git
+    ~/.gitconfig:
+      path: git/.gitconfig
+      create: true
+      relink: true
+      force: true
+
+    # Sublime text
+    ~/Library/Application Support/Sublime Text 3/Packages/User:
+      path: sublime_text/
+      create: true
+      relink: true
+      force: true
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - description: Installing Homebrew
+    command: . scripts/homebrew.sh
+    stdout: true
+  - description: Installing RVM & Ruby
+    command: . scripts/rvm.sh
+    stdout: true
+  - description: Installing ZSH
+    command: . scripts/zsh.sh
+    stdout: true
+  - description: Installing Homebrew packages
+    command: . scripts/homebrew-packages.sh
+    stdout: true
+  - description: Installing Homebrew Cask packages
+    command: . scripts/homebrew-cask-packages.sh
+    stdout: true
+  - description: Configuring OSX
+    command: . scripts/osx.sh
+    stdout: true

@@ -1,0 +1,13 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+    ~/.zpreztorc: zpreztorc
+    ~/.zprofile: zprofile
+    ~/.tmux.conf: tmux.conf
+    ~/.i3: i3/
+
+- shell:
+  - git update-submodules # after linking ~/.gitconfig

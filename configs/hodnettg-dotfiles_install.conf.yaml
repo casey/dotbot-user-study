@@ -1,0 +1,21 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc:
+        path: vimrc
+        force: true
+    ~/.vim:
+        path: vim
+        force: true
+    ~/.tmux.conf:
+        path: tmux.conf
+        force: true
+    ~/.bashrc:
+        path: bashrc
+        force: true
+    ~/.bash_profile:
+        path: bashrc
+        force: true
+    ~/.bash_aliases:
+        path: bash_aliases
+        force: true

@@ -1,0 +1,15 @@
+- clean: ["~"]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.vim: vim/
+    ~/.zshrc: zshrc
+    ~/.Xresources: Xresources
+    ~/.emacs.d: emacs.d/
+
+- shell:
+    -
+        - git submodule update
+        - Installing/updating submodules

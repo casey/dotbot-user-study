@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- link:
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.config: config/
+    ~/.gitconfig: gitconfig
+    ~/.julia: julia/
+    ~/.juliarc.jl: juliarc.jl
+    ~/.ipython: ipython/
+    ~/.nvblas: nvblas
+    ~/.cups: cups/
+
+- shell:
+    - [git submodule update --init --recursive dotbot, Installing submodules]

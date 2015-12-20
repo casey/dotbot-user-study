@@ -1,0 +1,23 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.config/nvim/autoload/plug.vim:
+        create: true
+        path: vim/vim-plug/plug.vim
+    ~/.config/nvim/init.vim:
+        create: true
+        path: vim/nvimrc
+    ~/.gitconfig: Git/gitconfig
+    ~/.gitignore: Git/gitignore
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.zprezto: prezto/
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: prezto/runcoms/zpreztorc
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: prezto/runcoms/zshrc
+    ~/.gruvbox_256palette.sh: ./vim/gruvbox_256palette.sh

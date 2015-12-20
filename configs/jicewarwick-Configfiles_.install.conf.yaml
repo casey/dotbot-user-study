@@ -1,0 +1,5 @@
+- link:
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.vimrc: vim/vimrc
+    ~/.bashrc: bash/bashrc
+    ~/.bash_profile: bash/bash_profile

@@ -1,0 +1,26 @@
+- clean: ['~']
+
+- link:
+    ~/.bash: .bash/
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.bowerrc: .bowerrc
+    ~/.atom/config.cson:
+      force: true
+      path: atom/config.cson
+    ~/.atom/keymap.cson:
+      force: true
+      path: atom/keymap.cson
+    ~/.gemrc: .gemrc
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore: .gitignore
+    ~/.hgrc: .hgrc
+    ~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings: 'sublime-text/Preferences.sublime-settings'
+    ~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap: 'sublime-text/Default (OSX).sublime-keymap'
+    ~/.vimrc: .vimrc
+    ~/bin/subl:
+        create: true
+        path: "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+- shell:
+    - ["git submodule update --init --recursive", "Installing/updating submodules"]

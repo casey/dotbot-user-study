@@ -1,0 +1,25 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.emacs.d: emacs.d/
+    ~/.gitconfig: gitconfig
+    ~/.sbt: sbt/
+    ~/.aws: aws/
+    ~/.ansible: ansible/
+    ~/.config/fish/config.fish: config/fish/config.fish
+    ~/.config/omf/bundle: config/omf/bundle
+    ~/.config/omf/theme: config/omf/theme
+    ~/.config/omf/init.fish: config/omf/init.fish
+    ~/.config/omf/before.init.fish: config/omf/before.init.fish
+    ~/.keysnail.js: keysnail.js
+    ~/.lein: lein/
+    ~/.boot: boot/
+    ~/.itsalltext: itsalltext
+    ~/Library/Application Support/Karabiner/private.xml: karabiner.xml
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - command: ./brew.sh
+    stdout: true
+    description: Install Homebrew (if necessary), install packages (if necessary), and update packages

@@ -1,0 +1,39 @@
+- link:
+    ~/.zshrc:
+      path: zsh/zshrc
+      force: true
+    ~/.aliases: zsh/aliases
+    ~/.vimrc: vim/vimrc
+    ~/.gvimrc: vim/gvimrc
+    ~/.vimrc_linux: vim/vimrc_linux
+    ~/.emacs: emacs/emacs
+    ~/.emacs.d/prefs:
+      path: emacs/prefs/
+      create: true
+    ~/.zathurarc: zathura/zathurarc
+    ~/.Xresources: Xresources
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.taskrc: taskwarrior/taskrc
+    ~/.nethackrc: nethack/nethackrc
+    ~/.i3blocks.conf: i3/i3blocks.conf
+    ~/.i3/config: i3/config
+    ~/.i3/scripts: i3/scripts/
+    ~/.gitconfig:
+      path: git/gitconfig
+      force: true
+    ~/.gitignore_global: git/gitignore_global
+    ~/.bashrc:
+      path: bashrc
+      force: true
+    ~/.signature: mutt/signature
+    ~/.mutt: mutt/
+    ~/compton.conf: compton/compton.conf
+    ~/.config/ranger/commands.py:
+      path: ranger/commands.py
+      create: true
+    ~/.config/ranger/rc.conf:
+      path: ranger/rc.conf
+      create: true
+    ~/.config/ranger/rifle.conf:
+      path: ranger/rifle.conf
+      create: true

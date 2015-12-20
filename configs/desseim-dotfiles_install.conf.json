@@ -1,0 +1,20 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.dotfiles": "",
+            "~/.bash_profile": "bash_profile",
+            "~/.bashrc": "bashrc",
+            "~/.dir_colors": "dir_colors",
+            "~/.editorconfig": "editorconfig",
+            "~/.gitconfig": "gitconfig",
+            "~/.gitignore_global": "gitignore_global",
+            "~/.inputrc": "inputrc",
+            "~/.vim": "vim/",
+            "~/.vimrc": "vimrc"
+        }
+    }
+]
+

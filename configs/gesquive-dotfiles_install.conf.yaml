@@ -1,0 +1,10 @@
+- clean: ['~']
+- link:
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.vimrc: vim/vimrc
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/themes/bitzero.zsh-theme: zsh/bitzero.zsh-theme
+- shell: []

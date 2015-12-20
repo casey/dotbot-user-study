@@ -1,0 +1,37 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.hgrc: hgrc
+    ~/.hgrc.d: hgrc.d
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gvimrc: gvimrc
+    ~/.nvim: vim/
+    ~/.nvimrc: vimrc
+    ~/.emacs: emacs.el
+    ~/.mutt: mutt/
+    ~/.config/fish:
+        create: true
+        path: fish
+    ~/.config/yi/yi.hs:
+        create: true
+        path: yi.hs
+    ~/.config/yi/lib:
+        create: true
+        path: lib-yi
+    ~/.sbt/0.13/plugins/plugins.sbt:
+        create: true
+        path: sbt/0.13/plugins/plugins.sbt
+    ~/.gradle/init.gradle:
+        create: true
+        path:  gradle/init.gradle
+    ~/.gradle/gradle.properties:
+        create: true
+        path: gradle/gradle.properties
+
+- shell:
+  - [git submodule init, Installing/updating submodules]
+  - [git submodule update, Installing/updating submodules]
+  - [vim -e +PluginInstall +visual +qall, Installing vim plugins (at least 15 mins first run).]

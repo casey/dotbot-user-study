@@ -1,0 +1,32 @@
+- clean: ['~']
+
+- shell:
+    - git submodule update --init --recursive
+
+- link:
+    ~/.profile: profile
+    ~/.gitconfig: gitconfig
+    ~/.vim:
+        path: vim/
+        create: true
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/bin:
+        path: bin/
+        create: true
+    ~/.Xresources: Xresources
+    ~/.i3:
+        path: i3/
+        create: true
+    ~/.i3blocks.conf: i3blocks.conf
+    ~/.compton.conf: compton.conf
+    ~/.config/dunst/dunstrc: dunstrc
+    ~/.config/mpd/mpd.conf: mpd
+    ~/.ncmpcpp/config: ncmpcpp
+    ~/.spacemacs: spacemacs
+
+- shell:
+    - rm $HOME/.nvim
+    - rm $HOME/.nvimrc
+    - ln -s $HOME/.vim $HOME/.nvim
+    - ln -s $HOME/.vimrc $HOME/.nvimrc

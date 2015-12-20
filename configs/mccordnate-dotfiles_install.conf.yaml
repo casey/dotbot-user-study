@@ -1,0 +1,30 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+
+    ~/.zshrc: 
+      force: true
+      path: zshrc
+
+    ~/.vimrc:
+      force: true
+      path: vimrc
+
+    ~/.vim:
+      force: true
+      path: vim/
+
+    ~/.zsh:
+      force: true
+      path: zsh/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  -
+    description: "Running micks config"
+    command: "sh scripts/config.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+  - [vim +PluginInstall +qall, Installing vundle plugins]

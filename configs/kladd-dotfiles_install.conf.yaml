@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_profile: bash_profile
+    ~/.bash_prompt: bash_prompt
+    ~/.bashrc: bashrc
+    ~/.dotfiles.d: dotfiles.d/
+    ~/.gitconfig: gitconfig
+    ~/.gittemplate: gittemplate/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.xmonad: xmonad/
+
+- shell:
+    - git submodule update --init --recursive

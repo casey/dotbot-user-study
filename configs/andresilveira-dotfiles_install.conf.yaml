@@ -1,0 +1,29 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.zshrc: zshrc
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gemrc: gemrc
+    ~/.tmux.conf: tmux.conf
+    ~/.gitignore_global: gitignore_global
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ['ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"', Installing Homebrew]
+  - [brew install caskroom/cask/brew-cask, Installing Brew Cask]
+  - [brew cask install iterm2]
+  - [brew install zsh, Installing zsh]
+  - [brew install vim, Installing Vim via Homebrew]
+  - [brew install npm, Installing NPM]
+  - [brew install tmux, Installing Tmux]
+  - [brew install vim --with-lua, Installing latest Vim with Lua enabled]
+  - [brew cask install gitx, Installing GitX]
+  - ['sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"', Installing oh-my-zsh]
+  - [vim +PluginInstall +qall, Installing Vundle Plugins]
+  - [npm install -g eslint-config-airbnb, Installing ESlint npm module]
+  - [npm install -g eslint]
+  - [npm install -g babel-eslint]
+  - [npm install -g eslint-plugin-react]
+  - [git config --global core.excludesfile ~/.gitignore_global, Add global gitignore file]

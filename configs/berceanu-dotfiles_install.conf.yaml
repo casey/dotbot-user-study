@@ -1,0 +1,23 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.msmtprc: msmtprc
+    ~/.offlineimaprc: offlineimaprc
+    ~/.emacs.d/init.el:
+        path: emacs.d/init.el
+        create: true
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+    ~/.xmonad/xmonad.hs:
+        path: xmonad/xmonad.hs
+        create: true
+    ~/.tmux.conf: tmux.conf
+    ~/bin:
+        path: bin/
+        create: true
+    ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc

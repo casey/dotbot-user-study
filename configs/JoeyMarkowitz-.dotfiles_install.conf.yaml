@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
+
+- shell:
+  - [git submodule update --init --remote --recursive, Upgrading and Installing submodules]
+  - [install_vim_pathogen.sh, Install vim pathogen]
+  - [sudo easy_install pip, Install pip on macos]
+  - [install-vim-debug.py, Installing python vim debugger github.com/jaredly/vim-debug]
+  - [pip install dbgp vim-debug, Installing python dbgp and vim-debug]

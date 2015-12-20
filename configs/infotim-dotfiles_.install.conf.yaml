@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- shell:
+    - [mkdir -p ~/.config/, Create ~/.config]
+    - [mkdir -p ~/.vim/autoload, Create ~/.vim/autoload]
+
+- link:
+    ~/.ansible.cfg: ansible.cfg
+    ~/.dotfiles: ''
+    ~/.fonts: .fonts
+    ~/.config/firejail: firejail
+    ~/.bash: bash
+    ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
+    ~/.dircolors: dircolors
+    ~/.gitconfig: git/config
+    ~/.gitignore_global: git/ignore
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vim/config
+    ~/.vim/autoload/pathogen.vim: vim/pathogen/autoload/pathogen.vim
+    ~/.vim/bundle: vim/bundle
+    ~/.Xresources: x/resources
+    ~/.Xmodmap: x/modmap
+    ~/.xsession: x/session

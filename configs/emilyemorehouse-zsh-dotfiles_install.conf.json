@@ -1,0 +1,28 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.zsh-dotfiles": "",
+      "~/.hushlogin": "hushlogin",
+      "~/.oh-my-zsh": "oh-my-zsh/",
+      "~/.zshrc": "zshrc",
+      "~/.zsh-custom": "zsh-custom/",
+      "~/.nvm": "nvm/",
+      "~/.vim": "vim/",
+      "~/.vimrc": "vimrc",
+      "~/.screenrc": "screenrc",
+      "~/.gitconfig": "gitconfig",
+      "~/.gitignore_global": "gitignore_global",
+      "~/.hgrc": "hgrc",
+      "~/.hgignore_global": "hgignore_global",
+    }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"],
+      ["cp zsh-custom/themes/*.zsh-theme ~/.oh-my-zsh/themes/"]
+    ]
+  }
+]

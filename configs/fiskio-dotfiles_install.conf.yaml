@@ -1,0 +1,27 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    #~/.tmuxinator: tmuxinator/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    #~/.bashrc: bashrc
+    #~/.config/xfce4/terminal/terminalrc: terminalrc
+    ~/.ssh/rc: ssh.rc
+    ~/.ssh/config: ssh.config
+    ~/.ssh/connections: ssh-connections
+    #~/.zprezto: zprezto
+    #~/.exports: exports
+    #~/.aliases: aliases
+    #~/.zlogin: zprezto/runcoms/zlogin
+    #~/.zlogout: zprezto/runcoms/zlogout
+    #~/.zpreztorc: zprezto/runcoms/zpreztorc
+    #~/.zprofile: zprezto/runcoms/zprofile
+    #~/.zshenv: zprezto/runcoms/zshenv
+    #~/.zshrc: zprezto/runcoms/zshrc
+    ~/.config/fish: fish
+
+- shell:
+   - [git submodule update --init --recursive, Installing/updating submodules]
+   - [fonts/install.sh, Installing PowerLine fonts]

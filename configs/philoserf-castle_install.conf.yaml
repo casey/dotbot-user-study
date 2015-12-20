@@ -1,0 +1,23 @@
+- clean:
+    - "~"
+    - "~/.config"
+- shell:
+    - "git submodule update --init --recursive"
+- link:
+    ~/.plan: plan
+    ~/.project: project
+    ~/.zshenv: zshenv
+    ~/.zprofile: zprofile
+    ~/.zshrc: zshrc
+    ~/.zlogin: zlogin
+    ~/.zlogout: zlogout
+    ~/.functions.d: functions.d
+    ~/.aliases.d: aliases.d
+    ~/.zgen.zsh: zgen/zgen.zsh
+    ~/.config/nvim: config/nvim
+    ~/.vim: config/nvim
+    ~/.vimrc: config/nvim/init.vim
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.editorconfig: editorconfig
+    ~/.gemrc: gemrc

@@ -1,0 +1,20 @@
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.vim/ftplugin: vim/ftplugin/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.bashrc: bashrc
+    ~/.pentadactylrc: pentadactylrc
+    ~/.config/zathura/zathurarc:
+      create: true
+      path: zathurarc
+    ~/.liquidpromptrc:
+      create: true
+      path: liquidpromptrc
+    ~/.vifm/vifmrc:
+      create: true
+      path: vifmrc
+    ~/.config/ranger/rc.conf:
+      create: true
+      path: ranger.conf

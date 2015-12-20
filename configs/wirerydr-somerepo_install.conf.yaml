@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile:    bash_profile
+    ~/.bashrc:          bashrc
+    ~/.dotfiles:        ''
+    ~/.inputrc:         inputrc
+    ~/.multitailrc:     multitailrc
+    ~/.terminfo:        terminfo
+    ~/.vimrc:           vimrc
+    ~/.vim:             vim/
+    ~/.xxdiffrc:        xxdiffrc
+
+- shell:
+    -
+        - git submodule update --init --recursive
+        - Installing/updating submodules

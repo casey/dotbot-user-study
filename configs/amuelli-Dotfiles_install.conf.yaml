@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash/bash_profile
+    ~/.bashrc: bash/bashrc
+    ~/.zshrc: zsh/zshrc
+    ~/.config/base16-shell: zsh/base16-shell
+    ~/.oh-my-zsh: zsh/oh-my-zsh/
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.vim: vim-files/vim/
+    ~/.vimrc: vim-files/vimrc
+    ~/.tmux: tmux-files/tmux/
+    ~/.tmux.conf: tmux-files/tmux.conf
+    ~/.tmuxinator: tmux-files/tmuxinator/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [sudo gem install tmuxinator, Installing tmuxinator]

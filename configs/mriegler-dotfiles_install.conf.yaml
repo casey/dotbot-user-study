@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vimrc: vimrc
+    ~/.spacemacs: spacemacs
+    ~/.profile: profile
+    ~/.gitconfig: gitconfig
+    ~/.zshrc: zshrc
+    ~/.oh-my-zsh/custom:
+      force: true
+      path: oh-my-zsh-custom 
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

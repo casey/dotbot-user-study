@@ -1,0 +1,16 @@
+ - clean: ['~','~/.config']
+
+ - link:
+    ~/.dotfiles:             ''
+    ~/.gitconfig:            'common/gitconfig'
+    ~/.nanorc:               'common/nanorc'
+    ~/.vimrc:                'common/vimrc'
+    ~/.nvimrc:               'common/vimrc'
+    ~/.bash_aliases:         'common/bash_aliases'
+    ~/.bash_colors:          'common/bash_colors'
+    ~/.bash_logout:          'common/bash_logout'
+    ~/.bash_profile:         'common/bash_profile'
+    ~/.profile:              'common/bash_profile'
+    ~/.bash_rice:            'common/bash_rice'
+    ~/.bash_env:             'bash_env'
+ - shell: []

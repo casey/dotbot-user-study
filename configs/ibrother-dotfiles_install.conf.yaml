@@ -1,0 +1,26 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p ~/.irssi/scripts/autorun ~/.config/mpv ~/.ssh]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: git/gitconfig
+    ~/.irssi/config: irssi/config
+    ~/.irssi/weed.theme: irssi/weed.theme
+    ~/.irssi/scripts/autorun/awaybar.pl: irssi/scripts/awaybar.pl
+    ~/.irssi/scripts/autorun/awl.pl: irssi/scripts/awl.pl
+    ~/.irssi/scripts/autorun/nickcolor.pl: irssi/scripts/nickcolor.pl
+    ~/.irssi/scripts/autorun/trackbar.pl: irssi/scripts/trackbar.pl
+    ~/.irssi/scripts/autorun/usercount.pl: irssi/scripts/usercount.pl
+    ~/.config/mpv/mpv.conf: mpv/mpv.conf
+    ~/.ssh/config: ssh/config
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.vimrc.before.local: vim/vimrc.before.local
+    ~/.vimrc.bundles.local: vim/vimrc.bundles.local
+    ~/.zshrc: zsh/zshrc
+    ~/.quiltrc: quilt/quiltrc
+    ~/.kermrc: kermit/kermrc
+    ~/.ycm_extra_conf.py: vim/ycm_extra_conf.py
+    ~/.gtkrc-2.0-kde4: kde/gtkrc-2.0

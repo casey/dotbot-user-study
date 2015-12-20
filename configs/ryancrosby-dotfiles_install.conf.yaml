@@ -1,0 +1,22 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitignore: gitignore
+    ~/.sqliterc: sqliterc
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.xvimrc: xvimrc
+    ~/.zsh: zsh/
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.zprofile: zprofile
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- shell:
+  - [vim +PluginInstall +qall, Installing Vim plugins via Vundle]

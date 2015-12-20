@@ -1,0 +1,32 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_logout: bash_logout
+    ~/.curlrc: curlrc
+    ~/.editorconfig: editorconfig
+    ~/.eslintrc: eslintrc
+    ~/.gdbinit: gdbinit
+    ~/.ghci: ghci
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.gvimrc: gvimrc
+    ~/.hushlogin: hushlogin
+    ~/.inputrc: inputrc
+    ~/.nanorc: nanorc
+    ~/.screenrc: screenrc
+    ~/.ssh/config: ssh
+    ~/.vimrc: vimrc
+    ~/.wgetrc: wgetrc
+    ~/.zshrc: zshrc.zsh
+    ~/bin:
+        path: bin/
+        create: true
+    ~/.vim:
+        path: vim/
+        create: true
+    ~/.zsh:
+        path: zsh/
+        create: true
+    ~/.nano:
+        path: nano/
+        create: true

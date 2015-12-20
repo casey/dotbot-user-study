@@ -1,0 +1,26 @@
+[
+    {
+        "clean": ["~","~/.config"]
+    },
+    {
+        "link": {
+            "~/.config/nvim": {
+                    "create": true,
+                    "path": "nvim/"
+            },
+            "~/.zshrc": "zshrc",
+            "~/.Xresources": "Xresources",
+            "~/antigen": "antigen/"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing submodules"],
+            ["source ~/antigen/antigen.zsh", "Sourcing antigen.zsh"],
+            ["curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim", "Downloading vim-plug"],
+            ["nvim +PlugInstall", "Installing Neovim Plugins"],
+            ["cd .", "To install YCM, run: 'cd ~/.config/nvim/plugged/YouCompleteMe && ./install.py --clang-completer --omnisharp-completer --gocode-completer'"],
+            ["cd ./fun/ascii_art_generator && npm install", "Installing node modules for finding your spirit's ascii (run 'spiritascii' to look again)"]
+        ]
+    }
+]

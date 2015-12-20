@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.emacs.d: emacs.d/
+    ~/.i3: i3/
+    ~/.vimperatorrc: vimperatorrc
+    ~/.zshrc: zshrc
+    ~/.zsh: zsh/
+    ~/.Xresources: Xresources
+    ~/.themes: themes/
+    ~/.gitconfig: gitconfig
+    ~/.xinitrc: xinitrc
+    ~/.spacemacs.d: spacemacs.d

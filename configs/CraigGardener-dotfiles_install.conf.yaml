@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.gitignore-global: gitignore-global
+    ~/.profile: profile
+    ~/.npmrc: npmrc
+    ~/.ssh/config: ssh/config
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

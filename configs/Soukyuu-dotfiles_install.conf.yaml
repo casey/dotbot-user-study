@@ -1,0 +1,84 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+    ~/.config/deadbeef: 
+        path: config/deadbeef/
+        create: true
+    ~/.config/GIMP:
+        path: config/GIMP/
+        create: true
+    ~/.config/mcomix:
+        path: config/mcomix/
+        create: true
+    ~/.config/mpv:
+        path: config/mpv/
+        create: true
+    ~/.config/puddletag:
+        path: config/puddletag/
+        create: true
+    ~/.config/pulse/daemon.conf:
+        path: config/pulse/daemon.conf
+        create: true
+    ~/.config/breezerc:
+        path: config/breezerc
+        create: true
+    ~/.config/gwenviewrc:
+        path: config/gwenviewrc
+        create: true
+    ~/.config/katerc:
+        path: config/katerc
+        create: true
+    ~/.config/katepartrc:
+        path: config/katepartrc
+        create: true
+    ~/.config/kateschemarc:
+        path: config/kateschemarc
+        create: true
+    ~/.config/katesyntaxhighlightingrc:
+        path: config/katesyntaxhighlightingrc
+        create: true
+    ~/.config/klaunchrc:
+        path: config/klaunchrc
+        create: true
+    ~/.config/ktrashrc:
+        path: config/ktrashrc
+        create: true
+    ~/.config/kwinrc:
+        path: config/kwinrc
+        create: true
+    ~/.config/kwinrulesrc:
+        path: config/kwinrulesrc
+        create: true
+    ~/.config/redshift.conf:
+        path: config/redshift.conf
+        create: true
+    ~/.config/yakuakerc:
+        path: config/yakuakerc
+        create: true
+    ~/.config/katerc:
+        path: config/katerc
+        create: true
+    ~/.gimp-2.8:
+        path: gimp-2.8/
+        create: true
+    ~/.gnupg/gpg.conf:
+        path: gnupg/gpg.conf
+        create: true
+    ~/.kde4/share/kde4/services:
+        path: local/share/kservice5/
+        create: true
+    ~/.local/share/kservice5:
+        path: local/share/kservice5/
+        create: true
+    ~/.local/share/konversation/scripts/np:
+        path: local/share/konversation/scripts/np
+        create: true
+    ~/.scripts:
+        path: scripts/
+        create: true
+

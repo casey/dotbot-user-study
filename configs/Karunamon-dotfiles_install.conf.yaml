@@ -1,0 +1,22 @@
+- clean: ['~']
+
+- link:
+   ~/.dotfiles: ''
+   ~/.vim: vim/
+   ~/.vimrc: vimrc
+   ~/.screenrc: screenrc
+   ~/.scripts: scripts
+   ~/.htoprc: htoprc
+   ~/.zshrc: zshrc
+   ~/.bashrc: bashrc
+   ~/.bash_profile: bash_profile
+   ~/.conkyrc: conkyrc
+   ~/.gemrc: gemrc
+   ~/.fonts: fonts
+   ~/.mutt: mutt
+   ~/.atom: atom/
+
+
+- shell:
+    - [fonts/install.sh, Installing airline fonts]
+    - [vim -c PluginInstall, Installing vim plugins]

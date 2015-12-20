@@ -1,0 +1,36 @@
+- clean: [ '~' ]
+
+- link:
+    ~/.bashrc:
+      force: true
+      path: bashrc
+    ~/.bashrc_addon:
+      force: true
+      path: bashrc_addon
+    ~/.bash_profile:
+      force: true
+      path: bash_profile
+    ~/.inputrc:
+      force: true
+      path: inputrc
+    ~/.screenrc:
+      force: true
+      path: screenrc
+    ~/.shell_aliases:
+      force: true
+      path: shell_aliases
+    ~/.shell_exports:
+      force: true
+      path: shell_exports
+    ~/.tmux.conf:
+      force: true
+      path: tmux.conf
+    ~/.vimrc:
+      force: true
+      path: vimrc
+    ~/.zshrc:
+      force: true
+      path: zshrc
+    ~/.oh-my-zsh:
+      force: true
+      path: oh-my-zsh/

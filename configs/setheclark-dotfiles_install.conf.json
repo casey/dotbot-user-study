@@ -1,0 +1,24 @@
+[
+  {
+    "clean": [
+      "~"
+    ]
+  },
+  {
+    "link": {
+      "~/.zshrc": ".zshrc",
+      "~/.oh-my-zsh/custom/linux_settings.zsh": "linux_settings.zsh",
+      "~/.oh-my-zsh/custom/darwin_settings.zsh": "darwin_settings.zsh",
+      "~/.oh-my-zsh/custom/alias.zsh": "alias.zsh",
+      "~/.oh-my-zsh/custom/functions.zsh": "functions.zsh"
+    }
+  },
+  {
+    "shell": [
+      [
+        "git submodule update --init --recursive",
+        "Installing submodules"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+- link:
+    ~/.bashrc: bashrc
+    ~/.Xdefaults: Xdefaults
+    ~/.vimrc: vimrc
+    ~/.i3/config:
+        path: i3/config
+        create: true
+    ~/.i3blocks.conf: i3blocks.conf
+

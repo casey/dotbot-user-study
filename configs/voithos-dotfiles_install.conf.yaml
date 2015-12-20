@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.bash: bash
+    ~/.bashrc: bash/bashrc.sh
+    ~/.dir_colors: bash/dir_colors
+    ~/.inputrc: bash/inputrc
+    ~/.fonts: fonts
+    ~/.gitconfig: git/gitconfig
+    ~/.npmrc: node/npmrc
+    ~/.vim: vim
+    ~/.vimrc: vim/vimrc.vim
+
+- shell:
+    - ["git submodule update --init --recursive", Installing submodules]
+    - ["[ -f ~/.bashlocal ] || (echo '## machine-specific bashrc' > ~/.bashlocal)", Instancing bashlocal]
+    - ["[ -f ~/.vimlocal ] || (echo '\"\" machine-specific vimrc' > ~/.vimlocal)", Instancing vimlocal]

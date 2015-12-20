@@ -1,0 +1,47 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.Xdefaults: Xdefaults
+    ~/.Xmodmaps: Xmodmaps/
+    ~/.chef/cookbooks:
+      create: true
+      force: true
+      relink: true
+      path: chef/cookbooks/
+    ~/.dir_colors: dir_colors
+    ~/.ghc/ghci.conf:
+      create: true
+      path: ghc/ghci.conf
+    ~/.git_template: git_template/
+    ~/.gitconfig: gitconfig
+    ~/.haskeline: haskeline
+    ~/.inputrc: inputrc
+    ~/.quicklisp: quicklisp/
+    ~/.sbclrc: sbclrc
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.vimrc_minimal: vimrc_minimal
+    ~/.ycm_extra_conf.py: ycm_extra_conf.py
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+    ~/Gemfile.lock: Gemfile.lock
+    ~/Gemfile: Gemfile
+    ~/bin: bin/
+
+- shell:
+  - [git submodule update --init --recursive, Updating submodules]
+  - command: ~/.dotfiles/dependency_install.sh
+    stdin: true
+    stdout: true
+    stderr: true
+  - command: cd chef && sudo chef-client -z -o brh
+    stdin: true
+    stdout: true
+    stderr: true
+  - command: vim +PluginInstall +qall
+    stdin: true
+    stdout: true
+    stderr: true

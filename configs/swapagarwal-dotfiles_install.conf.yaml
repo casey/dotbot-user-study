@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.aliases: aliases
+    ~/.functions: functions
+    ~/.exports: exports
+
+- shell:
+  -
+    command: "./setup"
+    stdout: true
+    stderr: true
+    stdin: true

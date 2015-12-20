@@ -1,0 +1,18 @@
+- clean: []
+
+- shell:
+    - [git submodule update, Installing/updating submodules]
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.vim/autoload/togglebg.vim:
+        path:  vim/autoload/togglebg.vim
+        create: true
+    ~/.vim/bitmaps/togglebg.png:
+        path:  vim/bitmaps/togglebg.png
+        create: true
+    ~/.vim/colors/solarized.vim:
+        path: vim/colors/solarized.vim
+        create: true
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc

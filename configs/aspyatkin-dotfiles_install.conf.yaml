@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+    '~/.oh-my-zsh': 'oh-my-zsh'
+    '~/.zshrc': 'zshrc'
+    '~/.tmux.conf': 'tmux.conf'
+    '~/.bowerrc': 'bowerrc'
+    '~/.gitconfig': 'gitconfig'
+    '~/.vimrc': 'vimrc'
+    '~/.vim': 'vim'
+    '~/.minttyrc': 'minttyrc'
+
+- shell:
+    - ['git submodule update --init --recursive', 'Installing submodules']
+    - ['test -e vim/bundle/Vundle.vim || git clone https://github.com/VundleVim/Vundle.vim.git vim/bundle/Vundle.vim', 'Cloning Vundle repository']
+    - ['vim +PluginInstall +qall', 'Installing vim plugins']
+
+- link:
+    '~/.oh-my-zsh/custom/blank.zsh-theme': 'blank/blank.zsh-theme'

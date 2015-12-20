@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- link:
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.config/nvim: vim/
+    ~/.hammerspoon: hammerspoon/
+    ~/.config/fish/config.fish: config.fish
+    ~/.config/omf: omf/
+    ~/.config/ranger: ranger/
+    ~/Library/Application Support/Sublime Text 3/Installed Packages:  sublime-text/Installed Packages/
+    ~/Library/Application Support/Sublime Text 3/Packages:  sublime-text/Packages/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

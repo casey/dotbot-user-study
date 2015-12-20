@@ -1,0 +1,29 @@
+- clean: [
+  '~',
+  '~/.config'
+]
+
+- shell: [
+  {
+    command: pip install --user --upgrade -r requirements.txt,
+    stdout: true,
+  },
+  {
+    command: git submodule update --init --recursive,
+    stdout: true,
+  }
+]
+
+- link: {
+  ~/.vim: vim,
+  ~/.vimrc: vim/vimrc,
+  ~/.screenrc: screenrc,
+  ~/.bash_profile: bash_profile,
+  ~/.git-completion.bash: git-completion.bash,
+  ~/.config/flake8: {
+    create: true,
+    path: flake8.config,
+  },
+  ~/.gitconfig: gitconfig,
+  ~/.gitignore_global: gitignore_global,
+}

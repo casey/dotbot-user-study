@@ -1,0 +1,24 @@
+- clean: ['~', '/opt']
+- link:
+   # ~/dotfiles: ''
+    ~/.bash_it: bash_it
+    ~/.bashrc: bashrc
+    ~/.bashrc.bak: bashrc.bak
+    ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
+    ~/.nanorc: nanorc
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.nvidia-settins-rc: nvidia-settings-rc
+    ~/.vnc: vnc
+    /opt/paste: bin/pasteIX
+    /opt/search: bin/search
+    /opt/git-wtf: bin/git-wtf
+    /opt/screenshot: bin/screenshot
+    /opt/backupPackagesDebian8.sh: bin/backupPackagesDebian8.sh
+    /opt/up: bin/up
+
+- shell:
+    - [git add ., Git adding changes]
+    - [git submodule update --init --recursive, Installing Submodules]
+    - [chmod +x --recursive bin/, make all executable]

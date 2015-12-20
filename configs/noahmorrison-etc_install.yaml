@@ -1,0 +1,47 @@
+- clean: ['~']
+
+- link:
+    # Shell
+    ~/.screenrc: screenrc
+    ~/.profile: profile
+    ~/.bashrc: bashrc
+    ~/.shutils: shutils
+
+    # Editor
+    ~/.vimrc: vimrc
+
+    # Git
+    ~/.gitconfig: git/config
+    ~/.gitignore: git/ignore
+    ~/.mrconfig: mrconfig
+    ~/.tigrc: tigrc
+
+    # X
+    ~/.Xresources: x/resources
+    ~/.xinitrc: x/initrc
+    ~/.config/sxhkd/sxhkdrc: sxhkd/rc
+    ~/.config/sxhkd/nowm: sxhkd/nowmrc
+
+    # Ranger
+    ~/.config/ranger/rc.conf: ranger/rc
+    ~/.config/ranger/scope.sh: ranger/scope.sh
+
+    # Mpd
+    ~/.mpd/mpd.conf: mpd/conf
+    ~/.ncmpcpp/config: mpd/ncmpcpp
+
+- shell:
+    # update git submodules
+    - "git submodule update --init --recursive"
+
+    # Setup required mpd files
+    - "touch ~/.mpd/database"
+    - "touch ~/.mpd/log"
+    - "touch ~/.mpd/pid"
+    - "touch ~/.mpd/state"
+    - "touch ~/.mpd/sticker.sql"
+    - "mkdir -p ~/.mpd/playlists"
+
+    # Setup required vim files
+    - "mkdir -p ~/.vim/backup"
+    - "mkdir -p ~/.vim/swp"

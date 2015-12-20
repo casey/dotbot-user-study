@@ -1,0 +1,24 @@
+[
+  {
+    "clean": [
+      "~"
+    ],
+    "link": {
+      "~/.gitconfig": "gitconfig",
+      "~/.oh-my-zsh/custom/themes": "custom/themes/",
+      "~/.zsh": "zsh/",
+      "~/.zshrc": "zshrc",
+      "~/.teamocil": "teamocil/"
+    },
+    "shell": [
+      [
+        "git submodule update --init --recursive",
+        "Installing submodules"
+      ],
+      [
+        "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"",
+        "Installing Homebrew"
+      ]
+    ]
+  }
+]

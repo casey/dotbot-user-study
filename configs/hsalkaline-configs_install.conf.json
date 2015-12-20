@@ -1,0 +1,20 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.emacs": ".emacs",
+            "~/.emacs.d": ".emacs.d",
+            "~/.gitconfig": ".gitconfig",
+            "~/.vimrc": ".vimrc",
+            "~/.bashrc": ".bashrc",
+            "~/.screenrc": ".screenrc"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing submodules"]
+        ]
+    }
+]

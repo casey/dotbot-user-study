@@ -1,0 +1,33 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_aliases: aliases
+    ~/.config/sublime-text-3/Packages/User/Package Control.sublime-settings:
+        force: true
+        path: sublime/Package Control.sublime-settings
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings:
+        force: true
+        path: sublime/Preferences.sublime-settings
+    ~/.config/sublime-text-3/Packages/User/SublimeCodeIntel.sublime-settings:
+        force: true
+        path: sublime/SublimeCodeIntel.sublime-settings
+    ~/.config/sublime-text-3/Packages/User/Xdebug.sublime-settings:
+        force: true
+        path: sublime/Xdebug.sublime-settings
+    ~/.gitconfig: gitconfig
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.ssh/config:
+        create: true
+        path: ssh_config
+    ~/update.sh: update.sh
+    ~/.xmobarrc: xmobarrc
+    ~/.xmonad: xmonad/
+    /usr/share/xsessions/xmonad.desktop:
+        force: true
+        path: xmonad.desktop
+    ~/.zshrc: zshrc
+
+#- shell:
+#  -
+#    - git update-submodules
+#    - Install/update submodules

@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: .gitconfig
+    ~/.tmux.conf: .tmux.conf
+    ~/.zshrc: .zshrc
+
+- shell:
+  -
+    - git update-submodules
+    - Installing/updating submodules

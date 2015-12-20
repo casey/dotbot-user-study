@@ -1,0 +1,12 @@
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+
+- shell:
+    - echo Done

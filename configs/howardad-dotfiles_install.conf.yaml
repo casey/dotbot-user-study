@@ -1,0 +1,27 @@
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    -
+        command: cd vim/bundle/vimproc.vim && make
+        stdout: true
+        stderr: true
+        description: Making vimproc.vim native lib
+
+- link:
+    ~/.bash_aliases: .bash_aliases
+    ~/.bash_functions: .bash_functions
+    ~/.bash_profile: .bash_profile
+    ~/.profile: .profile
+    ~/.bashrc:
+        force: true
+        path: .bashrc
+    ~/.vim: vim/
+    ~/.vimrc: .vimrc
+    ~/.gvimrc: .gvimrc
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
+    ~/.inputrc: .inputrc
+    ~/liquidprompt: liquidprompt/
+    ~/.liquidpromptrc: .liquidpromptrc
+    ~/lp_adam.theme: lp_adam.theme

@@ -1,0 +1,31 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "shell": []
+    },
+    {
+        "link": {
+            "~/.dotfiles" : "",
+            "~/bin" : "bin",
+            "~/.config" : "config",
+            "~/.fonts" : "fonts",
+            "~/.gitconfig" : "gitconfig",
+            "~/.gitignore_global" : "gitignore_global",
+            "~/.gitmodules" : "gitmodules",
+            "~/.pythonrc" : "pythonrc",
+            "~/.tmux.conf" : "tmux.conf",
+            "~/.vim" : "vim",
+            "~/.vimrc" : "vimrc",
+            "~/.vimwiki" : "vimwiki",
+            "~/.zsh" : "zsh",
+            "~/.zshrc" : "zshrc"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing/updating submodules"]
+        ]
+    }
+]

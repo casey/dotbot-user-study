@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+    ~/.agignore:      .agignore
+    ~/.config:        config/
+    ~/.gemrc:         ruby/gemrc
+    ~/.gitignore:     .gitignore
+    ~/.jshintrc:      javascript/jshintrc
+    ~/.eslintrc:      javascript/eslintrc
+    ~/.pryrc:         ruby/pryrc
+    ~/.rspec:         ruby/rspec
+    ~/.spaceman-diff: .spaceman-diff
+    ~/.tmux.conf:     tmux.conf
+    ~/.vim:           vim/
+    ~/.vimrc:         vimrc
+    ~/.zshrc:         zshrc
+
+- shell:
+  - [git pull && git submodule update --init --recursive, Installing/updating submodules]

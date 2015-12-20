@@ -1,0 +1,22 @@
+- clean: ['~']
+
+- link:
+    ~/.config/bspwm:
+        create: true
+        path: config/bspwm/
+    ~/.config/sxhkd:
+        create: true
+        path: config/sxhkd/
+    ~/.config/dunst:
+        create: true
+        path: config/dunst/
+    ~/.vim: vim/
+    ~/.profile: profile
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.vimrc: vimrc
+    ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc
+
+

@@ -1,0 +1,16 @@
+- link:
+    ~/.spacemacs: spacemacs/dot-spacemacs
+    ~/.i3: i3/
+    #zsh/prezto setup
+    ~/.zprezto: prezto
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: prezto/runcoms/zpreztorc
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: prezto/runcoms/zshrc
+    #spacemacs contrib layers
+    ~/.emacs.d/private/rust: spacemacs/layers/rust/
+    ~/.emacs.d/private/elixir: spacemacs/layers/elixr/
+    ~/.emacs.d/private/web-mode: spacemacs/layers/web-mode/
+    ~/.lein/profiles.clj: clojure/profiles.clj

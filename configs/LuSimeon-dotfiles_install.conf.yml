@@ -1,0 +1,18 @@
+- 
+  clean: 
+    - "~"
+
+- 
+  link: 
+    ~/.zshrc: "zshrc"
+    ~/.gitconfig: "gitconfig"
+    ~/.gitignore_global: "gitignore_global"
+    ~/.aliases: ".aliases"
+    ~/.bash_profile: ".bash_profile"
+    ~/.WebIde80: "pstorm/WebIde80"
+- 
+  shell: 
+    - 
+      - "git submodule update --init --recursive --remote"
+      - "Installing/updating submodules"
+

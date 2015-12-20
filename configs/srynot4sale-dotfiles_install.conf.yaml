@@ -1,0 +1,25 @@
+# Clean removes all broken symlinks from directory supplied
+- clean: ['~']
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+- link:
+    ~/.config/fish/config.fish:
+        create: true
+        force: true
+        path: fish/config.fish
+    ~/.config/fish/custom:
+        create: true
+        force: true
+        path: fish/custom/
+    ~/.config/fish/omf:
+        create: true
+        force: true
+        path: fish/omf/
+    ~/.config/qtile: qtile/
+    ~/.gitconfig: .gitconfig
+    ~/.vimrc: .vimrc
+    ~/.vim: .vim/
+    ~/.xinitrc: .xinitrc
+    ~/.Xmodmap: .Xmodmap
+- shell:
+    - [omf install, Install oh-my-fish]

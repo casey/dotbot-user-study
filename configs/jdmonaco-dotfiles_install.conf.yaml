@@ -1,0 +1,40 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
+    ~/.gitconfig: gitconfig
+    ~/.gitignore.global: gitignore.global
+    ~/.vimrc: vimrc
+    ~/.vim/autoload/togglebg.vim:
+        path: vim/autoload/togglebg.vim
+        create: true
+    ~/.vim/colors/solarized.vim:
+        path: vim/colors/solarized.vim
+        create: true
+    ~/.vim/ftplugin/python_matchit.vim:
+        path: vim/ftplugin/python_matchit.vim
+        create: true
+    ~/.vim/spell/en.utf-8.add:
+        path: vim/spell/en.utf-8.add
+        create: true
+    ~/.tmux.conf: tmux.conf
+    ~/.screenrc: screenrc
+    ~/.condarc: condarc
+    ~/.power-prompt.sh: power-prompt.sh
+    ~/.basic-prompt.sh: basic-prompt.sh
+    ~/.osx: osxdefaults
+    ~/.apps: appdefaults
+    ~/.nvram: nvramsettings
+
+- shell:
+    - [mkdir -p ~/code/bin ~/dev/bin ~/source/bin ~/bin, Creating home directories]
+    - ["[[ -d ~/.local ]] || mkdir -p ~/local/bin", Creating local/]
+    - [bin/link-or-copy-git-bash-files.sh, Linking git shell files]
+    - [tic xterm/xterm-256color-italic.terminfo, Compiling xterm italics]
+    - [bin/install-Vundle-if-needed.sh, Checking Vundle installation]
+    - [vim +PluginInstall +qall, Installing Vim plugins]
+    - ["[[ $(uname) == \"Darwin\" ]] && osxdefaults || true", Setting OS X defaults]
+    - ["[[ $(uname) == \"Darwin\" ]] && appdefaults || true", Application settings]
+    - ["[[ $(uname) == \"Darwin\" ]] && sudo nvramsettings || true", NVram settings]

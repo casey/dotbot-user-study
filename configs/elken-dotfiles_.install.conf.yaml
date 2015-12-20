@@ -1,0 +1,42 @@
+- clean: ['~', '~/.config']
+
+- shell:
+    - mkdir -p ~/.config
+    - mkdir -p ~/.ncmpcpp
+    - git submodule update --init --recursive
+
+- link:
+    ~/.aliases:        .aliases
+    ~/bin:             bin/
+    ~/.compton.conf:   .compton.conf
+    ~/.config/dunst:   .config/dunst
+    ~/.config/termite: .config/termite
+    ~/.dircolors:      .dircolors
+    ~/.dwm:            .dwm/
+    ~/.fbtermrc:       .fbtermrc
+    ~/.fonts:          .fonts/
+    ~/.gitconfig:      .gitconfig
+    ~/.icons:          .icons
+    ~/.mpdconf:        .mpdconf
+    ~/.ncmpcpp/config: .ncmpcpp/config
+    ~/.pentadactyl:    .pentadactyl/
+    ~/.pentadactylrc:  .pentadactylrc
+    ~/.st:             .st/
+    ~/.themes:         .themes/
+    ~/.tmux:           .tmux/
+    ~/.tmux.conf:      .tmux.conf
+    ~/.vimrc:          .vim/.vimrc
+    ~/.vim:            .vim/
+    ~/.Xresources:     .Xresources
+    ~/.Xresources.d:   .Xresources.d
+    ~/.zlogin:         .zsh/prezto/runcoms/zlogin
+    ~/.zlogout:        .zsh/prezto/runcoms/zlogout
+    ~/.zpreztorc:      .zsh/prezto/runcoms/zpreztorc
+    ~/.zprofile:       .zsh/prezto/runcoms/zprofile
+    ~/.zshenv:         .zsh/prezto/runcoms/zshenv
+    ~/.zshrc:          .zsh/prezto/runcoms/zshrc
+    ~/.zsh:            .zsh/
+
+- shell:
+    - sudo ln -s $HOME/.vim /etc/xdg/nvim
+    - sudo ln -s $HOME/.vimrc /etc/xdg/nvim/init.vim

@@ -1,0 +1,23 @@
+[
+    {
+        "clean": [
+            "~",
+            "~/.vim/"
+        ]
+    },
+    {
+        "link": {
+            "~/.vimrc"       : "vimrc",
+            "~/.vim/colors"  : "vim/colors",
+            "~/.vim/bundle"  : "vim/bundle",
+            "~/.gitconfig"   : "gitconfig",
+            "~/.tmux.config" : "tmux.config",
+            "~/.emacs"       : "emacs"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing/updating submodules"]
+        ]
+    }
+]

@@ -1,0 +1,21 @@
+- clean:
+    - '~'
+- shell:
+    - [mkdir -p ~/.config, Making sure that ~/.config exists]
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.xinitrc: xinitrc
+    ~/.zgen.zsh: zsh/zgen/zgen.zsh
+    ~/.zshrc: zsh/zshrc
+    ~/.config/termite/config: termite.config
+    ~/.config/i3/config: i3.config
+    ~/.i3status.conf: i3status.config
+    ~/.config/nvim/init.vim: vim/vimrc
+    ~/.config/nvim/autoload/plug.vim: vim/vim-plug/plug.vim
+    ~/.config/zathura/zathurarc: zathura.config
+- shell:
+    - [inkscape -f wallpaper.svg -e ~/.wallpaper.png -w 1920 -h 1080, Creating wallpaper]
+    - [sed 's/cynkpad/locked/' wallpaper.svg >! wallpaper-locked.svg &&
+       inkscape -f wallpaper-locked.svg -e ~/.wallpaper-locked.png -w 1920 -h 1080 &&
+       rm -f wallpaper-locked.svg,
+       Creating locked wallpaper]

@@ -1,0 +1,12 @@
+---
+- clean: ['~']
+
+- link:
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+
+- shell:
+    - description: Updating submodules
+      command: git submodule update --init --recursive
+      stderr: true
+

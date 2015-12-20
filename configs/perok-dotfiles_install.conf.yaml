@@ -1,0 +1,34 @@
+- shell:
+    - mkdir -p "~/.config/nvim/{autoload,colors,swap,backup}"
+    - mkdir -p ~/.virtualenvs
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    # NVIM
+    ~/.config/nvim/init.vim: config/nvim/init.vim
+    ~/.config/nvim/autoload/plug.vim: config/nvim/autoload/plug.vim
+    ~/.config/nvim/colors/badwolf.vim: config/nvim/colors/badwolf.vim
+    # Virtualenvs
+    ~/.virtualenvs/postactivate: virtualenvs/postactivate
+    ~/.virtualenvs/postdeactivate: virtualenvs/postdeactivate
+    # ZSH
+    ~/.zshrc: zsh/zshrc
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zlogin: zsh/zlogin
+    ~/.zslogout: zsh/zlogout
+    ~/.zprofile: zsh/zprofile
+    ~/.zshenv: zsh/zshenv
+    ~/.dir_colors: colors/dir_colors
+    ~/.zprezto/modules/prompt/functions/prompt_lambda_setup: zsh/prompts/prompt_lambda_setup
+    # KDE
+    ~/.local/share/konsole/Gruvbox_dark.colorscheme: colors/konsole/Gruvbox_dark.colorscheme
+
+
+    #~/.tmux.conf: tmux.conf
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    #- [git submodule update --remote  --recursive, Updating submodules]
+    - [(cd ~/.zprezto && git pull && git submodule update --init --recursive), Updating zprezto]
+    - [nvim +PlugInstall +qall, Installing nvim plugins]

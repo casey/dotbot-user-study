@@ -1,0 +1,47 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.vimrc": {
+                "path": "vim/vimrc",
+                "relink": "true",
+                "force": "true"
+            },
+            "~/.Xresources": {
+                "path": "Xresources/Xresources",
+                "force": "true"
+            },
+            "~/.xinitrc": {
+                "path": "Xinit/xinitrc",
+                "force": "true"
+            },
+            "~/.config/fish": {
+                "path": "fish",
+                "relink": "true",
+                "force": "true"
+            },
+            "~/.gitconfig": {
+                "path": "git/gitconfig",
+                "relink": "true",
+                "force": "true"
+            },
+            "~/.i3/config": {
+                "path": "i3/config",
+                "relink": "true",
+                "force": "true"
+            },
+            "~/.local/share/omf/init.fish": {
+                "path": "ohMyFish/init.fish",
+                "relink": "true",
+                "force": "true"
+            }
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing submodules"]
+        ]
+    }
+]

@@ -1,0 +1,17 @@
+- clean: ['~']
+- shell:
+    - mkdir -p ~/.i3
+    - mkdir -p ~/.nixpkgs
+    - mkdir -p ~/.atom
+- link:
+    '~/.dotfiles': ''
+    '~/.i3/config': 'i3.conf'
+    '~/.i3status': 'i3status.conf'
+    '~/.xprofile': 'xprofile.conf'
+    '~/.bashrc': 'bashrc.conf'
+    '~/packages.nix': 'user.nix'
+    '~/.config/xfce4/terminal/terminalrc': 'xfce4terminal.conf'
+    '~/.gitconfig': 'git.conf'
+    '~/.atom/config.cson': 'atom.cson'
+    '~/.zshrc': 'zshrc.zsh'
+    '~/.antigen.zsh': 'antigen.zsh'

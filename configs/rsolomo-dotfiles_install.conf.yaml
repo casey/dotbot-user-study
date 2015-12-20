@@ -1,0 +1,12 @@
+- clean: ['~']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.vimrc: vimrc
+    ~/.vim: vim/
+    ~/.gitignore_global: gitignore_global
+    ~/.tern-config: tern-config
+    ~/.eslintc: eslintrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

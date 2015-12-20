@@ -1,0 +1,19 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "shell": [
+      ["mkdir -p ~/Library/Application\\ Support/Sublime\\ Text\\ 3/Packages/User", "Creating ST3 User Packages directory"],
+      ["rm ~/Library/Preferences/com.mizage.direct.Divvy.plist", "Removing divvy preferences"]
+    ]
+  },
+  {
+    "link": {
+      "~/.dotfiles/zsh/custom/osx.zsh": "custom.zsh",
+      "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap": "Sublime Text 3/Default (OSX).sublime-keymap",
+      "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings": "Sublime Text 3/preferences.sublime-settings",
+      "~/Library/Preferences/com.mizage.direct.Divvy.plist": "com.mizage.direct.Divvy.plist"
+    }
+  }
+]

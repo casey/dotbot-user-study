@@ -1,0 +1,23 @@
+- clean: ['~', '~/bin']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.makepkg.conf: makepkg.conf
+    ~/.vim: vim/
+    ~/.vimrc: vim/vimrc
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+
+    ~/bin/openocd: bin/openocd
+    ~/bin/openocd.stm32f1: bin/openocd
+    ~/bin/openocd.stm32f4: bin/openocd
+    ~/bin/openocd-writeimage: bin/openocd-writeimage
+    ~/bin/openocd-writeimage.stm32f1: bin/openocd-writeimage
+    ~/bin/openocd-writeimage.stm32f4: bin/openocd-writeimage
+    ~/bin/vless: bin/vless
+    ~/bin/writeiso: bin/writeiso
+    ~/bin/writeiso.ext2: bin/writeiso
+    ~/bin/writeiso.fat32: bin/writeiso

@@ -1,0 +1,54 @@
+- clean: ['~', '~/.config', '~/.bash_completion.d', '~/.todo.actions.d', '~/.todo']
+
+- shell:
+    - [mkdir -p ~/bin]
+    - [mkdir -p ~/.bash_completion.d]
+    - [mkdir -p ~/.todo.actions.d]
+    - [mkdir -p ~/.todo]
+    - [mkdir -p ~/.mantid]
+    - [cp 39b4abe7706cfe83f735/fixwhitespace ~/bin]
+    - [chmod 755 ~/bin/fixwhitespace]
+    - [cp Mantid.user.properties ~/.mantid/Mantid.user.properties]
+    - [tools/bootstrap-rpm.sh]
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/bin/git-wtf: bin/git-wtf
+    ~/bin/blink2-tool: blink1-toys/blink2-tool
+    ~/bin/dropbox: bin/dropbox.py
+    ~/bin/git-clang-format: bin/git-clang-format
+    ~/bin/iwyu_tool.py: bin/iwyu_tool.py
+    ~/bin/jenkins_mantid_to_blink1.sh: blink1-toys/jenkins_mantid_to_blink1.sh
+    ~/bin/load-to-blink1.sh: bin/load-to-blink1.sh
+    ~/bin/mantidpythonfromconfig: mantid-tools/mantidpythonfromconfig
+    ~/bin/mantidpythonfromtemplate: mantid-tools/mantidpythonfromtemplate
+    ~/bin/purge: purge/purge
+    ~/bin/sns_beam: blink1-toys/sns_beam
+    ~/bin/stats: bin/stats
+    ~/bin/travisci-to-blink1.sh: bin/travisci-to-blink1.sh
+    ~/.bash_completion.d/ctest: ctest-completion/ctest
+    ~/.bash_completion.d/dropbox_bash_completion: bash_completions.d/dropbox_bash_completion
+    ~/.conkyrc: conkyrc
+    ~/.dir_colors: dircolors-solarized/dircolors.ansi-universal
+    ~/.emacs: emacs
+    ~/.gitconfig: gitconfig
+    ~/.gitexcludes: gitexcludes
+    ~/.gitprompt: bash-git-prompt
+    ~/.git-prompt-colors.sh: git-prompt-colors.sh
+    ~/.rpmmacros: rpmmacros
+    ~/.topydo: topydo.conf
+    ~/.todo/config: todo.config
+    ~/.vimrc: vimrc
+
+- link:
+    ~/bin/todo.sh: todo.txt-cli/todo.sh
+    ~/.bash_completion.d/todo_completion: todo.txt-cli/todo_completion
+    ~/.todo.actions.d/again: todo.actions.d/todo.txt-cli-again-addon/again
+    ~/.todo.actions.d/edit: todo.actions.d/todo.txt-edit-addon/todo.actions.d/edit
+    ~/.todo.actions.d/futureTasks: todo.actions.d/futureTasks
+    ~/.todo.actions.d/nav: todo.actions.d/nav
+    ~/.todo.actions.d/pri: todo.actions.d/todo.txt-pri-addon/.todo.actions.d/pri
+    ~/.todo.actions.d/repeat: todo.actions.d/repeat
+    ~/.todo.actions.d/repeat.py: todo.actions.d/repeat.py
+    ~/.todo.actions.d/sortCommand: todo.actions.d/sortCommand

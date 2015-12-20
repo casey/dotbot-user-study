@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: .tmux.conf
+    ~/.vimrc: .vimrc
+    ~/.gvimrc: .gvimrc
+    ~/.bashrc: .bashrc
+    ~/.inputrc: .inputrc
+    ~/.zshrc: .zshrc
+    ~/.vimperatorrc: .vimperatorrc
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - bash ./bin/install_utilities.sh

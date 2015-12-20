@@ -1,0 +1,23 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.nvmirc: vimrc
+    ~/.bashrc:
+      force: false
+      path: bashrc
+    ~/.zshrc:
+      force: false
+      path: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.profile:
+      force: false
+      path: profile
+
+- shell:
+    - ['[[ -d ~/.zgen ]] || git clone https://github.com/tarjoilija/zgen ~/.zgen',
+      'Installing zgen...']
+    - ['[[ -d ~/.vim ]] || curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim',
+      'Installing vim-plug...']

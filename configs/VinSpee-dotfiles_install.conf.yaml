@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.gitconfig: gitconfig
+    ~/.tmux: tmux/
+    ~/.tmux.conf: tmux.conf
+    ~/.nvim: nvim/
+    ~/.nvimrc: nvimrc
+    ~/.oh-my-fish: oh-my-fish
+    ~/.config: config
+    ~/.eslintrc: eslintrc
+
+- shell:
+  - [git submodule update --init --recursive]

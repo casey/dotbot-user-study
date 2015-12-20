@@ -1,0 +1,48 @@
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [exec fonts/fonts/install.sh, Installing Powerline Fonts]
+    #- [exec scripts/compile-vim-with-lua.sh/vim74_lua]
+
+- link:
+    ~/.ssh : sshconf/
+    ~/.gitconfig : git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.vimrc: vim/vimrc
+    ~/.vim/custom: vim/custom/
+    ~/.profile: environment/profile
+    ~/.oh-my-zsh: zsh/oh-my-zsh/
+    ~/.zprezto: zsh/prezto/
+    ~/.oh-my-fish: fish/oh-my-fish/
+    ~/.alias.common.sh: shells-common/alias.common.sh
+    ~/.zshrc: zsh/zshrc
+    ~/.bash_it: bash/bash-it
+    ~/.bashrc: bash/bashrc
+    ~/.vim/bundle/neobundle.vim:
+        force: true
+        create: true
+        path: vim/neobundle.vim
+    ~/bin:
+        force: true
+        create: true
+        path: bin/
+    ~/.config/awesome:
+        create: true
+        force: true
+        # path: awesomewm/awesome-copycats/
+        # path: awesomewm/powerarrow/
+        path: awesomewm/awesomeconfig/
+        # awesomewm/awesome-copycats/rc.lua: awesomewm/rc.lua
+        # awesomewm/awesome-copycats/custom-rc.lua: awesomewm/custom-rc.lua
+    ~/.config/mc:
+        create: true
+        force: true
+        path: mc/
+    ~/.gemrc: ruby/gemrc
+
+- shell:
+    # - [exec ~/.bash_it/install.sh --none, Installing bash-it]
+    - [chmod 600 ~/.ssh/*, Fixing .ssh permissions]
+    - [mkdir -p ~/.vim/.vimundo, Creating persistent undo folder]
+    - [mkdir -p ~/.vim/sessions, Creating persistent sessions folder]

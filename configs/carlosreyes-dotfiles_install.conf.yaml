@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.files: ''
+    ~/.tmux.conf: .tmux.conf
+    ~/.config/fish/config.fish: config.fish
+    ~/.bashrc: .bashrc
+    ~/.zshrc: .zshrc
+    ~/.vim: vim/
+    ~/.vimrc: .vimrc
+    ~/.vimperatorrc: .vimperatorrc
+    ~/.config/ranger/rc.conf: rc.conf
+    ~/.config/ranger/colorschemes/euphrasia.py: euphrasia.py
+
+- shell:
+  - [git submodule update --init --recursive --remote]

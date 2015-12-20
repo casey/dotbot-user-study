@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.conkyrc: conkyrc
+    ~/.gitconfig: gitconfig
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+    ~/.tmux.conf: tmux.conf
+    ~/.config/openbox:
+        path: config/openbox/
+        create: true
+    ~/.config/tint2:
+        path: config/tint2/
+        create: true
+    ~/.gmrunrc: gmrunrc
+    ~/.config/dmenu:
+        path: config/tint2/
+        create: true
+      
+

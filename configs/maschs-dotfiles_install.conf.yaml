@@ -1,0 +1,43 @@
+- clean: ['~']
+- link:
+    ~/.gitconfig:
+        path: conf/gitconfig
+        force: true
+    ~/.gitignore_global:
+        path: conf/gitignore
+        force: true
+    ~/.config/mpv/mpv.conf:
+        path: conf/mpv.conf
+        force: true
+        create: true
+    ~/.aliases:
+        path: conf/aliases
+        force: true
+    ~/.scripts:
+        path: conf/scripts
+        force: true
+    ~/.vim:
+        path: vim/
+        force: true
+        create: true
+    ~/.vimrc:
+        path: conf/vimrc
+        force: true
+    ~/.zprofile:
+        path: conf/zprofile
+        force: true
+    ~/.zpreztorc:
+        path: conf/zpreztorc
+        force: true
+    ~/.zshrc:
+        path: conf/zshrc
+        force: true
+    ~/.zshenv:
+        path: conf/zshenv
+        force: true
+    ~/.tmux.conf:
+        path: conf/tmux.conf
+        force: true
+- shell:
+    - ["git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim", Install Vundle]
+    - ["vim +PluginInstall +qall", Install vim plugins]

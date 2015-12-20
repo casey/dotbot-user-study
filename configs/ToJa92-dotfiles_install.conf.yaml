@@ -1,0 +1,12 @@
+- clean: ['~', '~/.config']
+- link:
+    ~/.vim: vim/
+    ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.emacs.d: emacs.d/
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+- shell: 
+    - git submodule update --init --recursive
+    - vim +PluginInstall +qall

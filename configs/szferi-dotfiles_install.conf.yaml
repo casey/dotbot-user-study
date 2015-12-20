@@ -1,0 +1,31 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: 'git/gitconfig'
+    ~/.zshrc: 
+      force: true
+      path: 'zsh/zshrc'
+    ~/.vim/bundle/vundle:
+      create: true
+      force: true
+      path: 'vundle'
+    ~/.vimrc: 'vim/vimrc'
+    ~/.i3/config: 
+      create: true
+      force: true
+      path: 'i3/config'
+    ~/.profile: 
+      force: true
+      path: 'profile'
+    ~/.Xresources: 'x11/Xresources'
+    ~/.hgrc: hgrc
+    
+- shell:
+  - [git submodule update --init --recursive, Installing/updating submodules]
+  - [sudo aptitude install -y fonts-inconsolata, Installing inconsolate font]
+  - [sudo aptitude install -y gnome-settings-daemon, Installing settings daemon]
+  - [xrdb -merge ~/.Xresources, Merge X resources]
+  - [echo fs.inotify.max_user_watches=100000 | sudo tee /etc/sysctl.d/60-dropbox.conf, Increase inotify watchers]
+  - [sudo service procps restart, restart procps]
+#  - [./base16-gnome-terminal/base16-default.dark.sh]

@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ""
+    ~/.gemrc: gemrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/Brewfile: Brewfile
+
+- shell:
+  - [brew tap Homebrew/bundle, Installing homebrew bundle]
+  - [brew bundle, Installing homebrew packages from Brewfile]
+  - [rm -Rf ~/.oh-my-zsh, Removing old versions of oh my zsh if present]
+  - ['git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh', Installing oh my zsh]
+  - [pip install powerline-status, Installing powerline]
+  - ['git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim', Installing Vundle for vim]
+  - ['vim +PluginInstall +qall', Install Vundle plugins in vim]
+  - [mkdir -p ~/.config, Creating config directory]
+
+- link:
+    ~/.config/powerline: config/powerline

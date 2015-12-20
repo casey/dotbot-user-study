@@ -1,0 +1,9 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.oh-my-zsh/themes/diode.zsh-theme: diode.zsh-theme
+

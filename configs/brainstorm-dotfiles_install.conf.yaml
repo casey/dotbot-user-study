@@ -1,0 +1,12 @@
+- clean: ['~']
+
+- link:
+    ~/.gitignore_global: .gitignore_global
+    ~/.condarc: .condarc
+    ~/.bashrc: .bashrc
+    ~/.bash_profile: .bash_profile
+    ~/.vim: .vim
+    ~/.vimrc: .vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

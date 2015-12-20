@@ -1,0 +1,24 @@
+- clean: ['~', '~/.config']
+
+- shell:
+  - mkdir -p ~/.config/systemd/user ~/.cache/{mpd,vim,rtorrent/{session,torrents}}
+  - touch ~/.cache/mpd/{pid,state}
+
+- link:
+    ~/.config/bash: bash/
+    ~/.config/compton: compton/
+    ~/.config/git: git/
+    ~/.config/herbstluftwm: herbstluftwm/
+    ~/.config/modprobed-db.conf: modprobed-db.conf
+    ~/.config/mpd: mpd/
+    ~/.config/mpv: mpv/
+    ~/.config/ncmpcpp: ncmpcpp/
+    ~/.config/rtorrent: rtorrent/
+    ~/.config/systemd/user/rtorrent.service: systemd/user/rtorrent.service
+    ~/.config/vim: vim/
+    ~/.config/wallpapers: wallpapers/
+    ~/.config/xorg: xorg/
+    ~/bin: bin/
+
+- shell:
+  - touch ~/.config/mpd/{database,log,sticker.sql}

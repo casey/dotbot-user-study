@@ -1,0 +1,31 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.aliases": "aliases",
+      "~/.bash_profile": "bash_profile",
+      "~/.bash_prompt": "bash_prompt",
+      "~/.bashrc": "bashrc",
+      "~/.exports": "exports",
+      "~/.functions": "functions",
+      "~/.gitconfig": "gitconfig",
+      "~/.gitignore": "gitignore",
+      "~/.gvimrc": "gvimrc",
+      "~/.hushlogin": "hushlogin",
+      "~/.inputrc": "inputrc",
+      "~/.profile": "profile",
+      "~/.tmux.conf": "tmux.conf",
+      "~/.vim": "vim",
+      "~/.vimrc": "vimrc",
+      "~/.wgetrc": "wgetrc"
+    }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing Submodules"],
+      ["mkdir -p ~/.vimbackup ~/.vimswaps", "Making directories for temporary vim files"]
+    ]
+  }
+]

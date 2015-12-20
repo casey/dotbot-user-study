@@ -1,0 +1,6 @@
+- clean: ['~']
+- shell:
+        - [git submodule update --init --recursive, installing submodules]
+- link:
+        '~/.config/fish/': fish
+        '~/.hammerspoon': hammerspoon

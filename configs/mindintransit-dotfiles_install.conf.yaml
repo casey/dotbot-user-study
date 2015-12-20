@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- link:
+        ~/.dotfiles: ''
+        ~/.zshrc:
+                relink: true
+                force: true
+                path: zsh/zshrc
+        ~/.gitconfig:
+                relink: true
+                path: git/gitconfig
+        ~/.vim:
+                relink: true
+                path: vim/vim/
+        ~/.vimrc:
+                relink: true
+                path: vim/vimrc
+        ~/.tmux.conf:
+                relink: true
+                path: tmux/tmux.conf
+
+- shell:
+        - [git submodule update --init --recursive, Installing submodules]
+        - [./fonts/install.sh, Installing fonts]

@@ -1,0 +1,29 @@
+[{
+    "clean": ["~", "~/.config"],
+    "link": {
+        "~/.aliases": "aliases",
+        "~/.bash_profile": "bash_profile",
+        "~/.bashrc": "bashrc",
+        "~/.bashrc_min": "bashrc_min",
+        "~/.config/base16-shell": {
+            "create": true,
+            "path": "base16-shell/"
+        },
+        "~/.gitconfig": "gitconfig",
+        "~/.inputrc": "inputrc",
+        "~/.profile": "profile",
+        "~/.tmux": {
+            "create": true,
+            "path": "tmux/"
+        },
+        "~/.tmux.conf": "tmux.conf",
+        "~/.vim": {
+            "create": true,
+            "path": "vim/"
+        },
+        "~/.vimrc": "vimrc"
+    },
+    "shell": [
+        ["git submodule update --init --recursive", "Installing submodules"]
+    ]
+}]

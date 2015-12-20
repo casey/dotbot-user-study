@@ -1,0 +1,14 @@
+- clean: ['~']
+- shell:
+    - ./homebrew/install.sh
+    - ./sublime/install.sh
+    - ./osx/set-defaults.sh
+    - ./omz/install.sh
+- link:
+    ~/.dotfiles: ''
+    ~/.zshrc: zsh/.zshrc
+    ~/.gitconfig: git/.gitconfig
+    ~/.gitignore: git/.gitignore
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --remote  --recursive, Updating submodules]

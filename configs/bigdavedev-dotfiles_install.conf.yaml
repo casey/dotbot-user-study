@@ -1,0 +1,26 @@
+- clean: ['~']
+
+- link:
+    ~/bin/updater:
+        create: true
+        path: bin/updater
+    ~/bin/lock: bin/lock.sh
+    ~/bin/add_machine_to_domain: bin/add_machine_to_domain
+    ~/.bash_aliases: bash_aliases
+    ~/.xinitrc: xinitrc
+    ~/.i3: i3/
+    ~/.gitconfig: gitconfig
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.config/gtk-3.0/settings.ini:
+        create: true
+        path: gtk-3.0-settings.ini
+    ~/.config/terminal:
+        create: true
+        path: terminal/
+    ~/Pictures/Wallpapers:
+        create: true
+        path: Pictures/Wallpapers
+    ~/.config/sublime-text-3: sublime-text-3
+    ~/.tigrc: tigrc
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc

@@ -1,0 +1,39 @@
+[
+  {
+    "clean": [
+      "~",
+      "~/.config",
+      "~/.vim",
+    ]
+  },
+
+  {
+    "link": {
+        "~/.bash_profile": "bash_profile",
+        "~/.bash_prompt": "bash_prompt",
+        "~/.config/terminator": {
+          create: true,
+          path: "config/terminator/"
+        },
+        "~/.vimrc": "vimrc",
+        "~/.vim": "vim/",
+        "~/.zlogin": "zsh/prezto/runcoms/zlogin",
+        "~/.zlogout": "zsh/zlogout",
+        "~/.zprofile": "zsh/prezto/runcoms/zprofile",
+        "~/.zshenv": "zsh/prezto/runcoms/zshenv",
+        "~/.zshrc": "zsh/zshrc",
+        "~/.zpreztorc": "zsh/zpreztorc",
+        "~/.zprezto": "zsh/prezto",
+        "~/.zsh-autosuggestions": "zsh/zsh-autosuggestions",
+        "~/.tmux.conf": "tmux.conf",
+        "~/.config/flake8": "config/flake8"
+    }
+  },
+
+  {
+  "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"],
+      ["git apply --directory=zsh/prezto zsh/prezto_auto_suggestions.patch", "Patching Prezto"]
+    ]
+  }
+]

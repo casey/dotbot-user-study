@@ -1,0 +1,82 @@
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [curl https://packagecontrol.io/Package%20Control.sublime-package -o ]
+
+#   link:
+#     ~/.config/mpv:
+#       create: true
+#       path: config/mpv/
+#     ~/.config/sublime-text-3:
+#       create: true
+#       path: config/sublime-text-3/
+#     ~/.dotfiles: ""
+#     ~/.gitconfig: gitconfig
+#     ~/.gitignore_global: gitignore_global
+#     ~/.gvimrc: gvimrc
+#     ~/.vim: vim/
+#     ~/.vimrc: vimrc
+#     ~/.ssh: ssh
+#     ~/.tmux.conf: tmux.conf
+#     ~/.zshrc: zshrc
+#     ~/.zprofile: zprofile
+
+#   shell:
+#     -
+#       - "curl https://sublime.wbond.net/Package%20Control.sublime-package -o ~/.config/sublime-text-3/Installed\\\ Packages/Package\\\ Control.sublime-package"
+#       - "Installing Package Control"
+#     -
+#       - "git submodule update --init --recursive --remote"
+#       - "Installing/updating submodules"
+
+#       - shell:
+#     -
+#       - "mkdir -p ~/{.pip,.config/{qtile,termite},.cache/pip,.subversion}"
+#       - "Checking folder structure exists"
+#     -
+#       - "git submodule foreach git pull origin master"
+#       - "Updating submodules"
+#     -
+#       - "bash base16-eighties.dark.sh"
+#       - "Set base16 for gnome-terminal"
+# - clean:
+#     - "~"
+#     - "~/.cache"
+#     - "~/.config"
+#     - "~/.config/fish"
+#     - "~/.config/qtile"
+#     - "~/.config/termite"
+#     - "~/.pip"
+#     - "~/.subversion"
+#     - "~/.vim"
+#     - "~/.vim/bundle"
+#     - "~/.wallpapers"
+#     - "~/.screenlayout"
+# - link:
+#     ~/.gemrc: "gemrc"
+#     ~/.gitconfig: "gitconfig"
+#     ~/.gitignore: "gitignore"
+#     ~/.mongorc.js: "mongorc.js"
+#     ~/.tmux.conf: "tmux.conf"
+#     ~/.xinitrc: "xinitrc"
+#     ~/.config/dircolors: "config/dircolors/"
+#     ~/.config/fish: "config/fish/"
+#     ~/.config/qtile/config.py: "config/qtile/config.py"
+#     ~/.config/termite/config: "config/termite/config"
+#     ~/.pip/pip.conf: "pip/pip.conf"
+#     ~/.subversion/config: "subversion/config"
+#     ~/.vim: "vim/"
+#     ~/.wallpapers: "wallpapers/"
+#     ~/.screenlayout: "screenlayout/"
+# - shell:
+#     -
+#       - "vim +PluginInstall +qall"
+#       - "Update bundles"

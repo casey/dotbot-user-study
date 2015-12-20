@@ -1,0 +1,20 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.zshrc:
+        path: zsh/zshrc
+        force: true
+    ~/.i3:
+        path: i3/
+        create: true
+    ~/.tmux.conf:
+        path: tmux.conf
+    ~/.nanorc: nanorc
+    ~/.tvnamer.json: tvnamer.json
+    ~/.dotfiles:
+        path: .
+        create: true
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

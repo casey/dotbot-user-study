@@ -1,0 +1,14 @@
+- link:
+    ~/.vimrc: vimrc
+    ~/.vim: vim/
+    ~/.vimrc.bundles: vimrc.bundles
+    ~/.tmux.conf: tmux.conf
+    ~/.bash_profile: bash_profile
+    ~/.bash_prompt.sh: bash_prompt.sh
+    ~/.bashrc: bashrc
+    ~/.git-completion.bash: git-completion.bash
+    ~/.gitignore_global: gitignore_global
+    ~/.inputrc: inputrc
+    ~/.welcome_prompt.sh: welcome_prompt.sh
+    ~/.editorconfig: editorconfig
+    ~/.gitconfig: gitconfig

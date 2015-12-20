@@ -1,0 +1,93 @@
+- clean: ["~"]
+- link:
+    ~/.npmrc: npmrc
+    ~/.tig: tigrc
+    ~/.jshintrc: jshintrc
+    ~/.jscsrc: jscsrc
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.zlogin: zlogin
+    ~/.zlogout: zlogout
+    ~/.zpreztorc: zpreztorc
+    ~/.zprofile: zprofile
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.Xresources: Xresources
+    ~/.bin/i3exit:
+      create: true
+      path: bin/i3exit
+    ~/.bin/lock:
+      create: true
+      path: bin/lock
+    ~/.bin/spotify-start:
+      create: true
+      path: bin/spotify-start
+    ~/.bin/xflock4:
+      create: true
+      path: bin/xflock4
+    ~/.bin/macspoof:
+      create: true
+      path: bin/macspoof
+    ~/.config/ranger:
+      create: true
+      path: config/ranger
+    ~/.config/conky/config:
+      create: true
+      path: config/conky/config
+    ~/.config/desmume/config:
+      create: true
+      path: config/desmume/config
+    ~/.config/desmume/config.cfg:
+      create: true
+      path: config/desmume/config.cfg
+    ~/.config/ppsspp/PSP/SYSTEM/ppsspp.ini:
+      create: true
+      path: config/ppsspp/PSP/SYSTEM/ppsspp.ini
+    ~/.config/ppsspp/PSP/SYSTEM/controls.ini:
+      create: true
+      path: config/ppsspp/PSP/SYSTEM/controls.ini
+    ~/.config/i3/config:
+      create: true
+      path: config/i3/config
+    ~/.config/i3blocks:
+      create: true
+      path: config/i3blocks
+    ~/.config/livestreamer/config:
+      create: true
+      path: config/livestreamer/config
+    ~/.config/mpv/mpv.conf:
+      create: true
+      path: config/mpv/mpv.conf
+    ~/.config/networkmanager-dmenu/config.ini:
+      create: true
+      path: config/networkmanager-dmenu/config.ini
+    ~/.config/Thunar/thunarrc:
+      create: true
+      path: config/Thunar/thunarrc
+    ~/.weechat/buffers.conf:
+      create: true
+      path: weechat/buffers.conf
+    ~/.weechat/irc.conf:
+      create: true
+      path: weechat/irc.conf
+    ~/.weechat/logger.conf:
+      create: true
+      path: weechat/logger.conf
+    ~/.weechat/plugins.conf:
+      create: true
+      path: weechat/plugins.conf
+    ~/.weechat/weechat.conf:
+      create: true
+      path: weechat/weechat.conf
+    ~/.zsnes/zinput.cfg:
+      create: true
+      path: zsnes/zinput.cfg
+    ~/.zsnes/zsnesl.cfg:
+      create: true
+      path: zsnes/zsnesl.cfg
+    ~/.local/share/gtksourceview-2.0/styles/sqve.xml:
+      create: true
+      path: local/share/gtksourceview-2.0/styles/sqve.xml
+- shell:
+    -
+      - "git submodule update --init --recursive"
+      - "Installing/updating submodules"

@@ -1,0 +1,44 @@
+- clean: ['~']
+- link:
+        ~/.dotfiles: ''
+        ~/.tmux.conf: user/tmux.conf
+        ~/.tmux-powerlinerc: user/tmux-powerlinerc
+        ~/.tmux-powerline: user/tmux-powerline/
+        ~/.gitconfig: user/gitconfig
+        ~/.global_ignore: user/global_ignore
+        ~/.bash-completion/git.bash:
+                path: user/git-completion.bash
+                create: true
+        ~/.lein/profiles.clj:
+                path: user/lein-profiles.clj
+                create: true
+        ~/.nixpkgs/config.nix:
+                create: true
+                path: user/nixpkgs-config.nix
+        ~/.conkyrc: user/conkyrc
+        ~/.toprc: user/toprc
+        ~/.bash_profile: user/bash_profile
+        ~/.bashrc: user/bashrc
+        ~/.config/pep8:
+                create: true
+                path: user/pep8.ini
+        ~/.config/flake8:
+                create: true
+                path: user/pep8.ini
+        ~/.vim/bundles.vim:
+                create: true
+                path: user/bundles.vim
+        ~/.vim/bundle/Vundle.vim:
+                create: true
+                path: user/Vundle.vim
+        ~/.vimrc: user/vimrc
+        ~/.xmonad/xmonad.hs:
+                create: true
+                path: user/xmonad.hs
+- shell:
+        - [xmonad --recompile]
+        - [pip install --user flake8]
+        - [vim -u ~/.vim/bundles.vim +PluginInstall +qall]
+        - [git config --global user.name "John Weaver"]
+        - [git config --global user.email "saebynx@gmail.com"]
+        - [git config --global push.default matching]

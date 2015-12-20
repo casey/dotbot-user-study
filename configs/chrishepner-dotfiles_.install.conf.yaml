@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+    ~/.zprezto: prezto/
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zpreztorc: zpreztorc
+    ~/.zshrc: zshrc
+    ~/.curlrc: curlrc
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
+    ~/.ackrc: ackrc
+    ~/bin: bin
+
+- shell:
+    - git submodule update --init --recursive
+    - pip install --user --upgrade -r requirements.txt

@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.tmux.conf: tmux.conf
+    ~/.zshenv: zshenv
+    ~/.zprofile: zprofile
+    ~/.zshrc: zshrc
+    ~/.zpreztorc: zpreztorc
+    ~/.zprezto: prezto/
+    ~/.spacemacs: spacemacs
+    ~/aws.sh: aws.sh 
+

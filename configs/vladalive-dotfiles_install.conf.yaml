@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: 'files/gitconfig'
+    ~/.gitignore: 'files/gitignore'
+    ~/.bash_profile: 'files/bash_profile'
+    ~/.bash_aliases: 'files/bash_aliases'
+    ~/.zshrc: 'files/zshrc'
+    ~/.bashrc: 'files/bashrc'
+    ~/.gemrc: 'files/gemrc'
+    ~/.vimrc.after: 'files/vimrc.local'
+    ~/.gvimrc.local: 'files/gvimrc.local'
+    ~/.tmux.conf: 'files/tmux.conf'
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

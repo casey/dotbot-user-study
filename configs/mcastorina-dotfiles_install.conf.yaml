@@ -1,0 +1,71 @@
+- link:
+    ~/.asoundrc:
+        path: .asoundrc
+    ~/.conkerorrc:
+        path: .conkerorrc
+    ~/.dircolors:
+        path: .dircolors
+    ~/.config/dunst/dunstrc:
+        path: dunstrc
+        create: true
+    ~/.config/feh/keys:
+        path: feh-keys
+        create: true
+    ~/.gitconfig:
+        path: .gitconfig
+    ~/.config/htop/htoprc:
+        path: htoprc
+        create: true
+    ~/.i3/config:
+        path: i3-config
+        create: true
+    ~/.i3/i3bar.py:
+        path: i3bar.py
+        create: true
+    ~/.inputrc:
+        path: .inputrc
+    ~/bin/kb-backlight:
+        path: kb-backlight
+        create: true
+    ~/.vim/colors/lapis256.vim:
+        path: lapis256.vim
+        create: true
+    ~/.vim/colors/miccah.vim:
+        path: miccah.vim
+        create: true
+    ~/bin/notify-split:
+        path: notify-split
+        create: true
+    ~/.config/ranger/colorschemes/lapis.py:
+        path: ranger/lapis.py
+        create: true
+    ~/.config/ranger/rc.conf:
+        path: ranger/rc.conf
+        create: true
+    ~/.config/ranger/rifle.conf:
+        path: ranger/rifle.conf
+        create: true
+    ~/.config/ranger/scope.sh:
+        path: ranger/scope.sh
+        create: true
+    ~/.config/user-dirs.dirs:
+        path: user-dirs.dirs
+        create: true
+    ~/.vimrc:
+        path: .vimrc
+    ~/.xbindkeysrc:
+        path: .xbindkeysrc
+    ~/.xinitrc:
+        path: .xinitrc
+    ~/.Xmodmap:
+        path: .Xmodmap
+    ~/.Xresources:
+        path: .Xresources
+    ~/.zgen/custom/zbell.sh:
+        path: zbell.sh
+        create: true
+    ~/.zlogin:
+        path: .zlogin
+    ~/.zshrc:
+        path: .zshrc
+

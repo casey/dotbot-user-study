@@ -1,0 +1,28 @@
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/scripts: scripts
+    ~/pentest: pentest
+    ~/.gdbinit: gdbinit
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.tmux.conf: tmux.conf
+    ~/.compton.conf: compton.conf
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.conkyrc: conkyrc
+    ~/.idapro/__root__.py:
+        create: true
+        path: ida_init_python
+    ~/.i3/config:
+        create: true
+        path: i3_config
+
+- shell:
+    -
+        command: [./install_software.sh, Installing Software]
+        stdout: true
+        stdin: true

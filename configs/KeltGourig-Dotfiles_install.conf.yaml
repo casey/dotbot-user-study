@@ -1,0 +1,15 @@
+- clean: []
+- link: 
+        ~/.hushlogin: hushlogin
+        ~/.tmux.conf: tmux.conf
+        ~/.vim: vim/
+        ~/.vimrc: vimrc
+        ~/.zshrc: zshrc
+        ~/.oh-my-zsh: oh-my-zsh/
+        ~/.atom: atom/
+        #~/.irssi: irssi/
+- shell:
+        - "git submodule init"
+        - "git submodule update" 
+        - "vim +PluginInstall +qall"
+        - "source ~/.zshrc | zsh"

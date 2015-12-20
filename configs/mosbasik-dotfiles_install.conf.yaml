@@ -1,0 +1,18 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.compton.conf: .compton.conf
+    ~/.config: .config/
+    ~/.gitconfig: .gitconfig
+    ~/.gtkrc-2.0: .gtkrc-2.0
+    ~/.i3: .i3/
+    ~/.oh-my-zsh: .oh-my-zsh/
+    ~/.xinitrc: .xinitrc
+    ~/.Xresources: .Xresources
+    ~/.zlogin: .zlogin
+    ~/.zshrc: .zshrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

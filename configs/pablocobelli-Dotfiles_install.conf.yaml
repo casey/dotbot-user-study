@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.battery-status.sh: tmux/battery-status.sh
+    ~/.zshrc: zsh/zshrc
+    ~/.aliases: zsh/zsh_aliases
+    ~/.zsh_history: zsh/zsh_history
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.hushlogin: zsh/hushlogin
+    ~/.vimrc: vimfiles/vimrc
+    ~/.vim: vimfiles/vim
+    ~/.vim-bookmarks: vimfiles/vim-bookmarks
+    ~/.bash_profile: bash/bash_profile
+    ~/.bash_history: bash/bash_history
+    ~/.inputrc: inputrc
+
+

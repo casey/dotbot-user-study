@@ -1,0 +1,35 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig:
+        force: true
+        relink: true
+        path: gitconfig
+    ~/.gitignore:
+        force: true
+        relink: true
+        path: gitignore
+    ~/.zshrc:
+        force: true
+        relink: true
+        path: zshrc
+    ~/.oh-my-zsh/custom/themes/glean.zsh-theme:
+        create: true
+        force: true
+        relink: true
+        path: oh-my-zsh/themes/glean.zsh-theme
+    ~/.oh-my-zsh/custom/plugins/aliases/aliases.plugin.zsh:
+        create: true
+        force: true
+        relink: true
+        path: oh-my-zsh/plugins/aliases/aliases.plugin.zsh
+    ~/.oh-my-zsh/custom/plugins/dirs/dirs.plugin.zsh:
+        create: true
+        force: true
+        relink: true
+        path: oh-my-zsh/plugins/dirs/dirs.plugin.zsh
+
+- shell:
+    - [git submodule update --remote .dotbot, Updating dotbot]
+    - [git submodule update --init --recursive, Installing submodules]
+    - ["curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh", Installing Alcatraz]

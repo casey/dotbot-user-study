@@ -1,0 +1,23 @@
+## standard config for dotbot, the dotfiles manager
+
+#clean up any symlinks that don't have matching files
+- clean: ['~']
+
+- link:
+  ~/.dotfiles: ''
+  #symlink bashrc and force it to overwrite existing ones
+  ~/.bashrc:
+    force: true
+    path: .bashrc
+  #ditto with bash-profile
+  ~/.bash-profile:
+    force: true
+    path: .bash-profile
+
+- shell:
+  -
+    - "curl https://sublime.wbond.net/Package%20Control.sublime-package -o ~/.config/sublime-text-3/Installed\\\ Packages/Package\\\ Control.sublime-package"
+    - "Installing Package Control"
+  -
+    - "git submodule update --init --recursive"
+    - "Installing/updating submodules"

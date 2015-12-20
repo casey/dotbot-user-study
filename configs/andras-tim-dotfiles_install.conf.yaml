@@ -1,0 +1,63 @@
+- clean: ["~"]
+
+- shell:
+    -
+        command: ["git submodule update --init --recursive", "Installing/updating submodules"]
+        stdout: true
+        stderr: true
+    -
+        command: ["mkdir -p ~/bin ~/.config/git ~/.urxvt/ext", "Creating directories"]
+        stderr: true
+
+- link:
+    # Shell
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.zshrc: zshrc
+    ~/.myrc: myrc
+
+    # VCS
+    ~/.gitconfig: gitconfig
+    ~/.config/git/gitk: gitk
+    ~/.hgrc: hgrc
+
+    # Other console apps
+    ~/.tmux.conf: tmux.conf
+    ~/.screenrc: screenrc
+    ~/.vimrc: vimrc
+    ~/.quiltrc: quiltrc
+    ~/.gdbinit: gdbinit
+
+- link:
+    # GUI
+    ~/.Xdefaults: Xdefaults
+    ~/.urxvt/ext/clipboard: urxvt-perls/clipboard
+    ~/.conkyrc: conkyrc
+    ~/.xbindkeysrc: xbindkeysrc
+
+    # Distro GUI
+    ~/.config/xfce4/xfconf/xfce-perchannel-xml/keyboard-layout.xml: xfce4/keyboard-layout.xml
+    ~/.config/xfce4/xfconf/xfce-perchannel-xml/keyboards.xml: xfce4/keyboards.xml
+    ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml: xfce4/xfce4-keyboard-shortcuts.xml
+
+- link:
+    # Scripts
+    ~/bin/urxvt-tmux: bin/urxvt-tmux
+    ~/bin/nested-tmux-config: bin/nested-tmux-config
+    ~/bin/monitor-config: bin/monitor-config
+    ~/bin/set-bluetooth-audio: bin/set-bluetooth-audio
+    ~/bin/tssh: bin/tssh
+
+- shell:
+    -
+        command: ["bin/check-requirements.sh", "Checking requirements"]
+        stderr: true
+    -
+        command: ["bin/fix-shift-f6-in-mc.sh", "Fixing Shift+F6 Midnight Commander shortcut"]
+        stdout: true
+        stderr: true
+    -
+        command: ["xrdb ~/.Xdefaults", "Applying GUI config"]
+        stdout: true
+        stderr: true

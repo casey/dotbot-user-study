@@ -1,0 +1,113 @@
+# be aware: indentation must be at least 4 spaces or single tab
+
+- clean: ['~']
+
+- shell:
+    # creating directories
+    - [mkdir -p ~/.gnupg, Creating .gnupg directory]
+    - [mkdir -p ~/.config, Creating .config directory]
+    - [mkdir -p ~/.bin, Creating .bin directory]
+    - [mkdir -p ~/.gradle, Creating .gradle directory]
+    - [mkdir -p ~/Library/Application\ Support/Karabiner/, Creating Karabiner settings directory]
+    - [mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/, Creating Sublime Text 3 settings directory]
+    # keyboard layout
+    - [cp keylayout/U.S.\ International\ wo\ dead\ keys.* ~/Library/Keyboard\ Layouts/, Installing US International keyboard layout]
+    # fonts
+    - [cp fonts/* ~/Library/Fonts, Installing fonts]
+    # homebrew
+    - description: "Installing Homebrew"
+      command: 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+      stdin: true
+    # some dependencies
+    - [brew install coreutils, Installing coreutils]
+    - [brew install wget, Installing wget]
+    - [brew install curl, Installing curl]
+    - [brew install python, Installing python]
+    # zsh
+    - [brew install zsh, Installing zsh]
+    - description: "Changing default shell to zsh"
+      command: "sh zsh/install-zsh.sh"
+      stdin: true
+    # powerline shell
+    - [pip install powerline-status, Installing powerline shell]
+    # terminal notifications
+    - [brew install terminal-notifier, Installing terminal-notifier]
+    # fasd
+    - [brew install fasd, Installing fasd]
+    # git
+    - [brew install git, Installing git]
+    - [brew install git-flow, Installing git-flow]
+    - [brew install tig, Installing tig]
+    - [gem install git-up, Installing git-up]
+    # ack
+    - [brew install ack, Installing ack]
+    # ncdu
+    - [brew install ncdu, Installing ncdu]
+    # tree
+    - [brew install tree, Installing tree]
+    # bro pages
+    - description: "Installing bro pages"
+      command: "sudo gem install bropages"
+      stdin: true
+    # rdf.sh
+    - ["brew install https://raw.githubusercontent.com/seebi/rdf.sh/master/brew/rdf.sh.rb", Installing rdf.sh]
+    - [pip install Pygments, Installing Pygments]
+    - [pip install semantic_web_pygments, Installing Semantic Web lexers]
+    # raptor
+    - [brew install raptor, Installing raptor]
+    # jq
+    - [brew install jq, Installing jq]
+    # keybase / gnupg
+    - [brew install keybase, Installing keybase]
+    - [brew install gpg-agent, Installing gpg-agent]
+    - description: "Login to keybase"
+      command: "keybase login"
+      stdin: true
+    - description: "Decrypt secrets"
+      command: "sh ssh/decrypt_secrets.sh"
+      stdin: true
+    # karabiner settings
+    - [sh karabiner/karabiner-settings.sh, Restoring Karabiner settings]
+    - [sh seil/seil-settings.sh, Mapping Caps Lock to F19]
+    # osx hacks
+    - description: "OS X hacks"
+      command: "sh osx/hacks.sh"
+      stdin: true
+
+- link:
+    # zsh
+    ~/.zshrc: zsh/zshrc
+    # ack
+    ~/.ackrc: ack/ackrc
+    # slate
+    ~/.slate.js: slate/slate.js
+    # sublime
+    ~/.bin/subl: "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+    "~/Library/Application Support/Sublime Text 3/Packages/User": sublime/User
+    # git
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.bin/git-mail: git/git-mail.sh
+    ~/.bin/git-status: git/git-status.sh
+    # ssh
+    ~/.ssh: ssh
+    # powerline shell
+    ~/.config/powerline: powerline/config_files
+    # rdf.sh
+    ~/.config/rdf.sh: rdf.sh
+    # docker
+    ~/.bin/docker-i: docker/docker-i
+    ~/.bin/docker-loglast: docker/docker-loglast
+    ~/.bin/docker-psa: docker/docker-psa
+    ~/.bin/docker-rma: docker/docker-rma
+    ~/.bin/docker-rmf: docker/docker-rmf
+    ~/.bin/docker-machine-start: docker/docker-machine-start
+    ~/.bin/docker-machine-stop: docker/docker-machine-stop
+    ~/.bin/docker-machine-restart: docker/docker-machine-restart
+    ~/.bin/docker-machine-ssh: docker/docker-machine-ssh
+    # gradle
+    ~/.gradle/gradle.properties: gradle/gradle.properties
+    # karabiner
+    "~/Library/Application Support/Karabiner/private.xml": karabiner/private.xml
+    # p4merge
+    ~/.bin/p4merge: p4merge/p4merge.sh

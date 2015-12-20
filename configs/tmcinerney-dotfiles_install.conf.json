@@ -1,0 +1,24 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.ackrc":        "ackrc",
+      "~/.dotfiles":     "bashrc",
+      "~/.ctags":        "ctags",
+      "~/.gemrc":        "gemrc",
+      "~/.gitconfig":    "gitconfig",
+      "~/.gitignore":    "gitignore",
+      "~/.janus":        "vim",
+      "~/.tmux.conf":    "tmux.conf",
+      "~/.vimrc.after":  "vimrc.after",
+      "~/.vimrc.before": "vimrc.before"
+    }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"]
+    ]
+  }
+]

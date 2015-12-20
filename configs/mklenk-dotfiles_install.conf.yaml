@@ -1,0 +1,23 @@
+- clean: ['~', '~/.oh-my-zsh/plugins']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vim/vimrc
+    ~/.oh-my-zsh: zsh/oh-my-zsh/
+    ~/.oh-my-zsh/plugins/zsh-syntax-highlighting:
+        create: true
+        path: zsh/zsh-syntax-highlighting/
+    ~/.zshrc: zsh/zshrc
+    ~/.alias: alias
+    ~/.i3: i3/
+    ~/.fonts: fonts/
+    ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc
+    ~/.sshrc: sshrc
+    ~/z.sh: z.sh
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [fc-cache -rv, Clearing font cache]

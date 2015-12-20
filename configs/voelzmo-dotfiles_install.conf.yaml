@@ -1,0 +1,20 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p ~/workspace, Creating ~/workspace]
+  - [./configure-git, Setting up gitconfig]
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.vim: vim/
+    ~/.git-authors: pairing/git-authors
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.bash_profile: bash_profile
+    ~/.bash_prompt: bash_prompt
+    ~/.bash_command_proxy: proxy-settings/bash_command_proxy
+    ~/.ssh/config: ssh/config
+    ~/.bash_profile: bash_profile
+    ~/.atom: atom/
+    ~/Library/Preferences/com.googlecode.iterm2.plist: com.googlecode.iterm2.plist

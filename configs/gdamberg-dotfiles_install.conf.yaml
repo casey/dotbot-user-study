@@ -1,0 +1,18 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bashrc: bashrc
+    ~/.inputrc: inputrc
+    ~/.hgrc: hgrc
+    ~/.todo.actions.d: tools/todo.txt-addons
+    ~/.todo.cfg: todo.cfg
+    ~/.gitconfig: gitconfig
+    ~/.config/sublime-text-3/Packages/User: tools/sublime.User
+    ~/.ackrc: ackrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - mkdir -p ~/.todo
+  - gsettings set com.canonical.desktop.interface scrollbar-mode normal
+

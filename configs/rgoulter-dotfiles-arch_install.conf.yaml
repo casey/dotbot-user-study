@@ -1,0 +1,8 @@
+- clean: ['~']
+
+- link:
+    ~/.tmux.user.conf: tmux.user.conf
+    ~/.config/fish/config.user.fish: config.user.fish
+
+- shell:
+  - [git submodule update, Installing/updating submodules]

@@ -1,0 +1,30 @@
+- clean: ['~']
+
+- shell:
+    - ["mkdir -p ~/.config/{htop,i3,i3status,j4status,mpd,termite}", 
+       'Creating .config and subdirs']
+    - ["mkdir -p ~/.{mpd,ncmpcpp,vim}", 'Creating top-level hidden dirs']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.config/archey3.cfg: config/archey3.cfg
+    ~/.config/htop/htoprc: config/htop/htoprc
+    ~/.config/i3/config: config/i3/config
+    ~/.config/i3status/config: config/i3status/config
+    ~/.config/j4status/config: config/j4status/config
+    ~/.config/mpd/mpd.conf: config/mpd/mpd.conf
+    ~/.config/termite/config: config/termite/config
+    ~/.gitconfig: gitconfig
+    ~/.ncmpcpp/config: config/ncmpcpp/config 
+    ~/.promptline.sh: promptline.sh
+    ~/.rainbow_config.json: rainbow_config.json
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc
+    ~/Templates: Templates
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

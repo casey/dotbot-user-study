@@ -1,0 +1,9 @@
+- clean: ['~']
+
+- link:
+    ~/.oh-my-zsh: oh-my-zsh/ 
+    ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

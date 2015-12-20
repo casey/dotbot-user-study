@@ -1,0 +1,9 @@
+- clean: ['~']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.config/awesome:
+        create: true
+        path: _awesome/
+    ~/.gitignore: _gitignore
+    ~/.pentadactylrc: _pentadactylrc

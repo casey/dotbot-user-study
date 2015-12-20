@@ -1,0 +1,32 @@
+- clean: ['~']
+
+- link:
+    ~/.tmux: .tmux
+    ~/.tmux.conf: .tmux/.tmux.conf
+    ~/.inputrc: .inputrc
+    ~/.bash: .bash/
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore
+    ~/.vim: .vim/
+    ~/.vimrc: .vim/vimrc
+    ~/.config/nvim:
+        path: nvim
+        create: true
+
+- shell:
+    - 
+        description: Installing submodules
+        command: git submodule update --init --recursive
+    - 
+        description: Installing Vim plugins
+        command: vim +PluginInstall +qall
+        stdin: true
+        stdout: true
+        stderr: true
+    -
+        description: Installing NeoVim plugins
+        command: nvim "+colorscheme desert" +PlugInstall +qall
+        stdout: true
+        stderr: true

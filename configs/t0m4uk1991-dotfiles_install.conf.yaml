@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
+    ~/.bash-git-prompt: bash-git-prompt
+    ~/.conkyrc: conkyrc
+
+    
+    
+    
+    
+- shell:
+ - [git submodule update --init --recursive, Installing submodules]

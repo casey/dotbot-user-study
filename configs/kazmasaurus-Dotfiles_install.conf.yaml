@@ -1,0 +1,64 @@
+# Syntax can be found at https://github.com/anishathalye/dotbot
+
+- clean: ['~']
+
+- link: 
+
+    # fish
+    ~/.config/fish/config.fish:
+        create: true
+        path: fish/config.fish
+
+    # git
+    ~/.config/git/ignore:
+        create: true
+        path: git/config/.gitignore
+
+    ~/.config/git/config:
+        create: true
+        path: git/config/.gitconfig
+
+    # Xcode
+    ~/Library/Preferences/com.apple.dt.Xcode.plist:
+        create: true
+        path: Xcode/com.apple.dt.Xcode.plist
+
+- shell:
+
+    #### Plist cache nuke ####
+    # Nukes the plist cache so that anything set in link will get correctly read
+    - 
+        - killall -u zak cfprefsd
+        - Nuke plist cache
+
+    #### Homebrew ####
+    # Get Homebrew setup
+    -
+        - 'brew --version || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
+        - Install Homebrew
+    -
+        - "brew tap homebrew/bundle"
+        - Install Brewfileabilityness
+
+    # Update Homebrew if we're just touching up
+    -
+        command: brew update
+        description: Update Homebrew
+        stdout: true
+        stderr: true
+
+    # Install _All_ the things!
+    -
+        command: "brew bundle --file=homebrew/Brewfile"
+        description: Install _All_ the brewlings!
+        stdout: true
+        stderr: true
+
+    #### fish ####
+    # Add fish to the allowed shells
+    -
+        - "cat /etc/shells | grep $(which fish) || echo $(which fish) | sudo tee -a /etc/shells"
+        - Ensure fish can shell
+    -
+        - "echo $SHELL | grep $(which fish) || chsh -s $(which fish)"
+        - Set fish as shell

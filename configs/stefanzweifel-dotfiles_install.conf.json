@@ -1,0 +1,54 @@
+[
+    {
+        "clean": [
+            "~",
+            "~/.cache",
+            "~/.zshrc"
+        ]
+    },
+    {
+        "shell": [
+            ["mkdir -p ~/.composer", "Create global composer folder"],
+        ]
+    },
+    {
+        "link": {
+            "~/.gitconfig": {
+                "relink": true,
+                "force": true,
+                "path": "git/.gitconfig"
+            },
+            "~/.gitattributes": {
+                "relink": true,
+                "force": true,
+                "path": "git/.gitattributes"
+            },
+            "~/.zshrc": {
+                "relink": true,
+                "force": true,
+                "path": "zsh/.zshrc"
+            },
+            "~/.tmux.conf": {
+                "relink": true,
+                "force": true,
+                "path": "tmux/tmux.conf"
+            },
+            "~/.composer/composer.json": {
+                "relink": true,
+                "force": true,
+                "path": "composer/composer.json"
+            },
+            "~/Library/Application Support/Sublime Text 3/Packages/User": {
+                "relink" : true,
+                "force": true,
+                "path": "sublime/user"
+            }
+        }
+    },
+    {
+        "shell": [
+            ["composer global install", "Install global composer packages"],
+            ["git submodule update --init --recursive", "Installing submodules"],
+        ]
+    }
+]

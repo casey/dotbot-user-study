@@ -1,0 +1,20 @@
+- clean:
+    - '~'
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.colours: colours
+    ~/.gitconfig: gitconfig
+    ~/.i3: i3
+    ~/.mpd: mpd
+    ~/.ncmpcpp: ncmpcpp
+    ~/.oh-my-fish: oh-my-fish
+    ~/.Xresources: Xresources
+    ~/.xmodmaprc: xmodmaprc
+    ~/.config/fish:
+        create: true
+        path: config/fish
+
+- shell: []

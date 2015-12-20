@@ -1,0 +1,57 @@
+- clean: ['~']
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_profile: bash_profile
+    ~/bin: bin
+    ~/.vim: vim
+    ~/.janus: janus
+    ~/.vimrc.after: vimrc.after
+    ~/.vimrc.gui: vimrc.gui
+    ~/.tigrc: tigrc
+    ~/.ipython/kernels: ipython/kernels
+
+    ~/go: ../Dropbox/go
+
+    # platform
+    # ls platform | sed 's/^\(.*\)/~\/development\/platform\/\1 platform\/\1/'
+    #
+    ~/development/platform/.gitignore: platform/gitignore
+    ~/development/platform/build.local.xml: platform/build.local.xml
+
+    ~/development/platform/build.gradle: platform/build.gradle
+
+    ~/development/platform/karma.conf.js: platform/karma.conf.js
+    ~/development/platform/package.json: platform/package.json
+
+    ~/development/platform/lib/nrepl-servlet-context-0.1.0-standalone.jar: platform/lib/nrepl-servlet-context-0.1.0-standalone.jar
+
+    ~/development/platform/watch-env.sh: platform/watch-env.sh
+    ~/development/platform/copy-env.sh: platform/copy-env.sh
+    ~/development/platform/migratedb.sh: platform/migratedb.sh
+    ~/development/platform/rebase.sh: platform/rebase.sh
+    ~/development/platform/dcommit.sh: platform/dcommit.sh
+
+    ~/development/platform/run-amazon.sh: platform/run-amazon.sh
+    ~/development/platform/run-ecenter.sh: platform/run-ecenter.sh
+    ~/development/platform/run-estation.sh: platform/run-estation.sh
+    ~/development/platform/run-src-ecenter.sh: platform/run-src-ecenter.sh
+    ~/development/platform/run-target-ecenter.sh: platform/run-target-ecenter.sh
+    ~/development/platform/save-estation.sh: platform/save-estation.sh
+
+    ~/development/platform/tomcat: platform/tomcat
+    ~/development/platform/tomcat.pom.xml: platform/tomcat.pom.xml
+
+    ~/.jira-url: jira-url
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [cd $HOME/.vim && rake && cd $HOME/dotfiles]
+    - [brew install caskroom/cask/brew-cask]
+    - [brew install the_silver_searcher]
+    - [brew install tig]
+    - [brew install ruby]
+    - [gem install iruby]
+    - [gem install pry pry-doc --no-ri --no-rdoc]
+    - [gem install gnuplot rubyvis]

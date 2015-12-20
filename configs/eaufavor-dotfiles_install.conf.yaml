@@ -1,0 +1,12 @@
+- clean: []
+
+- link: 
+    "~/.tmux.conf":     "tmux.conf"
+    "~/.compton.conf":  "compton.conf"
+    "~/.xinitrc":  "xinitrc"
+    "~/.vimrc":  "vimrc"
+    "~/.pylintrc":  "pylintrc"
+    "~/.zprezto/runcoms": "zprezto/runcoms"
+    "~/.gitignore_global":  "gitignore_global"
+
+- shell: [git config --global core.excludesfile ~/.gitignore_global]

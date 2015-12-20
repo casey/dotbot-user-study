@@ -1,0 +1,21 @@
+- clean: ['~']
+- link:
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/bin: bin
+    ~/.atom: atom
+    ~/.bashrc: bashrc
+    ~/.profile: profile
+    ~/.aliases: aliases
+    ~/.gemrc: gemrc
+    ~/.irbrc: irbrc
+    ~/.pryrc: pryrc
+    ~/.tigrc: tigrc
+    ~/.vimrc: vimrc
+    ~/.yaourtrc: yaourtrc
+    ~/.config/fish: fish
+    ~/.config/omf: omf
+    ~/.config/sublime-text-3/Packages/User: sublime
+- shell:
+  - "git submodule update --init --recursive"

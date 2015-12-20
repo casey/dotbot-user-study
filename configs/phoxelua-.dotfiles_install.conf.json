@@ -1,0 +1,32 @@
+[   
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.dotfiles": "",
+
+            "~/.colors": "colors/",
+            "~/.fonts": "fonts/",
+            "~/.scripts": "scripts/",
+            "~/.config": "config/",
+            "~/.urxvt": "urxvt",
+            "~/.vim": "vim/",
+
+            "/etc/vimrc": "vimrc",
+            "~/.bashrc": "bashrc",
+
+            "~/.Xdefaults": "Xdefaults",
+            "~/.xinitrc": "xinitrc",
+
+            "~/.bash_history": "bash_history",
+            "~/.bash_logout": "bash_logout",
+            "~/.bash_profile": "bash_profile",
+            "~/.zshrc": "zshrc",
+            
+            "~/.gtkrc-2.0": "gtkrc-2.0",
+            "~/.dmrc": "dmrc",
+
+        }
+    }
+]

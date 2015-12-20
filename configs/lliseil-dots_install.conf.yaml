@@ -1,0 +1,25 @@
+# dotbot configuration (yaml)
+
+# Specify directories that should be checked for dead symbolic links.
+# here only deadlinks pointing to ~/<dotfiles>
+- clean: ['~']
+
+- link: 
+      ~/.mydots: ''
+      ~/.profile: config/env/profile
+      ~/.bashrc: config/bash/rc
+      ~/.bash_profile: config/bash/profile
+      ~/.inputrc: config/bash/inputrc
+      ~/.dircolors: config/bash/dircolors
+      ~/.screenrc: config/screen/rc
+      ~/.vimrc: config/vim/rc
+      ~/.vim: config/vim/
+      ~/.ranger/rc.conf: config/ranger/rc.conf
+      ~/.gitconfig: config/git/config
+      ~/.gitignore: config/git/ignore
+#     ~/.xinitrc: config/X/initrc
+#     ~/.xsession: config/X/session
+      ~/bin: bin/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

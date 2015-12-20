@@ -1,0 +1,18 @@
+- clean: ['~']
+
+- link:
+    ~/.xmonad: xmonad
+    ~/.vim: vim
+    ~/.fonts: fonts
+    ~/.zshrc: zsh/zshrc
+    ~/.zprofile: zsh/zprofile
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zprezto: zsh/zprezto
+    ~/.Xresources: urxvt/Xresources
+    ~/.tmux.conf: tmux/tmux.conf
+    ~/.config/powerline: powerline_config
+
+- shell:
+  - [git submodule update --init --recursive dotbot, Installing/updating dotbot submodules]
+  - [git submodule update --init --recursive zsh/zprezto, Installing/updating zsh submodules]
+  - [fc-cache -vf ~/.fonts/, Updating local fonts]

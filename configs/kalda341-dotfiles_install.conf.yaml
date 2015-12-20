@@ -1,0 +1,30 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux/
+    ~/.i3: i3/
+    ~/.zshrc: zshrc
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.vimperatorrc: vimperatorrc
+    ~/.ncmpcpp: ncmpcpp
+    ~/.Xresources: Xresources
+    ~/.config/beets: beets
+    ~/.config/dunst: dunst
+    ~/.config/luakit: luakit
+    ~/.config/ranger: ranger
+    ~/.vimperatorrc: vimperatorrc
+    ~/.zsh-antigen: zsh-antigen
+    ~/.synergy.conf: synergy.conf
+    ~/.weechat: weechat
+
+- shell:
+    - ln -s ~/.zprezto/runcoms/zpreztorc ~/.zpreztorc
+    - ln -s ~/.zprezto/runcoms/zshrc ~/.zshrc
+    - ln -s ~/.zprezto/runcoms/zprofile ~/.zprofile
+    - mkdir -p ~/src
+    - mkdir -p ~/Downloads
+    - mkdir -p ~/bin
+    - vim -c "BundleInstall"

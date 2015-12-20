@@ -1,0 +1,12 @@
+- link:
+    ~/.bash_aliases: bash_aliases
+    ~/.bashrc: bashrc
+    ~/.bashrc.d: bashrc.d
+    ~/.gitconfig: gitconfig
+    ~/.run_scripts: run_scripts
+    ~/.tmux.conf: tmux.conf
+    ~/.tmuxstatusline: tmuxstatusline
+    ~/.vimrc: vimrc
+    ~/.xinitrc: xinitrc
+    ~/.Xmodmap: Xmodmap
+    ~/.Xresources: Xresources

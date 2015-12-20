@@ -1,0 +1,33 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.pythonrc.py: python/pythonrc
+    ~/.pydistutils.cfg: python/pydistutils.cfg
+    ~/.ipython: python/ipython
+    ~/.gitignore_global: git/gitignore_global
+    ~/.gitconfig: git/gitconfig
+    ~/.git-completion.sh: git/git-completion.sh
+    ~/.zshrc: zsh/zshrc
+    ~/.zprofile: zsh/zprofile
+    ~/.zshenv: zsh/zshenv
+    ~/.zlogin: zsh/zlogin
+    ~/.zlogout: zsh/zlogout
+    ~/.zprezto: zsh/prezto
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.bashrc:       bash/bashrc
+    ~/.bash_profile: bash/bash_profile
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.bash_exports: bash/bash_exports
+    ~/.bash_options: bash/bash_options
+    ~/.bash_paths:   bash/bash_paths
+    ~/.bash_prompt:  bash/bash_prompt
+    ~/.inputrc:      bash/inputrc
+    ~/.fonts:        fonts
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [~/.fonts/install.sh, Installing powerline fonts]
+    - [mkdir -p ~/.history, Create directory for python history]

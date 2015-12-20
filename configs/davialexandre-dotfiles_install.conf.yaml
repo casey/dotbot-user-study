@@ -1,0 +1,31 @@
+- clean: ['~']
+- link:
+    ~/.vim:
+        path: 'files/.vim/'
+        force: true
+    ~/.vimrc:
+        path: 'files/.vimrc'
+        force: true
+    ~/.gvimrc:
+        path: 'files/.gvimrc'
+        force: true
+    ~/.bash_profile:
+        path: 'files/.bash_profile'
+        force: true
+    ~/.gitconfig:
+        path: 'files/.gitconfig'
+        force: true
+    ~/.gitignore_global:
+        path: 'files/.gitignore_global'
+        force: true
+    ~/.zshrc:
+        path: 'files/.zshrc'
+        force: true
+    ~/.npmrc:
+        path: 'files/.npmrc'
+        force: true
+- shell:
+     - [source scripts/osx.sh]
+     - [pip install --user powerline-status]
+     - [source scripts/install_powerline_fonts.sh]
+     - [mkdir ~/npm]

@@ -1,0 +1,23 @@
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [mkdir -p ~/.urxvt/ext]
+    - [mkdir -p ~/.ptpython]
+
+- link:
+    # Dotfiles in ~
+    ~/.bashrc: bashrc 
+    ~/.compton.conf: compton.conf 
+    ~/.gitconfig: gitconfig 
+    ~/.gitignore: gitignore 
+    ~/.pam_environment : pam_environment 
+    ~/.pythonrc : pythonrc
+    ~/.startup : startup
+    ~/.tmux.conf: tmux.conf
+    ~/.vimperatorrc: vimperatorrc
+    ~/.Xresources: Xresources
+    ~/.zshrc: zshrc
+    ~/.urxvt/ext/clipboard: urxvt/clipboard
+    ~/.ptpython/config.py: ptpython/config.py
+    

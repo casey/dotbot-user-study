@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- shell:
+    - "git submodule update --init --recursive vundle"
+    - ["if [ ! -d vim/bundle ]; then mkdir vim/bundle; fi", "Set up vundle"]
+
+- link:
+    ~/.tmux.conf : tmux.conf
+    ./vim/bundle/Vundle.vim: vundle/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml:
+        force: true
+        path: xfce4-keyboard-shortcuts.xml

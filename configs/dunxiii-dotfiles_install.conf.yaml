@@ -1,0 +1,46 @@
+- clean: ['~', '~/.config', '~/.vim/bundle/']
+
+- shell:
+    - mkdir -p ~/{Downloads,Documents}
+
+- link:
+    ~/.zshrc:
+        force: true
+        path: .zshrc
+    ~/.zlogin:
+        force: true
+        path: .zlogin
+    ~/.vimrc:
+        force: true
+        path: .vimrc
+    ~/.vim/bundle/Vundle.vim:
+        create: true
+        force: true
+        path: Vundle.vim/
+    ~/.gitconfig:
+        force: true
+        path: .gitconfig
+    ~/.i3:
+        force: true
+        path: i3/
+    ~/.config/ranger:
+        create: true
+        force: true
+        path: ranger
+    ~/.xinitrc:
+        force: true
+        path: .xinitrc
+    ~/.Xresources:
+        force: true
+        path: .Xresources
+    ~/.urxvt/ext:
+        create: true
+        force: true
+        path: urxvt-font-size/
+    ~/.config/zathura/zathurarc:
+        create: true
+        force: true
+        path: zathurarc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

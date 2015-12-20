@@ -1,0 +1,23 @@
+- shell:
+    - mkdir -p $HOME/.config
+    - [git pull, Updating dotfiles]
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
+    ~/.profile: profile
+    ~/.zprofile: zprofile
+    ~/.emacs.d: emacs.d/
+    ~/.exrc: exrc
+    ~/.gitconfig: gitconfig
+    ~/.spacemacs: spacemacs
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.config/nvim: vim/
+    ~/.vimrc: vim/init.vim
+    ~/.zshrc: zshrc
+
+- shell:
+    - [git submodule update --init --recursive, Updating submodules]

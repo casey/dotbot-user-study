@@ -1,0 +1,27 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.aliases: files/aliases
+    ~/.bash_profile: files/bash_profile
+    ~/.bash_prompt: files/bash_prompt
+    ~/.bashrc: files/bashrc
+    ~/.emacs.d: src/spacemacs
+    ~/.exports: files/exports
+    ~/.gitconfig: files/gitconfig
+    ~/.gitignore-global: files/gitignore-global
+    ~/.inputrc: files/inputrc
+    ~/.path: files/path
+    ~/.sbt/0.13/plugins/plugins.sbt:
+      create: true
+      path: files/sbt/0.13/plugins/plugins.sbt
+    ~/.spacemacs: files/spacemacs
+    ~/.toprc: files/toprc
+    ~/.vim: files/vim/
+    ~/.vimrc: files/vimrc
+    ~/.wgetrc: files/wgetrc
+    bin/osx-config: src/osx-config
+    bin/git-remote-dropbox: src/git-remote-dropbox/git-remote-dropbox
+
+- shell:
+    - mkdir -p files/vim/{backups,swaps,undo}

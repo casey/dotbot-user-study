@@ -1,0 +1,9 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: .bash_profile
+    ~/.bashrc: .bashrc
+    ~/.emacs: .emacs
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

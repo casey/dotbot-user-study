@@ -1,0 +1,28 @@
+- clean: ['~']
+- link:
+    "~/.dotfiles": ""
+    ~/.ssh/config:
+        force: true
+        path: ssh/config
+    ~/.ssh/known_hosts:
+        force: true
+        path: ssh/known_hosts
+    ~/.vimrc: 
+        force: true
+        path: vimrc
+    ~/.zshrc: 
+        force: true
+        path: zshrc
+    ~/.gitconfig: 
+        force: true
+        path: gitconfig
+    ~/.gitignore_global: 
+        force: true
+        path: gitignore_global 
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting:
+        force:  true
+        path: zsh-syntax-highlighting/
+    ~/.vim/autoload/pathogen.vim:
+        force:  true
+        create: true
+        path: vim-pathogen/autoload/pathogen.vim

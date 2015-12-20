@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.Xdefaults: Xdefaults
+    ~/.bash_logout: bash_logout
+    ~/.bashrc: bashrc
+    ~/.emacs: emacs
+    ~/.screenrc: screenrc
+    ~/.synergy.conf: synergy.conf
+    ~/.bash: bash/
+    ~/emacslib: emacslib/    
+    ~/bin: bin/    
+

@@ -1,0 +1,13 @@
+- clean: []
+- link:
+    ~/.ackrc: ackrc
+    ~/.bash_profile: .bash_profile
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: .gitignore
+    ~/.git-completion.bash: .git-completion.bash
+    ~/.rspec: rspec
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

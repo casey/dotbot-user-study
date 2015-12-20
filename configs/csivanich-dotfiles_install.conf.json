@@ -1,0 +1,107 @@
+[
+    {
+        "meta" : {
+            "title" : "Local bin files",
+            "description" : "Scripts to be added to local ~/bin/"
+        },
+        "link" : {
+            "~/bin/dux" : "libs/github/dux/dux.py",
+            "~/bin/glacier" : "libs/github/glacier-cli/glacier.py"
+        }
+    },
+    {
+        "link" : {
+            "~/.fonts" : "fonts",
+            "~/.aliases" : "other/aliases",
+            "~/.gitconfig": "other/gitconfig",
+            "~/.ctags" : "other/ctags"
+        },
+        "meta" : {
+            "title" : "Other",
+            "description" : "Files which don't fit anywhere else"
+        }
+    },
+    {
+        "meta" : {
+            "title" : "Dunst",
+            "description" : "Dunst notification settings"
+        },
+        "link" : {
+            "~/.config/dunst/dunstrc" : "dunst/dunstrc"
+        },
+
+        "meta" : {
+            "title" : "Tmux"
+        },
+        "link" : {
+            "~/.tmux.conf" : "tmux/tmux.conf"
+        }
+    },
+    {
+        "meta" : {
+            "title" : "X Resources",
+            "description" : "Xresources and xinitrc"
+        },
+        "link" : {
+            "~/.Xresources" : "x/Xresources",
+            "~/.xinitrc" : "x/xinitrc",
+            "~/.xbindkeysrc" : "x/xbindkeysrc"
+        }
+    },
+    {
+        "meta" : {
+            "title" : "Compton configuration"
+        },
+        "link" : {
+            "~/.compton.conf" : "compton/compton.conf"
+        }
+    },
+    {
+        "meta" : {
+            "title" : "Vim",
+            "description" : "Vim and vimrc"
+        },
+        "link" : {
+            "~/.vim" : "vim/vim",
+            "~/.vimrc" : "vim/vimrc"
+        }
+    },
+    {
+        "meta" : {
+            "title" : "Zsh"
+        },
+        "link" : {
+            "~/.zsh.d/000-dux.zsh" : "zsh/000-dux.zsh",
+            "~/.zsh.d/bindkeys.zsh" : "zsh/bindings.zsh",
+            "~/.zsh.d/colored_man.zsh" : "zsh/colored_man.zsh",
+            "~/.zsh.d/exports.zsh" : "zsh/exports.zsh",
+            "~/.zsh.d/prompt.zsh" : "zsh/prompt.zsh",
+            "~/.zsh.d/setopt.zsh" : "zsh/setopt.zsh",
+            "~/.zsh.d/z.sh" : "zsh/z.sh",
+            "~/.zsh.d/zsh-syntax-highlighting.zsh" : "zsh/zsh-syntax-highlighting.zsh",
+            "~/.zshrc" : "zsh/zshrc"
+        }
+    },
+    {
+        "meta" : {
+            "title" : "$HOME/bin"
+        },
+        "link" : {
+            "~/bin/dux" : "libs/github/dux/dux.py"
+        }
+    },
+    {
+        "meta" : {
+            "title" : "i3"
+        },
+        "link" : {
+            "~/.i3" : "i3"
+        }
+    },
+    {
+        "clean" : ["~"],
+        "meta" : {
+            "title" : "Clean symlinks which have moved"
+        }
+    }
+]

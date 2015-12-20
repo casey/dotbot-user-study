@@ -1,0 +1,29 @@
+- clean: ['~']
+
+- link:
+    ~/.agignore: agignore
+    ~/.astylerc: astylerc
+    ~/.bin: bin/
+    ~/.gemrc: gemrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.templates/git/hooks:
+      create: true
+      path: templates/git/hooks/
+    ~/.vim/after/plugin/abolish.vim:
+      create: true
+      path: vim/after/plugin/abolish.vim
+    ~/.vim/colors/Tomorrow-Night.vim:
+      create: true
+      path: vim/colors/Tomorrow-Night.vim
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+
+- shell:
+  - mkdir -p ~/.vim/tmp/{backup,swap,undo}
+  - git submodule update --init --remote
+  - brew tap homebrew/bundle
+  - brew bundle
+  - brew update
+  - brew upgrade

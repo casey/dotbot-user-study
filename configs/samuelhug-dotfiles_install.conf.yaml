@@ -1,0 +1,37 @@
+- clean: ['~']
+
+- shell:
+  - [rm -rf tmux/plugins/tpm, Clean old tpm plugin directory]
+  - [rm -rf ~/.local/share/omf, Clean old omf installations]
+  - 
+    command: git clone -q --depth 1 https://github.com/oh-my-fish/oh-my-fish.git ~/.local/share/omf
+
+  - [rm -rf ~/.config/omf, Clean default omf configuration]
+  - [rm -rf ~/.config/fish, Clean default omf configuration]
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux/
+    ~/.vimrc: vimrc
+    ~/.vim: vim/
+    ~/.config/fish:
+        create: true
+        force: true
+        path: fish/
+    ~/.config/omf:
+        create: true
+        force: true
+        path: omf/config/
+
+- shell:
+  - [fish -c 'omf install']
+  -
+    command: git clone https://github.com/tmux-plugins/tpm.git tmux/plugins/tpm
+  - [git submodule update --init --recursive, Installing submodules]
+    #-
+    #command: tmux -c 'TMUX_PLUGIN_MANAGER_PATH='/home/vagrant/.dotfiles/tmux/plugins/' CI=vagrant /home/vagrant/.tmux/plugins/tpm/bin/install_plugins'
+  - 
+    command: fish -c 'omf theme (cat $OMF_CONFIG/theme)'
+    stdin: True
+    stdout: True
+    stderr: True

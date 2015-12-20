@@ -1,0 +1,65 @@
+- link:
+    ~/bin:
+        create: true
+        path: bin/
+    ~/.config/awesome:
+        create: true
+        path: .config/awesome/
+    ~/.config/mpv:
+        create: true
+        path: .config/mpv/
+    ~/.config/ranger:
+        create: true
+        path: .config/ranger/
+    ~/.config/systemd:
+        create: true
+        path: .config/systemd/
+    ~/.emacs.d:
+        create: true
+        path: .emacs.d/
+    ~/.config/rssdler:
+        create: true
+        path: .config/rssdler/
+    ~/.dynamic-colors:
+        create: true
+        path: .dynamic-colors/
+    ~/.fonts:
+        create: true
+        path: .fonts/
+    ~/.oh-my-zsh:
+        create: true
+        path: .oh-my-zsh/
+    ~/.pentadactyl/colors:
+       create: true
+       path: .pentadactyl/colors/
+    ~/.xmonad:
+        create: true
+        path: .xmonad/
+    ~/.zsh:
+        create: true
+        path: .zsh/
+    ~/.bashrc: .bashrc
+    ~/.config/compton.conf: .config/compton.conf
+    ~/.config/redshift.conf: .config/redshift.conf
+    ~/.gtkrc-2.0: .gtkrc-2.0
+    ~/.gtkrc.mine: .gtkrc.mine
+    ~/.livestreamerrc: .livestreamerrc
+    ~/.pentadactylrc: .pentadactylrc
+    ~/.profile: .profile
+    ~/.pythonrc: .pythonrc
+    ~/.rssdler/config.txt:
+        create: true
+        path: .rssdler/config.txt
+    ~/.stalonetrayrc: .stalonetrayrc
+    ~/.start-xmonad: .start-xmonad
+    ~/.vimrc: .vimrc
+    ~/.xbindkeysrc: .xbindkeysrc
+    ~/.xinitrc: .xinitrc
+    ~/.xmobarrc: .xmobarrc
+    ~/.Xresources: .Xresources
+    ~/.zlogin: .zlogin
+    ~/.zprofile: .zprofile
+    ~/.zshenv: .zshenv
+    ~/.zshrc:
+        force: true
+        path: .zshrc        

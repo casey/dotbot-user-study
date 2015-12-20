@@ -1,0 +1,23 @@
+- clean: ['~']
+- link:
+    ~/.config/bspwm:
+      create: true
+      path: bspwm
+    ~/.config/sxhkd:
+      create: true
+      path: sxhkd
+    ~/.config/compton.conf:
+      create: true
+      path: compton.conf
+    ~/.profile: profile
+    ~/.Xresources: Xresources
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+- shell:
+    - [mkdir -p ~/tmp, Creating vim temp directory]
+    - ['git clone https://github.com/zsh-users/antigen.git ~/.antigen/', Cloning antigen]
+    - ['git clone https://github.com/ingydotnet/git-hub ~/.git-hub/', Cloning git-hub]
+    - ['curl -L https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh', Installing NeoBundle]
+    - ['curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash', Installing PyEnv]
+    - ['curl -L https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash', Installing NVM]

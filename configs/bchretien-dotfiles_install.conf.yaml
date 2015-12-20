@@ -1,0 +1,125 @@
+#######################################################################
+#                               Aliases                               #
+#######################################################################
+
+- aliases:
+    # Install vim plugins
+    - &vim_plugins
+      command: vim -Nu ~/.vimrc.plugins +PlugInstall
+      stdin: true
+      stdout: true
+      stderr: true
+
+    # Install neovim plugins
+    - &nvim_plugins
+      command: nvim -u ~/.config/nvim/plugins.vim +PlugInstall
+      stdin: true
+      stdout: true
+      stderr: true
+
+
+#######################################################################
+#                               Install                               #
+#######################################################################
+
+- clean: ['~', '~/.config', '~/.vim', '~/.vim/autoload',
+          '~/.config/nvim', '~/.config/nvim/autoload']
+
+- shell:
+    - git submodule update --init --recursive
+    - ./lib/prepare_ini.sh
+
+- link:
+    ~/.dotfiles: ''
+    # dev
+    ~/.gdb: dev/gdb/
+    ~/.gdbinit: dev/gdbinit
+    ~/.gdbinit.local: dev/gdbinit.local
+    ~/.git_template: dev/git_template/
+    ~/.gitconfig: dev/gitconfig
+    ~/.gitconfig.local: dev/gitconfig.local
+    ~/.hgrc: dev/hgrc
+    ~/.hgrc.local: dev/hgrc.local
+    ~/.latexmkrc: dev/latexmkrc
+    ~/.lldbinit: dev/lldbinit
+    ~/.config/matplotlib/matplotlibrc: dev/matplotlibrc
+    ~/.valgrindrc: dev/valgrindrc
+    # emacs
+    ~/.emacs_zsh: editor/emacs_zsh
+    ~/.emacs.d: editor/emacs.d/
+    ~/.spacemacs: editor/spacemacs
+    # neovim
+    ~/.config/nvim/init.vim: editor/nvimrc
+    ~/.config/nvim/plugins.vim: editor/nvimrc.plugins
+    ~/.local/share/nvim/autoload/plug.vim:
+      create: true
+      path: editor/vim/autoload/plug.vim
+    ~/.config/nvim/custom_snippets:
+      create: true
+      path: editor/custom_snippets/
+    ~/.ycm_extra_conf.py: editor/ycm_extra_conf.py
+    # vim
+    ~/.vimrc: editor/vimrc
+    ~/.vimrc.plugins: editor/vimrc.plugins
+    ~/.vim/autoload/plug.vim:
+      create: true
+      path: editor/vim/autoload/plug.vim
+    ~/.vim/after/compiler/gcc.vim:
+      create: true
+      path: editor/vim/after/compiler/gcc.vim
+    ~/.vim/custom_snippets:
+      create: true
+      path: editor/custom_snippets/
+    # gui
+    ~/.i3: gui/i3/
+    ~/.themes: gui/themes/
+    ~/.Xresources: gui/Xresources
+    ~/.xbindkeysrc: gui/xbindkeysrc
+    # media
+    ~/.mpd: media/mpd/
+    ~/.ncmpcpp: media/ncmpcpp/
+    # term
+    ~/.fzfrc: term/fzfrc
+    ~/.screenrc: term/screenrc
+    ~/.tmux.conf: term/tmux.conf
+    ~/.tmux: term/tmux/
+    ~/.tmuxifier: term/tmuxifier/
+    ~/.weechat: term/weechat/
+    # util
+    ~/.fonts: util/fonts/
+    ~/.gnupg/gpg.conf: util/gnupg/gpg.conf
+    ~/.gnupg/gpg-agent.conf: util/gnupg/gpg-agent.conf
+    # zsh
+    ~/.zprezto: term/zsh/zprezto/
+    ~/.zpreztorc: term/zsh/zpreztorc
+    ~/.zshrc: term/zsh/zshrc
+    ~/.zshrc.local: term/zsh/zshrc.local
+    ~/.zshenv: term/zsh/zshenv
+    ~/.zshenv.local: term/zsh/zshenv.local
+    ~/.zprofile: term/zsh/zprofile
+    ~/.zprofile.local: term/zsh/zprofile.local
+    # Special case: ~/.config
+    ~/.config/fontconfig:
+      create: true
+      path: config/fontconfig/
+    ~/.config/glances:
+      create: true
+      path: config/glances/
+    ~/.config/qutebrowser:
+      create: true
+      path: config/qutebrowser/
+    ~/.config/pulse:
+      create: true
+      path: config/pulse/
+    ~/.config/ranger:
+      create: true
+      path: config/ranger/
+    ~/.config/termite:
+      create: true
+      path: config/termite/
+
+- shell:
+    - fc-cache -vf ~/.fonts # load fonts
+    - mkdir -p ~/.ssh 2> /dev/null
+    - *vim_plugins
+    - *nvim_plugins

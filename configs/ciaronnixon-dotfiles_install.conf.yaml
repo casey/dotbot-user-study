@@ -1,0 +1,35 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bash_profile:
+        path: bash/.bash_profile
+        force: true
+    ~/.aliases:
+        path: shell/.aliases
+        force: true
+    ~/.exports:
+        path: shell/.exports
+        force: true
+    ~/.functions:
+        path: shell/.functions
+        force: true
+    ~/.path:
+        path: shell/.path
+        force: true
+    ~/.prompt:
+        path: shell/.prompt
+        force: true
+
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [source homebrew/install.sh, Installing Homebrew]
+  - [source git/install.sh, Installing Git]
+  - [source python/install.sh, Installing Python]
+  - [source nodejs/install.sh, Installing Node.js]
+  - [source ruby/install.sh, Installing Ruby]
+  - [source jekyll/install.sh, Installing Jekyll]
+  - [source grunt/install.sh, Installing Grunt]
+  - [hash -r, Resetting shell path cache]
+  - [brew doctor, Checking Homebrew install]

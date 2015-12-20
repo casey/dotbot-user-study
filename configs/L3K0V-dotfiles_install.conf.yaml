@@ -1,0 +1,61 @@
+- shell:
+    - ["mkdir -p ~/.config/fish ~/.zsh ~/.oh-my-zsh/custom/themes", "Checking folder structure exists"]
+
+- clean: ['~', '~/.config/fish', '~/.zsh', '~/.oh-my-zsh/custom/themes']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zsh:
+      path: config/zsh/
+      replace: true
+      force: true
+    ~/.zshrc: config/zsh/zshrc
+    ~/.zshenv:
+      path: config/zsh/zshenv
+      force: true
+      replace: true
+    ~/.zsh_aliases:
+      path: config/zsh/zsh_aliases
+      force: true
+      replace: true
+    ~/.oh-my-zsh/custom/themes:
+      path: oh-my-zsh/custom/themes/
+      force: true
+      replace: true
+    ~/.config/fish/config.fish : config/fish/config.fish
+    ~/.bashrc:
+      path: bashrc
+      force: true
+      repalce: true
+    ~/.bash_profile :
+      path: bash_profile
+      force: true
+      replace: true
+    ~/.gitconfig:
+      create:     true
+      path:       gitfiles/gitconfig
+      backup:     ./backup
+      replace:    true
+      force:      true
+    ~/.gitignore_global:
+      create:     true
+      path:       gitfiles/gitignore_global
+      backup:     ./backup
+      replace:    true
+      force:      true
+    ~/.gitconfig.local:
+      create:     true
+      path:       gitfiles/gitconfig.local
+      replace:    true
+      force:      true
+    ~/bin:
+      create:     true
+      path:       bin/
+      backup:     ./backup
+      replace:    true
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [git submodule foreach git pull, Updating submodules]

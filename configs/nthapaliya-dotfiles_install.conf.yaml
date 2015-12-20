@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: "tmux/tmux.conf"
+    ~/.vim: "vim/"
+    ~/.config/nvim: "vim/"
+    ~/.zshenv: "zsh/zshenv"
+    ~/.zshrc: "zsh/zshrc"
+    ~/.railsrc: "ruby/railsrc"
+    ~/.irbrc: "ruby/irbrc"
+    ~/.gitignore_global: "git/gitignore_global"
+    ~/.gitconfig: "git/gitconfig"
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [./helpers/save-current-packages]

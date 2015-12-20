@@ -1,0 +1,29 @@
+- clean: ['~']
+
+- link:
+    ~/.config/nvim:
+        create: true
+        relink: true
+        path: .config/nvim/
+    ~/.vimrc:
+        relink: true
+        path: .config/nvim/init.vim
+    ~/.vim:
+        relink: true
+        path: .config/nvim/
+    ~/.i3: .i3/
+    ~/.weechat: .weechat/
+    ~/.Rprofile: .Rprofile
+    ~/.alsoftrc: .alsoftrc
+    ~/.bashrc: .bashrc
+    ~/.bash_alias: .bash_alias
+    ~/.bash_profile: .bash_profile
+    ~/.ghci: .ghci
+    ~/.gitconfig: .gitconfig
+    ~/.tmux.conf: .tmux.conf
+    ~/.yaourtrc: .yaourtrc
+    ~/.ycm_extra_conf.py: .ycm_extra_conf.py
+
+- shell:
+  - mkdir -p ~/src
+  - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,24 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.dotfiles": "",
+      "~/.bash_profile": "bash_profile",
+      "~/.bashrc": "bashrc",
+      "~/.Xresources": "Xresources",
+      "~/.hgignore_global": "hgignore_global",
+      "~/.hgrc": "hgrc",
+      "~/.gitignore_global": "gitignore_global",
+      "~/.gitconfig": "gitconfig",
+      "~/.vim": "vim/",
+      "~/.vimrc": "vimrc",
+    }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"]
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.gitignore: gitignore
+    ~/.zshrc: zshrc
+    ~/.xmobarrc: xmonad/xmobarrc
+    ~/.git_template: git_template
+
+- shell:
+  - [git config --global core.excludesfile ~/.gitignore, Setting up gitignore]
+  - [git config --global init.templatedir ~/.git_template, Setting up git_templates]
+  - [mkdir -p ~/.xmonad, Creating xmonad folder]
+
+- link:
+    ~/.xmonad/xmonad.hs": xmonad/xmonad.hs
+    ~/.xmonad/xmonad_dual_screen.hs": xmonad/xmonad_dual_screen.hs
+    ~/.xmonad/start-xmonad": xmonad/start-xmonad
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+
+- link:
+    ~/.vim: vim/,
+    ~/.oh-my-zsh: zsh/oh-my-zsh
+
+- shell:
+  - [mkdir -p ~/.oh-my-zsh/custom/themes, Creating custom theme dir]
+
+- link:
+    ~/.oh-my-zsh/custom/themes/cloud.zsh-theme: zsh/cloud.zsh-theme

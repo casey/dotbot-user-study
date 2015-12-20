@@ -1,0 +1,16 @@
+- clean: ["~"]
+- link:
+    ~/.dotfiles: ''
+    ~/.vimrc: cfg/vimrc
+    ~/.gitconfig: cfg/gitconfig
+    ~/.gitignore_global: cfg/gitignore_global
+    ~/.tmux.conf: cfg/tmux.conf
+    ~/.ctags: cfg/ctags
+    ~/.zshrc: cfg/zshrc 
+    ~/.vim: cfg/vim
+    ~/.oh-my-zsh: cfg/oh-my-zsh
+- shell:
+    - [git submodule update --init --recursive, Installing/updating submodules]
+    - [mkdir ~/.oh-my-zsh/custom/themes, Creating custom theme directory for oh-my-zsh]
+    - [cp cfg/custom/af-magic.zsh-theme ~/.oh-my-zsh/custom/themes/, Copying custom theme]
+    - [chsh -s /bin/zsh, Changing shell to zsh]

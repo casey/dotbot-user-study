@@ -1,0 +1,10 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.antigen.zsh: antigen/antigen.zsh
+    ~/.zshrc: zshrc
+    ~/.aliases: aliases
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

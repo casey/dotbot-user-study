@@ -1,0 +1,22 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.oh-my-zsh/custom/tomdale.zsh-theme: tomdale.zsh-theme
+    ~/.zshrc: zshrc
+    ~/.zshrc.local: zshrc.local
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: janus/
+    ~/.vimrc.before: vimrc.before
+    ~/.vimrc.after: vimrc.after
+    ~/.gvimrc.after: gvimrc.after
+    ~/.janus: janus-extra/
+    ~/.ackrc: ackrc
+    ~/.gemrc: gemrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ['cd janus && rake', Run rake in ./janus]

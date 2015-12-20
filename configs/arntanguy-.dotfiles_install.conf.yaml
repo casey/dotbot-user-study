@@ -1,0 +1,45 @@
+- clean: ['~', '~/.vim']
+
+- shell:
+  - [git submodule update --init --remote --recursive, Installing submodules]
+  - command: cd term/powerline-shell && ./install.py
+
+- link:
+    # Dev
+    ~/.gitconfig: dev/gitconfig
+    ~/.ycm_extra_conf.py: dev/ycm_extra_conf.py
+    ~/.clang-format: dev/clang-format
+    # Term
+    ~/.tmux.conf: term/tmux.conf
+    ~/.tmux: term/tmux/
+    ~/.bashrc: term/bash/bashrc
+    ~/.term_common: term/term_common
+    # ~/.zshrc: term/zshrc
+    # ~/.oh-my-zsh: term/oh-my-zsh
+    ~/.zprezto: term/zsh/prezto
+    ~/.zlogin: term/zsh/zlogin
+    ~/.zlogout: term/zsh/zlogout
+    ~/.zpreztorc: term/zsh/zpreztorc
+    ~/.zprofile: term/zsh/zprofile
+    ~/.zshenv: term/zsh/zshenv
+    ~/.zshrc: term/zsh/zshrc
+    ~/.mydircolors: term/mydircolors
+    ~/.powerline-shell.py: term/powerline-shell/powerline-shell.py
+    # GUI
+    ~/.xmonad: gui/xmonad
+    ~/.i3: gui/i3
+    ~/.xmobarrc: gui/xmobarrc
+    ~/.xbindkeys: gui/xbindkeys
+    ~/.xinitrc: gui/xinitrc
+    ~/.config/redshift.conf: gui/redshift.conf
+    # Editor
+    ~/.config/nvim: editor/vim
+    ~/.config/nvim/autoload/plug.vim: editor/vim/vim-plug/plug.vim
+
+- shell:
+  # Install vim plugins
+  - command: nvim -Nu ~/.config/nvim/vimrc.plugins +PlugUpdate +qall &> /dev/null
+    stdin: true
+    stdout: true
+    stderr: true
+

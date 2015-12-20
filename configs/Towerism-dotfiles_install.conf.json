@@ -1,0 +1,17 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "shell": [
+            ["git pull", "Pulling latest commits"],
+            ["rm -rf ~/.emacs.d/private", "Removing default emacs.d private dir"]
+        ]
+    },
+    {
+        "link": {
+            "~/.spacemacs": "spacemacs",
+            "~/.emacs.d/private": "emacs.d/private/"
+        }
+    }
+]

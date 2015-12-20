@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.zshrc.local: zshrc.local
+    ~/.Xresources: Xresources
+    ~/.alias: alias
+    ~/.xprofile: xprofile
+
+- shell: 
+    - 
+        command: sh ./neobundle-install.sh
+        stdout: true
+        stderr: true

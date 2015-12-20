@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.bashrc: bashrc
+    ~/.fonts: fonts/
+    ~/.config/terminator:
+      create: true
+      path: config/terminator/
+    ~/.zsh: zsh/
+    ~/.zshrc:
+      force: true
+      path: zshrc
+    ~/.gitconfig: gitconfig

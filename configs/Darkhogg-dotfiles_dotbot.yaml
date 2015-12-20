@@ -1,0 +1,35 @@
+- shell:
+    - ["git submodule update --init --recursive", "Setting up submodules"]
+
+-
+  shell:
+    - ["touch ~/.hushlogin", "Hush Login"]
+  link:
+    ~/.gitconfig:
+      force: true
+      path: gitconfig
+
+    ~/.gnupg/gpg.conf:
+      force: true
+      create: true
+      path: gpg.conf
+
+    ~/.nanorc:
+      force: true
+      path: nanorc
+
+    ~/nodemon.json:
+      force: true
+      path: nodemon.json
+
+    ~/.config/pacaur/config:
+      force: true
+      create: true
+      path: pacaur.conf
+
+    ~/.zshrc:
+      force: true
+      path: zshrc
+
+- shell:
+    - ["make -C nanorc.d", "Setting up nanorc"]

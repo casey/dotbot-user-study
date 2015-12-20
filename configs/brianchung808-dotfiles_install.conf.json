@@ -1,0 +1,72 @@
+[ {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+      "~/.dotfiles": {
+        "path": "",
+        "relink": true
+      },
+
+      "~/.vim": {
+        "path": "vim/",
+        "relink": true
+      },
+
+      "~/.nvim": {
+        "path": "vim/",
+        "relink": true
+      },
+
+      "~/.vimrc": {
+        "path": "vimrc",
+        "relink": true
+      },
+
+      "~/.nvimrc": {
+        "path": "vimrc",
+        "relink": true
+      },
+
+      "~/.oh-my-zsh": {
+        "path": "oh-my-zsh",
+        "relink": true
+      },
+
+      "~/.zshrc": {
+        "path": "zshrc",
+        "relink": true
+      },
+
+      "~/.eslintrc": {
+        "path": "eslintrc",
+        "relink": true
+      },
+
+      "~/.gitconfig": {
+        "path": "gitconfig",
+        "relink": true
+      },
+
+      "~/.gitignore_global": {
+        "path": "gitignore_global",
+        "relink": true
+      },
+
+      "~/.hammerspoon": {
+        "path": "hammerspoon",
+        "relink": true
+      },
+
+      "~/.emacs.d": {
+        "path": "emacs.d",
+        "relink": true
+      }
+    }
+  },
+  {
+    "shell": [
+      ["git submodule update --init --recursive", "Installing submodules"]
+    ]
+  }
+]

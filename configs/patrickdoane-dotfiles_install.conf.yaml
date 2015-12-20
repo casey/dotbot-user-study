@@ -1,0 +1,22 @@
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.ctags: ctags
+    ~/.dircolors: dircolors
+    ~/.dircolors.monokai: dircolors.monokai
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.ssh: ssh/
+    ~/.tmux: tmux/
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.weechat: weechat/
+    ~/.zshrc: zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [./fonts/install.sh, Installing patched powerline fonts]

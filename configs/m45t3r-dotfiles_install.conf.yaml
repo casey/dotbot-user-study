@@ -1,0 +1,30 @@
+- clean: ["~"]
+- link:
+    ~/.config/mpv:
+      create: true
+      path: config/mpv/
+    ~/.config/sublime-text-3:
+      create: true
+      path: config/sublime-text-3/
+    ~/.dotfiles: ""
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.gvimrc: gvimrc
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.ssh: ssh
+    ~/.tmux.conf: tmux.conf
+    ~/.zprezto: prezto
+    ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
+    ~/.zlogin: zlogin
+    ~/.zlogout: zlogout
+    ~/.zpreztorc: zpreztorc
+    ~/.zprofile: zprofile
+- shell:
+    -
+      - "curl https://sublime.wbond.net/Package%20Control.sublime-package -o ~/.config/sublime-text-3/Installed\\\ Packages/Package\\\ Control.sublime-package"
+      - "Installing Package Control"
+    -
+      - "git submodule update --init --recursive"
+      - "Installing/updating submodules"

@@ -1,0 +1,110 @@
+- clean: ['~', '~/.ssh']
+- link:
+    # ~/.box-name:
+    #   path: home/box-name
+    ~/.gemrc:
+      relink: true
+      path: home/gemrc
+    ~/.agignore:
+      relink: true
+      path: home/agignore
+    ~/.gitconfig:
+      relink: true
+      path: home/gitconfig
+    ~/.ctags:
+      relink: true
+      path: home/ctags
+    ~/.gitignore_global:
+      relink: true
+      path: home/gitignore_global
+    ~/.gvimrc:
+      relink: true
+      path: home/gvimrc
+    ~/.inputrc:
+      path: home/inputrc
+    ~/.mackup.cfg:
+      relink: true
+      path: home/mackup.cfg
+    ~/.nvimrc:
+      relink: true
+      path: home/vimrc
+    ~/.pryrc-helpers.rb:
+      relink: true
+      path: home/pryrc-helpers.rb
+    ~/.pryrc:
+      relink: true
+      path: home/pryrc
+    ~/.rubocop.yml:
+      relink: true
+      path: home/rubocop.yml
+    ~/.tidyrc:
+      relink: true
+      path: home/tidyrc
+    ~/.vimrc:
+      relink: true
+      path: home/vimrc
+    ~/.vimrc_min: home/vimrc.min
+    ~/.xvimrc:
+      relink: true
+      path: home/xvimrc
+    ~/.zshenv:
+      relink: true
+      path: home/zshenv
+    ~/.zshrc:
+      relink: true
+      path: home/zshrc
+
+    ~/.tmux.conf:
+      relink: true
+      path: home/tmux.conf
+    ~/.tmux/gary_theme.conf:
+      relink: true
+      create: true
+      path: home/tmux/gary_theme.conf
+    ~/.tmux/reset.tmux:
+      relink: true
+      create: true
+      path: home/tmux/reset.tmux
+    ~/.tmux/plugins/tpm:
+      create: true
+      relink: true
+      path: submodules/tpm
+
+    ~/.vim/autoload:
+      create: true
+      path: home/vim/autoload/
+    ~/.nvim/autoload:
+      create: true
+      path: home/vim/autoload/
+
+    ~/.vim/UltiSnips: home/vim/UltiSnips/
+    ~/.nvim/UltiSnips: home/vim/UltiSnips/
+    ~/.nvim/scripts: home/vim/scripts/
+    ~/.vim/scripts: home/vim/scripts/
+
+    ~/.zsh:
+      relink: true
+      path: home/zsh/
+    ~/.hammerspoon: home/hammerspoon/
+    ~/.git_hooks: home/git_hooks/
+    ~/.antigen: submodules/antigen/
+    ~/.dir_colors: submodules/dir_colors_solarized/dircolors.ansi-dark
+    ~/.gitconfig.local: private/gitconfig.local
+
+    ~/.ssh/config:
+      create: true
+      path: private/ssh/config
+    ~/.ssh/github_rsa: private/ssh/github_rsa
+    ~/.ssh/github_rsa.pub: private/ssh/github_rsa.pub
+    ~/.ssh/id_rsa: private/ssh/id_rsa
+    ~/.ssh/id_rsa.pub: private/ssh/id_rsa.pub
+
+    /usr/local/opt/rbenv/default-gems:
+      create: true
+      path: new_machine/gems
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [$(which vim) +PlugInstall +qall, Update bundles]
+  # homebrew
+  # - [bash -c "`curl -sL get.freshshell.com`"]
+

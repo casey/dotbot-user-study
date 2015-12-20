@@ -1,0 +1,36 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles_local: ''
+    ~/.gitconfig_local: gitconfig_local
+    ~/.ssh/config: ssh/config
+    ~/.vimperator/info/0/quickmarks:
+      path: vimperator/quickmarks
+      create: true
+      force: true
+    ~/.vimperator/info/1/quickmarks:
+      path: vimperator/quickmarks
+      create: true
+      force: true
+    ~/.vimperator/info/2/quickmarks:
+      path: vimperator/quickmarks
+      create: true
+      force: true
+    ~/.vimperator/info/3/quickmarks:
+      path: vimperator/quickmarks
+      create: true
+      force: true
+    ~/.vimperator/info/4/quickmarks:
+      path: vimperator/quickmarks
+      create: true
+      force: true
+    ~/.vimperator/info/5/quickmarks:
+      path: vimperator/quickmarks
+      create: true
+      force: true
+    ~/.zsh_local: zsh_local/
+    ~/bin_local: bin_local/
+
+
+- shell:
+  - [git submodule update --init --recursive, Updating submodules]

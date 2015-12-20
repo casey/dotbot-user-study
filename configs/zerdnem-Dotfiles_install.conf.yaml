@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir $HOME/.zfunctions]
+  - [ln -s "$HOME/.zsh/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"]
+  - [ln -s "$HOME/.zsh/pure/async.zsh" "$HOME/.zfunctions/async"]

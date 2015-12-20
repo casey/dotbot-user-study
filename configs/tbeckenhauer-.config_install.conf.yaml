@@ -1,0 +1,31 @@
+- clean: ['~']
+- link:
+    ~/.bashrc:
+        force: false
+        path: bashrc.nix
+    ~/.bashrc:
+        force: false
+        path: bashrc.osx
+    ~/.bash_logout:
+        force: false
+        path: bash_logout
+    ~/.profile:
+        force: false
+        path: profile.nix
+    ~/.profile:
+        force: false
+        path: profile.osx
+    ~/.tmux.conf:
+        force: false
+        path: tmux.conf
+    
+    ~/.vim:
+        force: false
+        path: vim
+    
+    ~/.gitconfig:
+        force: false
+        path: gitconfig
+- shell:
+    - git submodule update --init --recursive  # Installing submodules
+

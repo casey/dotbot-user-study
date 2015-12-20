@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- shell: 
+    - ["git submodule update --init --recursive", Installing submodules]
+    - ["wget -O ~/.zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc", Getting Grml .zshrc]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: "tmux/.tmux.conf"
+    ~/.vimrc: "vim/.vimrc"
+    ~/.zshrc.local: "zsh/.zshrc.local"

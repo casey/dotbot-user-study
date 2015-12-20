@@ -1,0 +1,48 @@
+--- 
+-
+  clean:
+    - "~"
+-
+  link:
+    ~/.Xresources:
+      force: true
+      path: conf/xresources
+    ~/.config/fontconfig/fonts.conf:
+      force: true
+      path: conf/fonts.conf
+    ~/.fonts:
+      force: true
+      path: fonts/
+    ~/.i3/config:
+      force: true
+      path: conf/i3config
+    ~/.i3status.conf:
+      force: true
+      path: conf/i3status.conf
+    ~/.pythonrc:
+      force: true
+      path: conf/pythonrc
+    ~/.tmux.conf:
+      force: true
+      path: conf/tmux.conf
+    ~/.vim:
+      create: true
+      force: true
+      path: vim/
+    ~/.vimrc:
+      force: true
+      path: conf/vimrc
+    ~/.vimrc.bundles:
+      force: true
+      path: conf/vimrc.bundles
+    ~/.zshenv:
+      force: true
+      path: conf/zshenv
+    ~/.zshrc:
+      force: true
+      path: conf/zshrc
+-
+  shell:
+    -
+      - "git submodule update --init --recursive"
+      - "Updating submodules"

@@ -1,0 +1,22 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.inputrc: runcom/.inputrc
+    ~/.bashrc: runcom/.bashrc
+    ~/.profile: runcom/.profile
+    ~/.bash_profile: runcom/.bash_profile
+    ~/.i3: .i3
+    ~/.screenlayout: .screenlayout
+    ~/.Xresources: .Xresources
+    ~/.Xmodmap: .Xmodmap
+    ~/.vimrc: .vimrc
+    ~/.config/synapse:
+      create: true
+      path: .config/synapse/
+    ~/.config/xfce4/terminal:
+      create: true
+      path: .config/xfce4/terminal/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

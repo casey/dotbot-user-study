@@ -1,0 +1,28 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.zshrc: zshrc
+    ~/.i3: i3/
+    #~/.emacs.d: emacs/
+    ~/.Xdefaults: Xdefaults
+    ~/.config/dunst/dunstrc: dunstrc
+    ~/.config/i3blocks/config: i3blocks
+    ~/.config/dunst/dunstrc: dunstrc
+    ~/.config/zathura/zathurarc: zathurarc
+    ~/.fehbg: fehbg
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [wget -O .wallpaper.jpg http://tympanikaudio.com/wp/wp-content/uploads/tympank-accretion-wallpaper1.jpg, Downloading wallpaper]
+    - [mkdir -p ~/abs, Creating abs directory]
+    - [mkdir -p ~/Загрузки, Creating downloads directory]
+    - [mkdir -p ~/Изображения, Creating pictures directory]
+    - [mkdir -p ~/Скриншоты, Creating screenshots directory]
+    - [mkdir -p ~/Музыка, Creating music directory]
+    - [mkdir -p ~/Видео, Creating video directory]
+    - [mkdir -p ~/org, Creating org-files directory]
+    - [mkdir -p ~/Dev, Creating development directory]
+    - [mkdir -p ~/Проекты, Creating projects directory]
+    - [mkdir -p ~/Virtual\ Box\ Data, Creating Virtual Box Data directory]

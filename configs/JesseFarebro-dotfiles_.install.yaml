@@ -1,0 +1,10 @@
+- clean: ['~']
+
+- link:
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+
+- shell:
+  - mkdir -p ~/.vim/autoload
+  - ['curl -o ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim', Installing pathogen]
+  - [git submodule update --init --recursive, Installing submodules...]

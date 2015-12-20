@@ -1,0 +1,22 @@
+[
+    {
+        "clean": ["~", "~/.i3"]
+    },
+    {
+        "link": {
+            "~/.vimrc": "editor/vimrc",
+            "~/.gitconfig": "git/gitconfig",
+            "~/.gitignore_global": "git/gitignore_global",
+            "~/.i3/config": "i3/config",
+            "~/.i3status.conf": "i3/i3status.conf",
+            "~/.Xresources": "X11/Xresources",
+            "~/.zshrc": "zsh/zshrc",
+            "~/.zpreztorc": "zsh/zpreztorc"
+        }
+    },
+    {
+        "shell": [
+            ["vim +PluginInstall +qall", "Installing vim plugins"]
+        ]
+    }
+]

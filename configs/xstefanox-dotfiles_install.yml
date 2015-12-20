@@ -1,0 +1,66 @@
+- clean:
+  - '~'
+  - ~/.profile.d
+  - ~/.bashrc.d
+  - ~/.bash_completion.d
+  - ~/.local/bin
+
+- shell:
+    - [ git submodule update --init --recursive, Installing submodules ]
+    - [ test -d ~/.profile.d || mkdir -p ~/.bashrc.d, Creating profile modules directory ]
+    - [ test -d ~/.bashrc.d || mkdir -p ~/.bashrc.d, Creating Bash modules directory ]
+    - [ test -d ~/.bash_completion.d || mkdir -p ~/.bash_completion.d, Creating Bash completion user modules directory ]
+    - [ test -d ~/.local/bin || mkdir -p ~/.local/bin, Creating user binaries directory ]
+    - [ 'test -f ~/.local/bin/composer || wget https://getcomposer.org/installer -O - | php -- --install-dir ~/.local/bin --filename composer', Installing composer]
+
+- link:
+
+    # Bash modules
+    ~/.bashrc.d/01.locale.sh:           bashrc.d/locale.sh
+    ~/.bashrc.d/02.env.sh:              bashrc.d/env.sh
+    ~/.bashrc.d/03.colors.sh:           bashrc.d/colors.sh
+    ~/.bashrc.d/04.functions.sh:        bashrc.d/functions.sh
+    ~/.bashrc.d/homebrew.sh:            bashrc.d/homebrew.sh
+    ~/.bashrc.d/python.sh:              bashrc.d/python.sh
+    ~/.bashrc.d/php.sh:                 bashrc.d/php.sh
+    ~/.bashrc.d/ruby.sh:                bashrc.d/ruby.sh
+    ~/.bashrc.d/nodejs.sh:              bashrc.d/nodejs.sh
+    ~/.bashrc.d/svn.sh:                 bashrc.d/svn.sh
+    ~/.bashrc.d/man.sh:                 bashrc.d/man.sh
+    ~/.bashrc.d/apache.sh:              bashrc.d/apache.sh
+    ~/.bashrc.d/git.sh:                 bashrc.d/git.sh
+    ~/.bashrc.d/ssh.sh:                 bashrc.d/ssh.sh
+    ~/.bashrc.d/docker.sh:              bashrc.d/docker.sh
+    ~/.bashrc.d/desktop-preferences.sh: bashrc.d/desktop-preferences.sh
+    ~/.bashrc.d/system-services.sh:     bashrc.d/system-services.sh
+    ~/.bashrc.d/package-manager.sh:     bashrc.d/package-manager.sh
+
+    # Bash completion modules
+    ~/.bash_completion.d/capistrano.sh: submodules/bash-it/completion/available/capistrano.completion.bash
+    ~/.bash_completion.d/ssh.sh:        submodules/bash-it/completion/available/ssh.completion.bash
+    ~/.bash_completion.d/symfony.sh:    bash_completion.d/symfony.sh
+
+    # Bash prompt
+    ~/.bashrc.d/05.liquidprompt.sh:        submodules/liquidprompt/liquidprompt
+    ~/.bashrc.d/06.liquidprompt-custom.sh: bashrc.d/liquidprompt-local.sh
+    ~/.liquidpromptrc:                     liquidpromptrc
+    ~/.liquidprompt.ps1:                   liquidprompt.ps1
+
+    # binaries
+    ~/.local/bin/colorsvn:        bin/colorsvn
+    ~/.local/bin/xdg-open:        bin/xdg-open
+    ~/.local/bin/git-multistatus: bin/git-multistatus
+    ~/.local/bin/diff-highlight:  submodules/git/contrib/diff-highlight/diff-highlight
+    ~/.local/bin/apt-cyg:         submodules/apt-cyg/apt-cyg
+
+    # misc
+    ~/.bashrc:            bashrc
+    ~/.colordiffrc:       colordiffrc
+    ~/.colorsvnrc:        colorsvnrc
+    ~/.gitignore.global:  gitignore.global
+    ~/.gitconfig.global:  gitconfig.global
+    ~/.my.cnf:            my.cnf
+    ~/.nanorc:            nanorc
+    ~/.profile:           profile
+    ~/.pythonrc:          pythonrc
+    ~/.screenrc:          screenrc

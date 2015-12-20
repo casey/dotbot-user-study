@@ -1,0 +1,15 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "shell": [
+      ["git update-submodules", "Installing/updating submodules"]
+    ]
+  },
+  {
+    "link": {
+      "~/.config/terminator/config": "terminator"
+    }
+  }
+]

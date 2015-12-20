@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
+    ~/.alias: alias
+    ~/.bashrc.my.history: bashrc.my.history
+    ~/.bashrc.my.adjustments: bashrc.my.adjustments
+    ~/.bashrc.my.color_prompt : bashrc.my.color_prompt
+    ~/.bashrc.my.git_ps1: bashrc.my.git_ps1
+    ~/.bashrc: bashrc
+
+- shell:
+  - [mkdir -p txt/vim-backup, Setup vim backup]

@@ -1,0 +1,12 @@
+---
+-
+  clean:
+      - "~"
+-
+  link:
+      ~/.gitconfig: gitconfig
+      ~/.tmux.conf: tmux.conf
+      ~/.config/nvim: nvim
+      ~/.vim: vim/vim
+      ~/.vimrc: vim/vimrc
+      ~/.zshrc: zshrc

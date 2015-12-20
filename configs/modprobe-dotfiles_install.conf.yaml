@@ -1,0 +1,18 @@
+- clean: ['~']
+- link:
+    ~/.config: config
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.zsh: zsh/.zsh
+    ~/.oh-my-zsh: zsh/oh-my-zsh
+    ~/.Xdefaults: x/Xdefaults
+    ~/.Xmodmap: x/Xmodmap
+    ~/.i3: i3
+- shell:
+  -
+    - "vim +NeoBundleInstall +qall"
+    - "Installing bundles"
+  -
+    - "git submodule update --init --recursive --remote"
+    - "Installing/updating submodules"

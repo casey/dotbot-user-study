@@ -1,0 +1,13 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vim/vimrc
+    ~/.vim: vim/
+    ~/.zsh: zsh/
+    ~/.zshrc: zsh/zshrc 
+
+- shell:
+  -
+    - git submodule foreach git pull 
+    - Installing/updating submodules 
+

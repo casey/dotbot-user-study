@@ -1,0 +1,8 @@
+- link:
+    ~/.vim:
+      path: vim/
+      force: true
+    ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
+- shell:
+    - ["git submodule update --init --recursive", "Installing submodules"]

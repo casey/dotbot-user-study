@@ -1,0 +1,23 @@
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.config/mpv/mpv.conf:
+        path: config/mpv/mpv.conf
+        create: true
+    ~/.config/redshift.conf: config/redshift.conf
+    ~/.compton: compton
+    ~/.gitconfig: gitconfig
+    ~/.i3:
+        path: i3/
+        create: true
+    ~/.i3blocks.conf: i3blocks.conf
+    ~/.mailcap: mailcap
+    ~/.muttrc: muttrc
+    ~/scripts:
+        path: scripts/
+        create: true
+    ~/.Xresources: Xresources
+    ~/.zshrc: zshrc
+
+- shell:
+    - git update-submodules

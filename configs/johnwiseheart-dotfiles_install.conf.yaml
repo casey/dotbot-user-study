@@ -1,0 +1,8 @@
+- clean: ['~']
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.config/fish/config.fish: config.fish
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+

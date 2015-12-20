@@ -1,0 +1,27 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.bash_profile:
+      force: true
+      path: bash_profile
+    ~/.gitconfig:
+      force: true
+      path: git/gitconfig
+    ~/.gitignore_global:
+      force: true
+      path: git/gitignore_global
+    ~/.hgrc:
+      force: true
+      path: hg/hgrc
+    ~/.hgignore_global:
+      force: true
+      path: hg/hgignore_global
+    ~/.zshrc:
+      force: true
+      path: zsh/zshrc
+    ~/.oh-my-zsh/custom/themes/agnoster.zsh-theme:
+      force: true
+      path: agnoster/agnoster.zsh-theme

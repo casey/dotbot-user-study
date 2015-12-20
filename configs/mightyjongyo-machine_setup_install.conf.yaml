@@ -1,0 +1,33 @@
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.wgetrc: wgetrc
+    ~/.curlrc: curlrc
+    ~/.bashrc:
+      force: true
+      path:  bashrc
+    ~/.vim:
+      force: true
+      create: true
+      path:   vim
+    ~/.vimrc:
+      force: true
+      path:  vimrc
+#    ~/.config/sublime-text-3:
+#      create: true
+#      path:   sublime-text-3/
+    ~/.subversion/config:
+      create: true
+      force:  true
+      path:   svn-config
+    ~/.subversion/servers:
+      create: true
+      force:  true
+      path:   svn-servers
+
+- shell:
+  - [git submodule init, Initializing submodules]
+  - [git submodule update --recursive, Installing/updating submodules]
+#  - [sudo ln -s sublime_text_3 /opt/sublime_text_3]
+#  - [sudo ln -s /opt/sublime_text_3/sublime_text /usr/bin/sublime]
+#  - [sudo ln -s sublime.desktop /usr/share/applications/sublime.desktop]

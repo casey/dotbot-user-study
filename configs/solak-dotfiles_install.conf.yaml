@@ -1,0 +1,7 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.vim: vim
+    ~/.zshrc: zshrc
+    ~/.ackrc: ackrc

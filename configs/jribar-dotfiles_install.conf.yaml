@@ -1,0 +1,15 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - mkdir -p ~/.zsh/themes
+
+- link:
+    ~/.emacs: emacs/emacs
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.perltidyrc: perltidy/perltidyrc
+    ~/.ssh/config: ssh/config
+    ~/.zshrc: zsh/zshrc
+    ~/.zsh/themes/james.zsh-theme: zsh/james.zsh-theme

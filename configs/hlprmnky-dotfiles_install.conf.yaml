@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init, Installing/updating submodules]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.emacs.d: emacs-live/
+    ~/.emacs-live.el: emacs-live.el
+    ~/.live-packs/cjbidler-pack/lib/emacs-colors-solarized: 
+      create: true
+      path: solarized/emacs-colors-solarized/
+    ~/.live-packs/cjbidler-pack/lib/rinari: rinari/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.oh-my-zsh: oh-my-zsh/

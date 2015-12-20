@@ -1,0 +1,35 @@
+- clean: [ '~', '~/.config/']
+
+- link:
+    ~/.bashrc:
+      path: src/.bashrc
+    ~/.config/bspwm:
+      path: src/.config/bspwm/
+    ~/.config/compton:
+      path: src/.config/compton/
+    ~/.config/dunst:
+      path: src/.config/dunst/
+    ~/.config/htop:
+      path: src/.config/htop
+    ~/.config/lemonbar:
+      path: src/.config/lemonbar/
+    ~/.config/mpd:
+      path: src/.config/mpd/
+    ~/.config/nvim:
+      path: src/.config/nvim/
+    ~/.config/sxhkd:
+      path: src/.config/sxhkd/
+    ~/.config/termite:
+      path: src/.config/termite
+    ~/.ncmpcpp:
+      path: src/.ncmpcpp/
+    ~/.stalonetrayrc:
+      path: src/.stalonetrayrc
+    ~/.xinitrc:
+      path: src/.xinitrc
+    ~/.Xresources:
+      path: src/.Xresources
+
+- shell:
+    - git submodule foreach git pull origin master
+

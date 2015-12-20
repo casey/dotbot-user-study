@@ -1,0 +1,6 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.zshrc: prezto/runcoms/zshrc
+    ~/.zpreztorc: prezto/runcoms/zpreztorc

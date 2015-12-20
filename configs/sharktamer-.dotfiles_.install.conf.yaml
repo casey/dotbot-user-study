@@ -1,0 +1,95 @@
+- clean: ['~']
+
+- shell:
+  - 
+    - git submodule update --init --recursive
+    - Installing submodules
+
+- link:
+    ~/.zprezto:
+        force: true
+        path: prezto
+
+- shell:
+  -
+    - zsh -c 'setopt EXTENDED_GLOB; for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do ln -sf "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"; done'
+    - Creating zprezto links
+
+- link:
+    ~/.config/base16-shell:
+        create: true
+        force: true
+        path: base16-shell
+    ~/.zprezto: 
+        force: true
+        path: prezto
+    ~/.gitconfig: 
+        force: true
+        path: gitconfig
+    ~/.tmux.conf: 
+        force: true
+        path: tmux.conf
+    ~/.tmuxinator:
+        force: true
+        path: tmuxinator
+    ~/.vimrc: 
+        force: true
+        path: vimrc
+    ~/.zshrc: 
+        force: true
+        path: zshrc
+    ~/.zsh_extra:
+        force: true
+        path: zsh_extra
+    ~/.aliases:
+        force: true
+        path: aliases
+    ~/.functions:
+        force: true
+        path: functions
+    ~/.local/bin:
+        create: true
+        force: true
+        path: scripts
+    ~/.config/base16-chalkeighties.dark.sh:
+        force: true
+        path: base16-chalkeighties.dark.sh
+    ~/.vim/bundle/Vundle.vim:
+        create: true
+        force: true
+        path: Vundle.vim
+    ~/.vim/autoload/plug.vim:
+        create: true
+        force: true
+        path: plug.vim
+    ~/.envs/postactivate:
+        create: true
+        force: true
+        path: virtualenv/postactivate
+    ~/.envs/postdeactivate:
+        force: true
+        path: virtualenv/postdeactivate
+    ~/.fab:
+        create: true
+        force: true
+        path: fab
+    ~/.minttyrc:
+        force: true
+        path: minttyrc
+    ~/.bashrc:
+        force: true
+        path: bashrc
+    ~/.config/bash_colors.sh:
+        force: true
+        path: bash_colors.sh
+    ~/.dir_colors:
+        force: true
+        path: dir_colors
+    ~/.tmux/plugins/tpm:
+        create: true
+        force: true
+        path: tpm
+- shell:
+  - 
+    - git submodule update --init --recursive
+    - Installing submodules

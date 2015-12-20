@@ -1,0 +1,63 @@
+- clean: ['~']
+
+- link:
+    ~/.zshrc:
+        relink: true
+        force: true
+        path: zshrc
+    ~/.gitignore_global:
+        relink: true
+        path: gitignore
+    ~/.gitconfig:
+        relink: true
+        path: gitconfig
+    ~/.zshenv:
+        relink: true
+        path: zshenv
+    ~/.vimrc:
+        relink: true
+        path: vimrc
+    ~/.vim/plugin:
+        relink: true
+        create: true
+        path: misc/vim_plugin
+    ~/.vim/after:
+        relink: true
+        create: true
+        path: misc/vim_after
+    ~/.vim/ftplugin:
+        relink: true
+        create: true
+        path: misc/vim_ftplugin
+    ~/.tmux.conf:
+        relink: true
+        path: tmux.conf
+    ~/.npmrc:
+        relink: true
+        path: npmrc
+    ~/.fzf:
+        relink: true
+        path: misc/fzf
+    ~/.inputrc:
+        relink: true
+        path: inputrc
+    ~/.ctags:
+        relink: true
+        path: ctags
+
+- shell:
+    - ./misc/shell/install-terminfo
+    -
+     command: git submodule update --init --recursive
+     stdout: true
+    -
+     command: git submodule foreach git pull origin master
+     stdout: true
+    - rm -f ~/.zcompdump*
+    -
+     command: ~/.fzf/install
+     stdout: true
+    -
+     command: ./post_install
+     stdin: true
+     stdout: true

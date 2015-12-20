@@ -1,0 +1,32 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.ackrc: ackrc
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_exports: bash_exports
+    ~/.bash_functions: bash_functions
+    ~/.bash_profile: bash_profile
+    ~/.bash_prompt: bash_prompt
+    ~/.bashrc: bashrc
+    ~/.boot_jvm_options: boot_jvm_options
+    ~/.emacs.d: emacs.d/
+    ~/.gitconfig: gitconfig
+    ~/.hgrc: hgrc
+    ~/.profile: profile
+    ~/.profile.boot: profile.boot
+    ~/.screenrc: screenrc
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ["curl https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o ~/.bash_preexec", Installing bash-preexec]
+
+- shell:
+  - mkdir -p ~/bin
+  - ["curl http://beyondgrep.com/ack-2.14-single-file -o ~/bin/ack", Installing ack]
+  - ["curl https://raw.githubusercontent.com/rupa/z/master/z.sh -o ~/bin/z", Installing z]
+  - ["curl https://raw.githubusercontent.com/funtoo/keychain/master/keychain.sh -o ~/bin/keychain", Installing keychain]
+  - chmod -R 0755 ~/bin

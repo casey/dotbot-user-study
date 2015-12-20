@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.colours: colours
+    ~/.i3: i3
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.vim: vim/
+    ~/.xinitrc: xinitrc
+    ~/.Xresources: Xresources
+    ~/bin: bin/
+
+- shell:
+    - [git submodule update --init --recursive, Installing/updating submodules]
+    - [vim +PluginInstall +qall, Installing Vim plugins with Vundle]

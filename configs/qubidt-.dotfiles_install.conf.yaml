@@ -1,0 +1,49 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.vim:
+      force: true
+      path: nvim
+    ~/.vimrc:
+      force: true
+      path: nvim/init.vim
+    ~/.config/nvim:
+      create: true
+      force: true
+      path: nvim
+    ~/.config/awesome:
+      create: true
+      force: true
+      path: awesome
+    ~/.scripts:
+      create: true
+      force: true
+      path: scripts
+    ~/.xbindkeysrc:
+      force: true
+      path: xbindkeysrc
+    ~/.Xresources:
+      force: true
+      path: Xresources
+    ~/.config/zsh:
+      create: true
+      force: true
+      path: zsh
+    ~/.zshenv:
+      force: true
+      path: zsh/zshenv
+    ~/.zprofile:
+      force: true
+      path: zsh/zprofile
+    ~/.zshrc:
+      force: true
+      path: zsh/zshrc
+    ~/.zlogin:
+      force: true
+      path: zsh/zlogin
+    ~/.zlogout:
+      force: true
+      path: zsh/zlogout

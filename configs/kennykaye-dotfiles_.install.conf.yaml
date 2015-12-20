@@ -1,0 +1,50 @@
+---
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.agignore: agignore
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gvimrc: gvimrc
+    ~/.fzf: fzf/
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
+    ~/.zprezto: zprezto
+    ~/.zpreztorc: zpreztorc
+    ~/.bash_profile: bash_profile
+    ~/.functions: functions
+    ~/.aliases: aliases
+    ~/.config: config
+    ~/.ycm_extra_conf.py: vim/settings/ycm_extra_conf.py
+    ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/base16_kaye.vim: vim/lightline/base16_kaye.vim
+    ~/.zprezto/modules/prompt/functions/prompt_kaye_setup: zsh/prompt_kaye_setup
+
+- shell:
+    -
+      - "ln -sf $(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight"
+      - "Installing improved diff highlighting"
+    -
+      - "git submodule update --init --recursive --remote"
+      - "Installing/updating submodules"
+    -
+      - "tic terminfo/xterm-256color-italic.terminfo; tic terminfo/screen-256color-italic.terminfo"
+      - "Install custom term info"
+    -
+      - "mkdir -p ~/.config/base16-shell ~/.vim/autoload ~/.vim/bundle/lightline.vim/autoload/lightline/colorscheme"
+      - "Checking folder structure exists"
+    -
+      - "~/.fzf/install"
+      - "Installing fzf"
+    -
+      - "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+      - "Installing vim-plug"
+    -
+      - "gem install tmuxinator"
+      - "Installing tmuxinator"
+

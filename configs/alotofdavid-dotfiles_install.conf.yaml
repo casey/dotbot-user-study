@@ -1,0 +1,28 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles:
+        path: ''
+    ~/.tmux.conf:
+        path: tmux.conf
+    ~/.zshrc:
+        path: zshrc
+    ~/.vimrc:
+        path: vimrc
+    ~/.bashrc:
+        path: bashrc
+    ~/bin:
+        path: bin/
+    ~/.vim:
+        path: vim/
+    ~/.gitconfig:
+        path: gitconfig
+    ~/.oh-my-zsh:
+        path: oh-my-zsh
+    ~/.zshenv:
+         path: zshenv
+    ~/.aliases:
+         path: aliases
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,17 @@
+- clean: ['~']
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: git/gitconfig
+    ~/.base16_theme: colorschemes/base16_theme 
+    ~/.vim: vim/vim/
+    ~/.nvim: vim/vim/
+    ~/.vimrc: vim/vimrc
+    ~/.nvimrc: vim/vimrc
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh: zsh/oh-my-zsh/
+    ~/.fonts: fonts/
+    ~/.xinitrc: xorg/xinitrc
+    ~/.vim/colors: colorschemes/base16-builder/output/vim
+    ~/.vimrc_background: colorschemes/vimrc_background
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

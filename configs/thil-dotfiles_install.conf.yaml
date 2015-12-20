@@ -1,0 +1,21 @@
+- clean: ['~']
+
+- link:
+    ~/.agignore:   home/.agignore
+    ~/.aprc:       home/.aprc
+    ~/.gemrc:      home/.gemrc
+    ~/.gitconfig:  home/.gitconfig
+    ~/.gitignore:  home/.gitignore
+    ~/.gitmessage: home/.gitmessage
+    ~/.pryrc:      home/.pryrc
+    ~/.psqlrc:     home/.psqlrc
+    ~/.rspec:      home/.rspec
+    ~/.vim:        home/.vim
+    ~/.vimrc:      home/.vimrc
+    ~/.zpreztorc:  home/.zpreztorc
+    ~/.zsh:        home/.zsh
+    ~/.zshrc:      home/.zshrc
+    ~/Vagrantfile: home/Vagrantfile
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

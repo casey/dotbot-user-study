@@ -1,0 +1,13 @@
+- link:
+    ~/.config/awesome:
+        create: true
+        path: awesome/
+    ~/.config/termite: termite/config
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.zshrc:
+        force: true
+        path: zsh/zshrc
+    /usr/share/zsh/site-functions/prompt_pure_setup: zsh/pure.zsh
+    ~/.cmus: cmus/autosave
+    ~/.xinitrc: xinitrc

@@ -1,0 +1,21 @@
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf:
+      force: true
+      path: tmux/tmux.conf
+    ~/.bashrc:
+      force: true
+      path: bash/bashrc
+    ~/.bash_aliases:
+      force: true
+      path: bash/bash_aliases
+    ~/.git-prompt.sh:
+      force: true
+      path: bash/git-prompt.sh
+    ~/.gitconfig:
+      force: true
+      path: git/gitconfig
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

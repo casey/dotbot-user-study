@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- shell:
+    - [ git pull, Updating Configuration ]
+    - [git submodule update --init --recursive --remote, Installing/Updating Submodules]
+
+- link:
+     ~/.vimrc: vimrc
+     ~/.vim: vim
+
+     ~/.tmux.conf: tmux.conf
+     ~/.tmux: tmux
+
+     ${ZDOTDIR}/.zshrc: zshrc
+
+     ~/.gitconfig: gitconfig

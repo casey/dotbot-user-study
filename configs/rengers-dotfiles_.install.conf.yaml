@@ -1,0 +1,16 @@
+- clean: ['~', '~/.config']
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.zshrc_ssh_agent: zshrc_ssh_agent
+- shell:
+    - [./core_deps.sh, Installing core dependencies]
+    - [git submodule update --init --recursive, Updating submodules]
+    - [./brew.sh, Installing and updating homebrew packages]
+    - [./ruby-install.sh, Installing latest ruby with rbenv and ruby-build]
+    - [./oh-my-zsh-install.sh, Installing oh-my-zsh]
+    - [./vim/vundle_bootstrap.sh, Setting up Vundle and Vim plusings]
+    - [./fonts.sh, Installing Powerline patched fonts]

@@ -1,0 +1,52 @@
+- clean: ['~', '~/.config']
+
+- shell:
+    - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads ~/Pictures ~/.background
+    - cp img/dojanp.png ~/Pictures/dojanp.png
+    - cp img/Terminal-icon.png ~/Pictures/Terminal-icon.png
+    - cp img/arch-blue-thx-martino.png ~/.background/arch-blue-thx-martino.png
+    - cp img/2.png ~/.background/2.png
+    - git submodule update --init --recursive # after linking ~/.gitconfig
+    - curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.bashMacrc: bashMacrc
+    # ~/.axelrc: axelrc
+    ~/.conkyrc: conkyrc
+    ~/.conkyMPD: conkyMPD
+    ~/.conkyCLOCK: conkyCLOCK
+    ~/.config/dunst:
+        create: true
+        path: config/dunst
+    ~/.config/mpv:
+        create: true
+        path: config/mpv
+    ~/.config/openbox:
+        create: true
+        path: config/openbox
+    ~/.config/ranger:
+        create: true
+        path: config/ranger
+    ~/.dotfiles: ''
+    ~/.i3:
+        create: true
+        path: i3
+    ~/.i3blocks.conf: i3blocks.conf
+    # ~/.gitconfig: gitconfig
+    # ~/.gitignore_global: gitignore_global
+    ~/.packages-list.txt: packages-list.txt
+    ~/.ncmpcpp:
+        create: true
+        path: ncmpcpp
+    ~/.rtorrent.rc: rtorrent.rc
+    ~/.screenrc: screenrc
+    # ~/.tmux.conf: tmux.conf
+    # ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.xinitrc: xinitrc
+    ~/.Xresources: Xresources    
+    ~/.zprezto: prezto/
+    ~/.zpreztorc: zpreztorc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc

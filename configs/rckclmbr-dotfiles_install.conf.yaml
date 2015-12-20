@@ -1,0 +1,17 @@
+#- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bashrc: bash/bashrc
+    ~/.i3: i3/
+    ~/.i3status.conf: i3/i3status.conf
+
+    ~/.vimrc.bundles.local: vim/vimrc.bundles.local
+    ~/.vimrc.before.local: vim/vimrc.before.local
+    ~/.vimrc.local: vim/vimrc.local
+
+    ~/.zshrc: zsh/zshrc
+
+#- shell:
+#    - [git update-submodules: Installing/updating submodules]
+#    - ["curl https://j.mp/spf13-vim3 -L -o - | sh": "Installing spf-13"]

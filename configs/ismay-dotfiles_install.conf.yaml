@@ -1,0 +1,160 @@
+#########
+# Clean #
+#########
+
+- clean: ['~', '~/.atom']
+- clean: ['~/Library/Application Support/org.videolan.vlc']
+- clean: ['~/Library/Preferences', '~/Library/Preferences/org.videolan.vlc']
+
+################
+# Link configs #
+################
+
+- link:
+    # Suppress banner
+    ~/.hushlogin:
+      relink: true
+      path: dotfiles/.hushlogin
+    # Atom configuration
+    ~/.atom/config.cson:
+      create: true
+      relink: true
+      path: dotfiles/.atom/config.cson
+    ~/.atom/init.coffee:
+      create: true
+      relink: true
+      path: dotfiles/.atom/init.coffee
+    ~/.atom/keymap.cson:
+      create: true
+      relink: true
+      path: dotfiles/.atom/keymap.cson
+    ~/.atom/snippets.cson:
+      create: true
+      relink: true
+      path: dotfiles/.atom/snippets.cson
+    ~/.atom/styles.less:
+      create: true
+      relink: true
+      path: dotfiles/.atom/styles.less
+    ~/Library/Preferences/com.github.atom.plist:
+      relink: true
+      path: 'dotfiles/Library/Preferences/com.github.atom.plist'
+    # Vlc
+    ~/Library/Application Support/org.videolan.vlc/ml.xspf:
+      create: true
+      relink: true
+      path: 'dotfiles/Library/Application Support/org.videolan.vlc/ml.xspf'
+    ~/Library/Preferences/org.videolan.vlc/vlcrc:
+      create: true
+      relink: true
+      path: 'dotfiles/Library/Preferences/org.videolan.vlc/vlcrc'
+    ~/Library/Preferences/org.videolan.vlc.plist:
+      relink: true
+      path: 'dotfiles/Library/Preferences/org.videolan.vlc.plist'
+    # Iterm2
+    ~/Library/Preferences/com.googlecode.iterm2.plist:
+      relink: true
+      path: 'dotfiles/Library/Preferences/com.googlecode.iterm2.plist'
+    # Spectacle
+    ~/Library/Preferences/com.divisiblebyzero.Spectacle.plist:
+      relink: true
+      path: 'dotfiles/Library/Preferences/com.divisiblebyzero.Spectacle.plist'
+
+#############
+# Gitconfig #
+#############
+
+- shell:
+  -
+    description: "Create gitconfig"
+    command: "./scripts/git.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+
+- link:
+    ~/.gitconfig:
+      relink: true
+      path: 'dotfiles/.gitconfig'
+
+############
+# Homebrew #
+############
+
+- shell:
+  -
+    description: "Install homebrew"
+    command: "./scripts/homebrew.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+  - [brew update, Updating brew...]
+  -
+    description: "Install homebrew packages"
+    command: "./scripts/homebrew-packages.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+  - [brew cleanup, Cleaning old brew packages...]
+
+##############
+# oh-my-fish #
+##############
+
+- shell:
+  -
+    description: "Set fish as default shell"
+    command: "./scripts/fish.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+  -
+    description: "Install oh-my-fish"
+    command: "./scripts/oh-my-fish.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+
+- link:
+    ~/.config/fish/config.fish:
+      relink: true
+      force: true
+      path: 'dotfiles/.config/fish/config.fish'
+
+- shell:
+  -
+    description: "Install oh-my-fish plugins and themes"
+    command: "./scripts/omf.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+
+#################
+# Homebrew cask #
+#################
+
+- shell:
+  -
+    description: "Install homebrew cask packages"
+    command: "./scripts/homebrew-cask-packages.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+  -
+    description: "Install fonts"
+    command: "./scripts/homebrew-fonts.sh"
+    stdout: true
+    stderr: true
+    stdin: true
+
+#################
+# Atom packages #
+#################
+
+- shell:
+  -
+    description: "Install atom packages"
+    command: "./scripts/atom.sh"
+    stdout: true
+    stderr: true
+    stdin: true

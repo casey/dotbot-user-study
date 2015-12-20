@@ -1,0 +1,12 @@
+- clean: ['~']
+
+- link: 
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.npmrc: npm/npmrc
+    ~/.config/nvim: vim
+    ~/.zshrc: zsh/zshrc
+    ~/.zsh: zsh/zsh
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

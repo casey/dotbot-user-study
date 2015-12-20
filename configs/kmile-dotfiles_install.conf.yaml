@@ -1,0 +1,9 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.oh-my-zsh/custom/theme.zsh: 'oh-my-zsh/theme.zsh'
+    ~/.oh-my-zsh/custom/aliases.zsh: 'oh-my-zsh/aliases.zsh'
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

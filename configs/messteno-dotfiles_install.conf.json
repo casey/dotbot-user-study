@@ -1,0 +1,24 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "link": {
+            "~/.dotfiles": "",
+            "~/.tmux.conf": "tmux.conf",
+            "~/.vimrc": "vimrc",
+            "~/.zshrc": "zshrc",
+            "~/.zsh": "zsh",
+            "~/.rtorrent.rc": "rtorrent.rc",
+            "~/.Xdefaults": "Xdefaults",
+            "~/.urlview": "urlview"
+        }
+    },
+    {
+        "shell": [
+            [ "git submodule update --init --recursive", "Installing submodules" ],
+            [ "mkdir -p ~/.vim/tmp", "Creating vim directories" ],
+            [ "mkdir -p ~/.session ~/Torrents/complete ~/Torrents/watch", "Creating rtorrent directories" ]
+        ]
+    }
+]

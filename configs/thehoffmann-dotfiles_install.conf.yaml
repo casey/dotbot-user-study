@@ -1,0 +1,17 @@
+- clean: ['~']
+
+- link:
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/scripts: scripts
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting/
+    ~/.gitignore: gitignore
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux/
+    ~/.ycm_extra_conf.py: ycm_extra_conf.py
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [fonts/install.sh, Installing Powerline fonts]

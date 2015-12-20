@@ -1,0 +1,73 @@
+- link:
+    ~/.config/awesome:
+        create: true
+        path: _awesome/
+    ~/.config/gtk-3.0:
+        create: true
+        path: _gtk-3.0/
+    ~/.config/keepassx:
+        create: true
+        path: _keepassx/
+    ~/.config/nvim:
+        create: true
+        path: _vim
+    ~/.config/ranger:
+        create: true
+        path: _ranger/
+    ~/.config/user-dirs.dirs:
+        create: true
+        path: _user-dirs.dirs
+    ~/.config/vlc:
+        create: true
+        path: _vlc/
+    ~/.local/share/fonts:
+        create: true
+        path: _fonts/
+    ~/.antigen: _antigen/
+    ~/.bin: _bin/
+    ~/.cabal: _cabal/
+    ~/.completions: _completions/
+    ~/.dir_colors: _dir_colors
+    ~/.dmrc: _dmrc
+    ~/.face.icon: _face.icon
+    ~/.fonts: _fonts/
+    ~/.fonts.config: _fonts.config
+    ~/.gitconfig: _gitconfig
+    ~/.gitignore: _gitignore
+    ~/.ghc: _ghc/
+    ~/.gnupg: _gnupg/
+    ~/.goobookrc: _goobookrc
+    ~/.gtk-bookmarks: _gtk-bookmarks
+    ~/.gtkrc-2.0: _gtkrc-2.0
+    ~/.mailcap: _mailcap
+    ~/.mpv: _mpv/
+    ~/.msmtprc: _msmtprc
+    ~/.mutt: _mutt/
+    ~/.muttrc: _muttrc
+    ~/.ncmpcpp: _ncmpcpp/
+    ~/.newsbeuter: _newsbeuter/
+    ~/.notmuch-config: _notmuch-config
+    ~/.nvim: _vim/
+    ~/.nvimrc: _vimrc
+    ~/.pentadactyl: _pentadactyl
+    ~/.pentadactylrc: _pentadactylrc
+    ~/.pip: _pip/
+    ~/.profile: _profile
+    ~/.screen: _screen
+    ~/.screenrc: _screenrc
+    ~/.urxvt: _urxvt/
+    ~/.vim: _vim/
+    ~/.vimrc: _vimrc
+    ~/.xprofile: _xprofile
+    ~/.Xresources: _Xresources
+    ~/.Xdefaults: _Xresources
+    ~/.zshrc: _zshrc
+
+- clean: ['~', '~/.config/', '~/.local/share/']
+
+- shell:
+    - [git submodule update --init --recursive, Installing/updating submodules]
+    - [antigen-update, Installing/updating zsh customizations]
+    - [cd ~/.fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
+    - [cd ~/.local/share/fonts; mkfontdir; fc-cache -rf, Installing/updating fonts]
+

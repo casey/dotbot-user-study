@@ -1,0 +1,43 @@
+# Remove dead symbolic links in path '~/' that point to the dotfiles directory
+#
+- clean: ['~']
+
+
+# Initialize submodules as stored in .gitmodules and all their nested submodules within
+# Note: the DotBot submodule is initialized in the install script. The command below will
+#       initialize all the other submodules
+#
+- shell:
+  - [git submodule update --init --recursive, Initializing submodules]
+
+
+#- shell:
+#  - [mkdir -p bash-it/aliases/enabled bash-it/completion/enabled bash-it/plugins/enabled, Initializing Bash-it directories for enabled aliases, completion and plugins]
+
+
+# Format: <symbolic link> : <source>
+#  - Use 'force: true' to override any existing file
+#  - Use 'create: true' to create parent directory if necessary
+# 
+- link:
+#    bash-it/aliases/enabled/ansible.aliases.bash: bash-it/aliases/available/ansible.aliases.bash
+#    bash-it/aliases/enabled/docker.aliases.bash:  bash-it/aliases/available/docker.aliases.bash
+#    ~/.bash_it: bash-it/
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bb/final/blogbridge.properties:
+      create: true
+      path:   blogbridge.properties
+    ~/.config/deluge/core.conf:
+      create: true
+      path:   deluge/core.conf
+    ~/.config/deluge/gtkui.conf:
+      create: true
+      path:   deluge/gtkui.conf
+    ~/.dotfiles: ''
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.kde/share/config/workspaceoptionsrc:
+      create: true
+      path:   kde/workspaceoptionsrc
+

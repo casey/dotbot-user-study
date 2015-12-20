@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.ackrc: ackrc
+    ~/.bash_completion: bash_completion
+    ~/.bash_completion.d: bash_completion.d/
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.gvimrc: gvimrc
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+
+- shell:
+  - [mkdir -p ~/.vimbackup, Creating Vim backup directory]
+

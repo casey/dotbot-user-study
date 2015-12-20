@@ -1,0 +1,102 @@
+- clean: ['~']
+
+
+- link:
+    ~/.profile:
+        path: profile
+        create: true
+        relink: false
+        force: false
+    ~/.bash_profile:
+        path: bash_profile
+        create: true
+        relink: false
+        force: false
+    ~/.bashrc:
+        path: bashrc
+        create: true
+        relink: false
+        force: false
+    ~/.bash_logout:
+        path: bash_logout
+        create: true
+        relink: false
+        force: false
+    ~/.gitconfig:
+        path: gitconfig
+        create: true
+        relink: false
+        force: false
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+        relink: false
+        force: false
+    ~/.tmux.conf:
+        path: tmux.conf
+        create: true
+        relink: false
+        force: false
+    ~/.vim/vimrc:
+        path: vim/vimrc
+        create: true
+        relink: false
+        force: false
+    ~/.zshenv:
+        path: zshenv
+        create: true
+        relink: false
+        force: false
+    ~/.zshrc:
+        path: zshrc
+        create: true
+        relink: false
+        force: false
+    ~/bin:
+        path: bin/
+        create: true
+        relink: false
+        force: false
+    ~/.Xmodmap:
+        path: Xmodmap
+        create: true
+        relink: false
+        force: false
+    ~/.Xresources:
+        path: Xresources
+        create: true
+        relink: false
+        force: false
+    ~/.Xdefaults:
+        path: Xresources
+        create: true
+        relink: false
+        force: false
+    ~/.xinitrc:
+        path: xinitrc
+        create: true
+        relink: false
+        force: false
+    ~/.config/awesome:
+        path: config/awesome/
+        create: true
+        relink: false
+        force: false
+    ~/.config/vimprobable:
+        path: config/vimprobable/
+        create: true
+        relink: false
+        force: false
+
+- shell:
+    - ./setup/vim-plug-init
+
+- link:
+        ~/.vim/autoload/plug.vim:
+            path: vim/autoload/plug.vim
+            create: true
+            relink: false
+            force: false
+
+- shell:
+    - ./setup/vim-plug-install

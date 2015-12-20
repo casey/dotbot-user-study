@@ -1,0 +1,9 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.gitconfig: gitconfig
+    ~/.rspec: rspec
+    ~/.exercism.json: exercism.json
+    ~/.hector: hector/
+    ~/.config: config/

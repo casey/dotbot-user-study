@@ -1,0 +1,89 @@
+---
+- clean:
+  - '~'
+- link:
+    ~/.bash_profile:
+      path: bash_profile
+      create: false
+      relink: false
+      force: false
+    ~/.bashrc:
+      path: bashrc
+      create: false
+      relink: false
+      force: false
+    ~/.gitconfig:
+      path: gitconfig
+      create: false
+      relink: false
+      force: false
+    ~/.ssh/config:
+      path: ssh/config
+      create: true
+      relink: false
+      force: false
+    ~/.tmux.conf:
+      path: tmux.conf
+      create: false
+      relink: false
+      force: false
+    ~/.vimrc:
+      path: vimrc
+      create: false
+      relink: false
+      force: false
+    ~/.zshrc:
+      path: zshrc
+      create: false
+      relink: true
+      force: true
+    ~/.vim:
+      path: vim
+      create: true
+      relink: false
+      force: false
+    ~/dotadd:
+      path: dotadd
+      create: false
+      relink: false
+      force: false
+    ~/.oh-my-zsh/custom:
+      path: oh-my-zsh/custom
+      create: true
+      relink: true
+      force: true
+    ~/.gemrc:
+      path: gemrc
+      create: false
+      relink: false
+      force: false
+    ~/.hgrc:
+      path: hgrc
+      create: false
+      relink: false
+      force: false
+    ~/.teamocil:
+      path: teamocil
+      create: true
+      relink: false
+      force: false
+    ~/.atom/config.cson:
+      path: atom/config.cson
+      create: false
+      relink: true
+      force: true
+    ~/.atom/keymap.cson:
+      path: atom/keymap.cson
+      create: false
+      relink: true
+      force: true
+    ~/.atom/snippets.cson:
+      path: atom/snippets.cson
+      create: false
+      relink: true
+      force: true
+    ~/.bin:
+      path: bin
+      create: true
+      relink: false
+      force: false

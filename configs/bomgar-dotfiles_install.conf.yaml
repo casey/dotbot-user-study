@@ -1,0 +1,51 @@
+- clean: ['~']
+
+- shell:
+  - ["git submodule update --init --remote", "Installing submodules"]
+  - ["sudo aptitude install vim tmux git i3 zsh feh xautolock scrot imagemagick tig arandr", "installing packages"]
+
+- link:
+    ~/.tmux/plugins/tpm:
+      create: true
+      path: tpm
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.config/nvim/init.vim: vimrc
+    ~/.zshrc: zsh/zshrc
+    ~/.zshrc.local: zsh/zshrc.local
+    ~/.gitconfig: gitconfig
+    ~/.i3/config:
+      path: i3/config
+      create: true
+    ~/.i3/lock.sh:
+      path: i3/lock.sh
+      create: true
+    ~/.i3/wallpaper.png:
+      path: i3/wallpaper.png
+      create: true
+    ~/.i3/i3status.conf:
+      path: i3/i3status.conf
+      create: true
+    ~/.xsessionrc: xsessionrc
+    ~/bin/radar-base.sh:
+      path: git-radar/radar-base.sh
+      create: true
+    ~/bin/prompt.zsh:
+      path: git-radar/prompt.zsh
+      create: true
+    ~/bin/git-radar:
+      path: git-radar/git-radar
+      create: true
+    ~/bin/svnaddallthethings.sh:
+      path: bin/svnaddallthethings.sh
+      create: true
+    ~/bin/svnvimdiff.sh:
+      path: bin/svnvimdiff.sh
+      create: true
+    ~/.vimperatorrc: vimperatorrc
+    ~/.config/nvim/autoload/plug.vim:
+      path: vim-plug/plug.vim
+      create: true
+    ~/.vim/autoload/plug.vim:
+      path: vim-plug/plug.vim
+      create: true

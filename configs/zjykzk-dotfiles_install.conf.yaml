@@ -1,0 +1,25 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.alias: alias
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.emacs.d: emacs.d
+    ~/.ssh: ssh/
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux.conf.local: tmux/.tmux.conf.local
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.bashrc: bashrc
+    ~/.functions: functions
+    ~/.path: path
+    ~/.env: env
+    ~/liquidprompt: liquidprompt
+    ~/.ycm_extra_conf.py: ycm_extra_conf.py
+    ~/.dircolors: dircolors-solarized/dircolors.256dark
+    ~/.oh-my-zsh: oh-my-zsh
+
+- shell:
+      - [eval 'dircolors ~/.dircolors']
+      - [git submodule update --init --recursive, Installing submodules]

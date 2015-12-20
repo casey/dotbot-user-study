@@ -1,0 +1,36 @@
+[
+    {
+        "clean": ["~", "~/.config"]
+    },
+    {
+        "shell": [
+            ["mkdir -p ~/.config", "Creating config directory"],
+            ["mkdir -p ~/.cache/vim/undofiles", "Creating cache directories"],
+            ["mkdir -p ~/.config/fish", "Creating fish config directory"]
+        ]
+    },
+    {
+        "link": {
+            "~/.dotfiles": "",
+            "~/.config/bspwm": "bspwm/",
+            "~/.config/compton.conf": "compton.conf",
+            "~/.config/fish/completions": "fish/completions/",
+            "~/.config/fish/functions": "fish/functions/",
+            "~/.config/fish/config.fish": "fish/config.fish",
+            "~/.config/git": "git/",
+            "~/.config/ranger": "ranger/",
+            "~/.config/sxhkd": "sxhkd/",
+            "~/.tmux.conf": "tmux.conf",
+            "~/.vim": "vim/",
+            "~/.xinitrc": "xinitrc"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing submodules"],
+            ["mkdir -p ~/.vim/autoload", "Creating vim autoload directory"],
+            ["curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
+                "Downloading vim-plug"]
+        ]
+    }
+]

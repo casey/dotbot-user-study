@@ -1,0 +1,23 @@
+[
+    {
+        "clean": ["~"]
+    },
+    {
+        "shell": [
+            ["mkdir -p ~/.config/mc", "Creating directories"]
+        ]
+    },
+    {
+        "link": {
+            "~/.tmux.conf": "tmux.conf",
+            "~/.gtkrc-2.0": "gtkrc-2.0",
+            "~/.pentadactylrc": "pentadactylrc",
+            "~/.config/mc/mc.keymap": "mc.keymap"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing submodules"]
+        ]
+    }
+]

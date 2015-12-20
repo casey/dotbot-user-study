@@ -1,0 +1,20 @@
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.tmux: tmux/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh/
+    ~/.oh-my-zsh/themes/itg.zsh-theme: zsh/itg.zsh-theme
+    ~/.oh-my-zsh/themes/itg-text.zsh-theme: zsh/itg-text.zsh-theme
+    ~/.zshrc: zshrc
+    ~/.iterm-256color-italic.terminfo: xterm-256color-italic.terminfo
+    ~/.gitignore: gitignore
+    ~/.gitconfig: gitconfig
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ["mkdir -p ~/.vim/autoload", Pathogen]
+  - ["curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim", Installing Pathogen]
+  - ["brew install zsh-completions zsh-syntax-highlighting", Zsh highlights]

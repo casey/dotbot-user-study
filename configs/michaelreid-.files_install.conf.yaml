@@ -1,0 +1,97 @@
+- clean: ['~'] 
+
+- link:
+
+
+#   dotfiles
+#----------------------------
+
+    ~/.dotfiles: ''
+
+
+#   Git
+#----------------------------
+
+    ~/.gitconfig: git/gitconfig
+
+
+#   Tmux
+#----------------------------
+
+    ~/.tmux: tmux/
+    ~/.tmux.conf: tmux/tmux.conf
+
+
+#   Emacs
+#----------------------------
+
+    ~/.emacs.d: emacs/
+
+
+#   Bash 
+#-----------------------------
+
+    ~/.bashrc: bash/bashrc
+    ~/.bash_PS1: bash/ps1
+    ~/.bash_profile: bash/bash_profile
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.bash_logout: bash/bash_logout
+    ~/.dircolors: bash/dircolors
+    ~/.gnome-terminal-colors-solarized: bash/gnome-terminal-colors-solarized
+    ~/.solarized-colours: bash/solarized-colours
+    ~/.bash-git-prompt: bash/bash-git-prompt
+
+#   Zsh
+#-----------------------------
+    
+    ~/.zshrc: zsh/zshrc
+    ~/.zsh-update: zsh/zsh-update
+    ~/.oh-my-zsh: zsh/oh-my-zsh/
+
+
+#   Xmodmap
+#-----------------------------
+
+    ~/.Xmodmap: Xmodmap
+
+
+#   Xinit
+# ----------------------------
+   
+    ~/.xinitrc: xinitrc
+
+#   Openbox
+#-----------------------------
+
+    ~/.config/openbox/autostart: openbox/autostart
+    ~/.config/openbox/environment: openbox/environment
+    ~/.config/openbox/rc.xml: openbox/rc.xml
+    ~/.config/openbox/menu.xml: openbox/menu.xml
+
+#   Keysnail
+#-----------------------------
+
+    ~/.keysnail.js: keysnail.js
+
+#   SSH
+#-----------------------------
+
+    ~/.ssh: ssh/
+
+
+#   WeeChat
+#-----------------------------
+
+    ~/.weechat: weechat/
+
+
+# Shell commands
+#------------------------------
+
+
+#  Import git submodules
+#----------------------
+
+- shell: [git submodule update --init --recursive]
+
+

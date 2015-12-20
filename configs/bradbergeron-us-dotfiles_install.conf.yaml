@@ -1,0 +1,89 @@
+- clean: ['~']
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [git submodule update --remote  --recursive, Updating submodules]
+    - [cd dotbot && git checkout master && git pull, Moving dotbot submodule to branch master and pulling]
+    - [cd prezto && git checkout master && git pull, Moving prezto submodule to branch master and pulling]
+    - [cd vim/Ultisnips/vim-snippets && git checkout master && git pull, Moving vim-snippets submodule to branch master and pulling]
+- link:
+    ~/.dotfiles: ''
+    ~/.ackrc: ack/ackrc
+    ~/.agignore: ag/agignore
+    ~/.applescripts: applescripts/
+    ~/.spotify.scpt: applescripts/spotify.scpt
+    ~/.itunes.scpt: applescripts/itunes.scpt
+    ~/.bin:
+      create: true
+      path: bin/
+    ~/.ctags: 
+      create: true
+      path: ctags
+    ~/.gemrc: 
+      create: true
+      path: ruby/gemrc
+    ~/.git: git/
+    ~/.gitconfig:
+      create: true
+      path: git/gitconfig
+    ~/.gitignore_global: 
+      create: true
+      path: git/gitignore_global
+    ~/.gvimrc:
+      create: true
+      path: vim/gvimrc
+    ~/.irb: irb/
+    ~/.iterm: iterm/
+    ~/.jshintrc:
+      create: true
+      path: jshintrc
+    ~/.jscrc:
+      create: true
+      path: jscrc
+    ~/.mongorc: mongorc
+    ~/.nginx: nginx/
+    ~/.nginx.conf:
+      create: true
+      path: nginx/nginx.conf
+    ~/.pryrc: 
+      create: true
+      path: irb/pryrc
+    ~/.psqlrc: psqlrc
+    ~/.rdebugrc: 
+      create: true
+      path: ruby/rdebugrc
+    ~/.rspec: 
+      create: true
+      path: rspec
+    ~/.tmux: 
+      create: true
+      path: tmux/
+    ~/.tmux.conf: 
+      create: true
+      path: tmux/tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc:
+      create: true
+      path: vim/vimrc
+    ~/.zprezto:
+      create: true
+      path: prezto/
+    ~/.zshrc:
+      create: true
+      path: prezto/runcoms/zshrc
+    ~/.zlogin:
+      create: true
+      path: prezto/runcoms/zlogin
+    ~/.zprofile:
+      create: true
+      path: prezto/runcoms/zprofile
+    ~/.zshenv:
+      create: true
+      path: prezto/runcoms/zshenv
+- shell:
+    - "curl https://sublime.wbond.net/Package%20Control.sublime-package -o ~/.config/sublime-text-3/Installed\\\ Packages/Package\\\ Control.sublime-package"
+    - [Installing Package Control]
+    - [vim +BundleInstall; +qall]
+    - [Update bundles]
+    - [cp -R sublime-text/Packages /Applications/Sublime\ Text.app/Contents/MacOS/Packages/]
+    - [git submodule update --init --recursive --remote]
+    - [Installing/updating submodules]

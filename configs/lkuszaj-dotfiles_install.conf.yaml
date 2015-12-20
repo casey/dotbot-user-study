@@ -1,0 +1,42 @@
+- clean: ['~']
+
+- link:
+    ~/.aliases: aliases
+    ~/.exports: exports
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.gitalias: gitalias
+    ~/.oh-my-zsh-custom: oh-my-zsh-custom/
+    ~/.ssh/config: ssh_config
+    ~/.tmux.conf: tmux.conf
+    ~/.tmuxline.conf: tmuxline.conf
+    ~/.vim:
+        relink: true
+        force: true
+        path: vim/
+    ~/.vimrc:
+        relink: true
+        path: vimrc
+    ~/.zshrc:
+        force: true
+        path: zshrc
+    ~/.zshrc_linux:
+        force: true
+        path: zshrc_linux
+    ~/.zshrc_darwin:
+        force: true
+        path: zshrc_darwin
+
+- shell:
+  -
+    - "git submodule update --init --recursive"
+    - "Installing submodules"
+  -
+    - "wget -O- http://cpanmin.us | perl - -l ~/perl5 App::cpanminus local::lib"
+    - "Fetching and installing cpanminus"
+  -
+    - "eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`"
+    - "Setting perl environment variables"
+  -
+    - "git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"

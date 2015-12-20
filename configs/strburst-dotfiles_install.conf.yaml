@@ -1,0 +1,28 @@
+# Check ~ for dead symlinks
+- clean: ['~']
+
+# Create the following symlinks
+- link:
+    ~/.config/bspwm/bspwmrc:
+        create: true
+        path: bspwmrc
+    ~/.config/sxhkd/sxhkdrc:
+        create: true
+        path: sxhkdrc
+
+    ~/.editorconfig: .editorconfig
+    ~/.gitconfig: .gitconfig
+    ~/.ideavimrc: .ideavimrc
+    ~/.tmux.conf: .tmux.conf
+    ~/.vimrc: .vimrc
+    ~/.weechat: .weechat/
+    ~/.xinitrc: .xinitrc
+    ~/.Xresources: .Xresources
+    ~/.zshrc: .zshrc
+
+    ~/.dircolors.ansi-universal: dircolors-solarized/dircolors.ansi-universal
+    ~/.tmuxcolors-256.conf: tmux-colors-solarized/tmuxcolors-256.conf
+
+# Execute the following shell commands
+- shell:
+  - [pushd ~/.vim && mkdir -p backup notes swap undo view && popd, Initializing .vim directory]

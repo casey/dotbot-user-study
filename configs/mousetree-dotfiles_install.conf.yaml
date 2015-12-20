@@ -1,0 +1,13 @@
+- clean: ['~']
+
+- link:
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - mkdir -p ~/code

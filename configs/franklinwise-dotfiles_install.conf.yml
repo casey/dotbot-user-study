@@ -1,0 +1,67 @@
+---
+- clean: ['~']
+
+- link:
+    /usr/local/bin/p4merge: osx/p4merge.sh
+    ~/.bashrc: home/bashrc
+    ~/.bash_profile: home/bash_profile
+    ~/.berkshelf/config.json: 
+      path: home/berkshelf/config.json
+      create : true
+    ~/.bin: home/bin/
+    ~/.boot2docker/env: home/boot2docker/env
+    ~/.chef: home/chef/
+    ~/.config: 
+      path: home/config/
+      force: true
+    ~/.gitconfig: home/gitconfig
+    ~/.kitchen/config.yml: 
+      path: home/kitchen/config.yml
+      create: true
+    ~/.oh-my-fish: home/oh-my-fish/
+    ~/.oh-my-zsh: home/oh-my-zsh/
+    ~/.profile: home/profile
+    #~/.vim: home/vim/
+    ~/.vim-go:
+      path: home/vim-go/
+      force: true
+    #~/.vimrc: home/vimrc
+    #~/.vimrc.before: home/vimrc.before
+    #~/.vimrc.bundles: home/vimrc.bundles
+    ~/.vimrc.before.local: home/vimrc.before.local
+    ~/.vimrc.local: 
+      path: home/vimrc.local
+      force: true
+    ~/.vim/colors: home/vim/colors/
+    ~/.vimrc.bundles.default: home/vimrc.bundles.default
+    ~/.vimrc.bundles.local: home/vimrc.bundles.local
+    ~/.vagrant.d/Vagrantfile:
+      path: home/vagrant.d/Vagrantfile
+      create: true
+    ~/.vagrant.d/insecure_private_key:
+      path: home/vagrant.d/insecure_private_key
+      create: true
+    ~/.vagrant.d/setup-vagrant:
+      path: home/vagrant.d/setup-vagrant
+      create: true
+    ~/.vagrant.d/license-vmware-fusion.lic:
+      path: home/vagrant.d/insecure_private_key
+      create: true
+    ~/Library/Application Support/Karabiner/private.xml: 
+      path: settings/karabiner/private.xml
+      create: true
+    ~/.zshrc: home/zshrc
+
+- shell:
+    -
+      - "source ~/.bashrc | bash"
+      - "Sourced ~/.bashrc"
+    -
+      - "chmod +x brew-it"
+      - "making brew-it executable"
+    -
+      - "chmod +x osx/osx-configure"
+      - "make osx/osx-configure executable"
+    -
+      - "chmod +x osx/installTextMateLicense.sh"
+      - "make osx/installTextMateLicense.sh executable"

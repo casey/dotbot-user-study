@@ -1,0 +1,13 @@
+- clean: []
+
+- shell:
+    - ["mkdir -p ~/.vim/bundle", "Creating vim directories"]
+
+- link: 
+    ~/zgen: zgen
+    ~/.zshrc: zshrc
+    ~/.vimrc: vimrc
+    ~/.vim/bundle/Vundle.vim: Vundle.vim
+
+- shell: 
+    - ["git submodule update --init --recursive", "Installing submodules"]

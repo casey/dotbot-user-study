@@ -1,0 +1,55 @@
+- clean: ['~']
+
+- shell:
+    - git submodule update --init --recursive
+
+- link:
+    # shell
+    ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
+    ~/.zlogin: zlogin
+    ~/.zfuncs:
+        relink: true
+        path: zfuncs/
+
+    # shell environment & utilities
+    ~/.dir_colors: dir_colors
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.ssh/config:
+        create: true
+        path: ssh/config
+
+    # X
+    ~/.Xresources: Xresources
+    ~/.xprofile: xprofile
+    ~/.local/share/fonts/source-code-pro:
+        create: true
+        path: fonts/source-code-pro/OTF
+    ~/.local/share/fonts/FontAwesome.otf:
+        create: true
+        path: fonts/font-awesome/fonts/FontAwesome.otf
+
+    # applications
+    ~/.i3/config:
+        create: true
+        path: i3/config
+    ~/.config/bspwm:
+        create: true
+        path: bspwm/
+    ~/.config/sxhkd:
+        create: true
+        path: sxhkd/
+    ~/.config/compton.conf:
+        create: true
+        path: compton.conf
+
+    # vim
+    ~/.vim:
+        relink: true
+        path: vim/
+    ~/.vimrc: vimrc
+    ~/.gvimrc: gvimrc
+
+- shell:
+    - fc-cache

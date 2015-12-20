@@ -1,0 +1,10 @@
+- clean: ['~']
+- link:
+    ~/.agignore: agignore
+    ~/.autoenv: autoenv/
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+- shell: []

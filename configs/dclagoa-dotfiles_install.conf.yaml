@@ -1,0 +1,68 @@
+- shell:
+    - [git pull && git submodule update --init --recursive, Installing/updating submodules]
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles:
+        create: true
+        force:  true
+        path: ""
+    ~/.screenrc:
+        create: true
+        force: true
+        path: 'programs/screenrc'
+    ~/.hushlogin:
+        create: true
+        force:  true
+        path: 'shells/hushlogin'
+    ~/.exports:
+        create: true
+        force: true
+        path: 'shells/exports'
+    ~/.vimrc:
+        create: true
+        force:  true
+        path:   'spf13-vim/.vimrc'
+    ~/.vimrc.before:
+        create: true
+        force:  true
+        path:   'spf13-vim/.vimrc.before'
+    ~/.vimrc.bundles:
+        create: true
+        force:  true
+        path:   'spf13-vim/.vimrc.bundles'
+    ~/.vimrc.local:
+        create: true
+        force:  true
+        path:   'programs/vimrc.local'
+    ~/.vim/bundle/vundle:
+        create: true
+        force:  true
+        path:   'Vundle.vim'
+    ~/.zshrc:
+        create: true
+        path:   'shells/zshrc'
+    ~/.zlogin:
+        create: true
+        path:   'prezto/runcoms/zlogin'
+    ~/.zpreztorc:
+        create: true
+        path:   'prezto/runcoms/zpreztorc'
+    ~/.zprofile:
+        create: true
+        path:   'prezto/runcoms/zprofile'
+    ~/.zshenv:
+        create: true
+        path:   'prezto/runcoms/zshenv'
+    ~/.zprezto:
+        create: true
+        force:  true
+        path:   'prezto'
+    ~/.functions.zsh:
+        create: true
+        force:  true
+        path:   'shells/functions.zsh'
+
+- shell:
+    - [vim +BundleInstall +BundleClean +qall, Installing vim modules]

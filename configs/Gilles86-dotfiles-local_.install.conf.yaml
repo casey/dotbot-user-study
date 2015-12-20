@@ -1,0 +1,8 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles-local: ''
+    ~/.zshrc_local_after: zshrc_local_after
+
+- shell:
+  - [git submodule update --init --recursive, Installing/updating submodules]

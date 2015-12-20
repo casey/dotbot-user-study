@@ -1,0 +1,13 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.aliases: aliases
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.oh-my-zsh: oh-my-zsh
+
+- shell:
+    - [git submodule update --init --recursive, Installing/updating submodules]

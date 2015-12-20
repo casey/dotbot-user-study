@@ -1,0 +1,40 @@
+- clean: ['~']
+- link:
+    ~/.vim:
+      force: true
+      path: vim/
+    ~/.config/nvim:
+      force: true
+      path: vim/
+    ~/.i3:
+      force: true
+      path: i3/
+    ~/.bashrc:
+      force: true
+      path: bashrc
+    ~/.vimrc:
+      force: true
+      path: vimrc
+    ~/.config/nvim/init.vim:
+      force: true
+      create: true
+      path: vimrc
+    ~/.tmux.conf:
+      force: true
+      path: tmux.conf
+    ~/.zshrc:
+      force: true
+      path: zshrc
+    ~/.profile:
+      force: true
+      path: profile
+    ~/.fonts/PowerlineSymbols.otf:
+      create: true
+      path: vim/bundle/powerline/font/PowerlineSymbols.otf
+    ~/.config/fontconfig/conf.d/10-powerline-symbols.conf:
+      create: true
+      path: vim/bundle/powerline/font/10-powerline-symbols.conf
+    ~/.i3status.conf:
+      force: true
+      path: i3status.conf
+

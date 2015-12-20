@@ -1,0 +1,11 @@
+- clean: ['~']
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.zshrc: zshrc
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+    ~/.vim: vimplugins/
+    ~/.config/terminator/config: terminator.conf
+    '~/.config/sublime-text-3/Installed Packages': sublime_packages/
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings: sublime_settings/Preferences.sublime-settings
+    ~/.oh-my-zsh/themes/custom.zsh-theme: custom.zsh-theme

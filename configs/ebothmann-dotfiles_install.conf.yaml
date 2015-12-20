@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.zshrc:     zshrc
+    ~/.zsh:       zsh/
+    ~/.gitconfig: gitconfig
+    ~/.vimrc:     vimrc
+    ~/.tmux.conf: tmux.conf
+    ~/.inputrc:   inputrc
+    ~/.editrc:    editrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [mkdir -p ~/.vim/autoload, Creating vim autoload directory]
+    - [ln -sf ~/.dotfiles/vim-plug/plug.vim ~/.vim/autoload, Installing vim-plug]
+    - [mkdir -p ~/.zgen, Creating zgen directory]

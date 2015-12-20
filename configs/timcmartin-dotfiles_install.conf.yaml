@@ -1,0 +1,81 @@
+- clean:
+    - "~"
+
+- link:
+    ~/.agignore:
+      relink: true
+      path: agignore
+    ~/.bash_aliases:
+      relink: true
+      path: bash_aliases
+    ~/.bashrc:
+      relink: true
+      path: bashrc
+    ~/.ctags:
+      relink: true
+      path: ctags
+    ~/.gemrc:
+      relink: true
+      path: gemrc
+    ~/.git_template:
+      relink: true
+      path: git_template/
+    ~/.gitconfig:
+      relink: true
+      path: gitconfig
+    ~/.irbrc:
+      relink: true
+      path: irbrc
+    ~/.pair:
+      relink: true
+      path: pair
+    ~/.rdebugrc:
+      relink: true
+      path: rdebugrc
+    ~/.rspec:
+      relink: true
+      path: rspec
+    ~/.tmux.conf:
+      relink: true
+      path: tmux.conf
+    ~/.todo.cfg:
+      relink: true
+      path: todo.cfg
+    ~/.vim:
+      relink: true
+      path: vim/
+    ~/.vimrc:
+      relink: true
+      path: vimrc
+    ~/.watchr.rb:
+      relink: true
+      path: watchr.rb
+    ~/.zsh:
+      relink: true
+      path: zsh
+    ~/.zshrc:
+      relink: true
+      path: zshrc
+    ~/crypt_config.vim:
+      relink: true
+      path: dotfiles_private/crypt_config.vim
+    ~/.vimbundles:
+      relink: true
+      path: vimbundles/
+    ~/.vimbackupdir:
+      relink: true
+      path: vimbackupdir/
+    ~/.thymerc:
+      relink: true
+      path: thymerc
+    ~/Library/LaunchAgents/local.update_dotfiles.plist:
+      relink: true
+      path: properties/local.update_dotfiles.plist
+    ~/.tmuxinator:
+      relink: true
+      path: tmuxinator/
+
+- shell:
+    -
+      - "git submodule update --init --recursive"
+      - "Installing submodules"

@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.emacs.d: emacs.d/
+    ~/.emacs: emacs.el
+    ~/.config/awesome:
+      create: true
+      path: awesome/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
+    ~/bin:
+        path: bin/
+        create: true
+    ~/rerun:
+        path: rerun/
+        create: true
+
+

@@ -1,0 +1,9 @@
+- clean: ['~']
+
+- link:
+    ~/.config/awesome: awesome/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.config/nvim: nvim/
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig

@@ -1,0 +1,24 @@
+[
+  {
+    "clean": ["~"]
+  },
+  {
+    "link": {
+        "~/.bash_profile": ".bash_profile",
+        "~/.profile": ".profile",
+        "~/.gitconfig": ".gitconfig",
+        "~/.gittemplate.txt": ".gittemplate",
+        "~/.gitattributes": ".gitattributes",
+        "~/.my.cnf": ".my.cnf",
+        "~/.slate.js": ".slate.js",
+        "~/.zshrc": ".zshrc",
+        "~/.fn": ".fn",
+        "~/.oh-my-zsh/themes/stffndtz.zsh-theme": "stffndtz.zsh-theme",
+        "~/.atom/config.cson": "atom/config.cson",
+        "~/.atom/styles.less": "atom/styles.less",
+        "~/.vim": "vim/vim",
+        "~/.vimrc": "vim/vimrc",
+        "~/.vim/colors": "vim/vim-hybrid-material/colors/"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+- clean: ['~', '~/.config']
+
+- shell:
+  - [mkdir -p ~/.config]
+
+- link:
+    ~/.config/bash: bash/
+    ~/.config/brew: brew/
+    ~/.config/cpan: cpan/
+    ~/.config/fish:
+      path: fish/
+      force: true
+    ~/.config/git: git/
+    ~/.config/gnupg: gnupg/
+    ~/.config/gtk-2.0: gtk-2.0/
+    ~/.config/httpie: httpie/
+    ~/.config/maid: maid/
+    ~/.config/npm: npm/
+    ~/.config/omf: omf/
+    ~/.config/planck: planck/
+    ~/.config/ssh/gitssh:
+      path: ssh/gitssh
+      create: true
+    ~/.config/thefuck: thefuck/
+    ~/.config/todo-txt: todo-txt/
+    ~/.config/vim: vim/
+    ~/.ideavimrc: vim/ideavimrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [ln -s ~/.local/share/fish/fish_history ~/.config/fish/]
+    - [ln -s ~/.local/share/fish/fishd.685b35aa345a ~/.config/fish/]

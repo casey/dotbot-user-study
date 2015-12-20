@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.i3/config:
+        create: true
+        path: i3/config
+    ~/.i3/i3status.conf:
+        create: true
+        path: i3/i3status.conf
+    ~/lock.sh: lock.sh
+    ~/.xinitrc: xinitrc
+    ~/.Xdefaults: Xdefaults
+    ~/.zshrc: zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

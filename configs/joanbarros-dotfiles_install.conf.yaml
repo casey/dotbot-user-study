@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+
+- shell:
+  - [vim +PluginInstall +qall]
+#  - [git submodule update --init --recursive, Installing submodules]

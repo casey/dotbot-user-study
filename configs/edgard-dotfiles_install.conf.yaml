@@ -1,0 +1,35 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile:
+        force: true
+        path: bash_profile
+    ~/.inputrc:
+        force: true
+        path: inputrc
+    ~/.gitconfig:
+        force: true
+        path: gitconfig
+    ~/.gitignore_global:
+        force: true
+        path: gitignore_global
+    ~/.ssh/config:
+        create: true
+        force: true
+        path: ssh/config
+    ~/.config/gocode/config.json:
+        create: true
+        force: true
+        path: config/gocode/config.json
+    ~/.config/fontconfig/fonts.conf:
+        create: true
+        force: true
+        path: config/fontconfig/fonts.conf
+    ~/.hushlogin:
+        create: true
+        force: true
+        path: hushlogin
+
+- shell:
+    - [git submodule update --init --recursive, Installing/updating submodules]
+    - [chmod 600 ssh/config, Fix ssh config permission]

@@ -1,0 +1,14 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore: git/gitignore
+    ~/.zshrc: zsh/zshrc
+    ~/.zsh: zsh/
+    ~/.zshenv: zsh/zshenv
+    /usr/local/share/zsh/site-functions/prompt_pure_setup: zsh/zfunctions/pure.zsh
+    /usr/local/share/zsh/site-functions/async: zsh/zfunctions/async.zsh
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

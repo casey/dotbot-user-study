@@ -1,0 +1,21 @@
+- clean: ['~']
+
+- link:
+    ~/.vimrc: vimenv/general/local.vim
+    ~/.gitignore: .gitignore
+    ~/.gitconfig: .gitconfig
+    ~/.bash_profile: vimenv/general/local.bash
+
+- shell:
+    - [mkdir -p ~/work/dev, Create work/dev dir]
+    - [mkdir -p vimenv/active_environment/plugin, Create active_environment dir]
+    - [vimenv -e, Activating general environment]
+
+- link: 
+    ~/.vim : vimenv/active_environment/plugin/
+
+- shell:
+    - [vim +PluginInstall +qall, Installing general vim plugins]
+
+
+

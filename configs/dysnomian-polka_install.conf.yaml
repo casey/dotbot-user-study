@@ -1,0 +1,39 @@
+- shell:
+  - [mkdir -p ~/src, Creating src directory]
+  - ["git submodule update --init --recursive", "Installing submodules"]
+- clean: ['~']
+- link:
+    ~/.agignore: agignore
+    ~/.config/fish:
+      path: config/fish
+      create: true
+      relink: true
+    ~/.config/omf:
+      path: config/omf
+      create: true
+      relink: true
+    ~/.ctags: ctags
+    ~/.emacs.d:
+      relink: true
+      path: emacs.d/
+    ~/.gemrc: gemrc
+    ~/.git_template: git_template
+    ~/.gitconfig: gitconfig
+    ~/.gitconfig.local: gitconfig.local
+    ~/.gitignore: gitignore
+    ~/.gitmessage: gitmessage
+    ~/.lein: lein/
+    ~/.nvm: nvm/
+    ~/.rspec: rspec
+    ~/.pryrc: pryrc
+    ~/.ruby-version: ruby-version
+    ~/.spacemacs: spacemacs
+    ~/.tmux.conf: tmux.conf
+    ~/.tmuxinator: tmuxinator/
+    ~/.vim:
+      path: vim/
+      force: true
+    ~/.vimrc: vimrc
+    ~/.vimrc.local: vimrc.local
+    ~/.vimrc.bundles: vimrc.bundles
+    ~/.vimrc.bundles.local: vimrc.bundles.local

@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+    ~/.vim: .vim/
+    ~/.vimrc: .vimrc
+    ~/.config/bspwm: .config/bspwm
+    ~/.config/sxhkd: .config/sxhkd
+    ~/.config/tint2: .config/tint2
+    ~/.config/lighthouse: .config/lighthouse
+    ~/.zshrc: .zshrc
+    ~/.config/zsh: ./.config/zsh
+    ~/.Xresources: .Xresources
+    ~/.config/xfce4/terminal: ./.config/xfce4/terminal
+    ~/.config/compton: ./.config/compton
+    ~/.vimperatorrc: ./.vimperatorrc
+    ~/.scripts: ./.scripts
+    ~/.config/fish/config.fish: ./.config/fish/config.fish
+    ~/.config/fish/functions: ./.config/fish/functions
+

@@ -1,0 +1,16 @@
+[
+    {
+        "link": {
+            "~/.bashrc":"bashrc",
+            "~/.tmux.conf":"tmux",
+            "~/.gitconfig":"gitconfig",
+            "~/.gitignore":"gitignore",
+            "~/.vimrc":"vimrc"
+        }
+    },
+    {
+        "shell": [
+            ["git submodule update --init --recursive", "Installing/updating submodules"]
+        ]
+    }
+]

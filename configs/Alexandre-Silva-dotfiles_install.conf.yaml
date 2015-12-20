@@ -1,0 +1,60 @@
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init, Installing/updating submodules]
+  - [mkdir -p ~/.todo, Creating .todo dir]
+  -
+    command: [./shell/scripts/install-oh-my-zsh, Installing/updating oh-my-zsh]
+    stdout: true
+
+- link:
+    ~/.tmux.conf: tmux.conf
+
+    ~/.vimrc: vimrc
+    ~/.gvimrc: gvimrc
+
+    ~/.config/awesome: 
+      create: true
+      path: config/awesome/
+
+    ~/.config/base16-shell: 
+      create: true
+      path: config/base16-shell/
+
+    ~/.config/fontconfig: 
+      create: true
+      path: config/fontconfig/
+
+    ~/.config/user-dirs.dirs: 
+      create: true
+      path: config/user-dirs.dirs
+
+    ~/.config/ranger: 
+      create: true
+      path: config/ranger
+
+    ~/.bashrc: shell/bashrc
+    ~/.zshrc: shell/zshrc
+
+    ~/.profile: shell/profile
+    ~/.zprofile: shell/zprofile
+
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+
+    ~/.conkyrc: conkyrc
+
+    ~/.config/zathura: config/zathura
+
+    ~/.spacemacs: emacs/spacemacs
+
+    ~/.xinitrc: xinitrc
+
+    ~/.Xresources: Xresources
+
+    ~/.bin/AL: shell/scripts/AL.sh
+    ~/.bin/rangerl: shell/scripts/rangerl.sh
+    ~/.bin/shellcd: shell/scripts/shellcd.sh
+
+- shell:
+    - [vim -c "PluginUpdate" -c "quitall", Installing/updating vim plugins]

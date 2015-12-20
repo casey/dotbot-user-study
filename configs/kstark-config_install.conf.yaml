@@ -1,0 +1,23 @@
+- clean: ['~']
+- shell:
+  - ['mkdir -p ~/scripts', 'Creating scripts directory']
+- link:
+    ~/.bash_profile: bash/bash_profile
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.bash_prompt: bash/bash_prompt
+    ~/scripts/elb_ssh: bash/scripts/elb_ssh
+    ~/scripts/elb_ssh_wrapper.py: bash/scripts/elb_ssh_wrapper.py
+    ~/scripts/git-cal: bash/scripts/git-cal
+    ~/scripts/git-churn: bash/scripts/git-churn
+    ~/scripts/git-owners: bash/scripts/git-owners
+    ~/scripts/plist_to_json: bash/scripts/plist_to_json
+    ~/scripts/tabs_to_csv: bash/scripts/tabs_to_csv
+    ~/scripts/update_pylintrc: bash/scripts/update_pylintrc
+    ~/scripts/lpsearch: bash/scripts/lpsearch
+    ~/.vim: vim
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.psqlrc: postgres/psqlrc
+    ~/.screenrc: screenrc
+- shell:
+   - ['vim -f +PluginInstall +qall', 'Installing vim plugins']

@@ -1,0 +1,57 @@
+- clean: ['~']
+
+- shell: 
+    - [git submodule update --init --recursive, Installing submodules]
+
+
+- link:
+    ~/.zshrc:  zshrc
+    ~/.spacemacs:  spacemacs
+    ~/.config/awesome/rc.lua: 
+        create: true
+        path: rc.lua
+    ~/.config/matplotlib/matplotlibrc:  
+        create: true
+        path: matplotlibrc
+    ~/.jupyter/jupyter_notebook_config.py: 
+        create: true
+        path: jupyter/jupyter_notebook_config.py
+    ~/.jupyter/jupyter_qtconsole_config.py: 
+        create: true
+        path: jupyter/jupyter_qtconsole_config.py
+    ~/.jupyter/nbconfig/notebook.json: 
+        create: true
+        path: jupyter/nbconfig/notebook.json
+    ~/.local/share/jupyter/nbextensions/notebook_input_mode/main.js:
+        create: true
+        path: jupyter/notebook_input_mode/main.js
+    ~/.local/share/jupyter/nbextensions/notebook_input_mode/styles.css:
+        create: true
+        path: jupyter/notebook_input_mode/styles.css
+    ~/.vim:    vim/
+    ~/.condarc: condarc
+    ~/.tmux.conf: tmux.conf
+    ~/.inputrc: inputrc
+    ~/.dir_colors: dir_colors
+    ~/.vimperatorrc: vimperatorrc
+    ~/.gitconfig:  gitconfig
+    ~/.global_ignore: global_ignore
+    ~/.ackrc:  ackrc
+    ~/local: 
+        create: true
+        path: local/
+    ~/.oh-my-zsh/plugins/last-working-dir/last-working-dir.plugin.zsh: 
+        create: true
+        path: last-working-dir.plugin.zsh
+    ~/.oh-my-zsh/themes/lukepfister.zsh-theme:
+        create: true
+        path: lukepfister.zsh-theme
+
+- shell: 
+    - mkdir -p ~/.vim_swp
+    - mkdir -p ~/.vim_undo
+    # - vim +PluginInstall +qall
+
+
+
+

@@ -1,0 +1,63 @@
+- clean: ['~', '~/.config', '~/.local']
+- clean: ['~/.local/share/plank']
+- clean: ['~/.local/share/icons']
+- clean: ['~/.zsh']
+
+- shell:
+  - [mkdir -p ~/bin]
+  - [mkdir -p ~/.ssh]
+  - [mkdir -p ~/.config]
+  - [mkdir -p ~/.zsh]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.autoenv: autoenv/
+    ~/.bashrc: bashrc
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_functions: bash_functions
+    ~/.bash_paths: bash_paths
+    ~/.config/powerline:  config/powerline/
+    ~/.devscripts: devscripts
+    ~/.gitconfig:  gitconfig
+    ~/.i3: i3/
+    ~/.rpmmacros: rpmmacros
+    ~/.screenrc: screenrc
+    ~/.tmux: tmux/
+    ~/.tmux.conf: tmux.conf
+    ~/.vimrc: vimrc
+
+
+# zsh setup
+- shell:
+  - [mkdir -p ~/.zsh]
+- link:
+    ~/.oh-my-zsh: oh-my-zsh/
+    ~/.zshrc: zshrc
+    ~/.antigen: antigen/
+
+# Stuff for my bin directory
+- link:
+    ~/bin/cpplint.py: bin/cpplint.py
+    ~/bin/git-clang-format: bin/git-clang-format
+
+# Themes and pretty stuff...
+- shell:
+  - [mkdir -p ~/.local/share/icons]
+  - [mkdir -p ~/.local/share/plank/themes]
+- link:
+    ~/.local/share/icons/Numix-Bevel: local/share/icons/Numix-Bevel/
+    ~/.local/share/icons/Vertex: local/share/icons/Vertex/
+#    ~/.local/share/icons/hicolor: local/share/icons/hicolor/
+    ~/.local/share/plank/themes/Numix: local/share/plank/themes/Numix/
+    ~/.local/share/plank/themes/Arc-Plank: local/share/plank/themes/Arc-Plank/
+    ~/.wallpapers: wallpapers
+
+### Fonts ###
+- shell:
+  - [mkdir -p ~/.config/fontconfig]
+- link:
+    ~/.local/share/fonts: local/share/fonts/
+    ~/.config/fontconfig/conf.d: config/fontconfig/conf.d/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

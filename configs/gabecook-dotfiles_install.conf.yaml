@@ -1,0 +1,35 @@
+- clean: ['~']
+
+- link:
+  #~/.dotfiles: ''
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gvimrc: gvimrc
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.profile: profile
+    ~/.tmuxinator: tmuxinator/
+    ~/.asdf: asdf/
+    ~/.ctags: ctags
+
+- shell:
+  # Update DotBot and other git submodules 
+  - [git submodule update --init --recursive, Installing submodules]
+
+  # Make MacVim the default handler for text files.
+  - ["defaults write com.apple.LaunchServices LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.MacVim;}'", "Making MacVim the default text editor"]
+
+  # Install/update VIM plugins with Vundler.
+  - ['vim +PluginInstall +qall', Update VIM plugins with Vundler]
+
+  # Install Erlang plugin for asdf
+  - ['asdf plugin-add Erlang https://github.com/HashNuke/asdf-erlang', Installing Erlang plugin for asdf]
+
+  # Install Elixer plugin for asdf
+  - ['asdf plugin-add Elixir https://github.com/HashNuke/asdf-elixir', Installing Elixir plugin for asdf]
+
+  #-
+  #description: Update RVM
+  #command: 'rvm get stable'
+  #stdout: true
+  #stderr: true

@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig:
+      force: true
+      path: git/gitconfig
+    ~/.bashrc:
+      force: true
+      path: bash/bashrc
+    ~/.zshrc:
+      force: true
+      path: zsh/zshrc
+    ~/.oh-my-zsh/themes/taschetto.zsh-theme:
+      force: true
+      path: zsh/themes/taschetto.zsh-theme
+    ~/.vim:
+      force: true
+      path: vim/
+    ~/.vimrc:
+      force: true
+      path: vim/vimrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

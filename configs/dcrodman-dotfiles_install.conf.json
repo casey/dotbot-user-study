@@ -1,0 +1,19 @@
+[
+    {
+        "clean" : ["~"]
+    },
+    {
+        "link" : {
+            "~/.dotfiles" : "",
+            "~/.zshrc" : "zshrc",
+            "~/.vimrc" : "vimrc",
+            "~/.vim" : "vim",
+            "~/.antigen_lnk" : "antigen",
+            "~/.gitignore": "gitignore",
+            "~/.gitconfig" : "gitconfig"
+        }
+    },
+    {
+        "shell" : []
+    }
+]

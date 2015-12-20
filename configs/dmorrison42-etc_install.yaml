@@ -1,0 +1,13 @@
+- link:
+  # Modules
+    ~/.vim: vim/
+    ~/.janus: janus/
+    ~/.oh-my-zsh: oh-my-zsh
+  # Files
+    ~/.zshrc: zshrc
+    ~/.profile: profile
+    ~/bin/mr: myrepos/mr
+    ~/.mrconfig: mrconfig
+    ~/.oh-my-zsh/custom/themes/pure.zsh-theme:
+        create: true
+        path: pure/pure.zsh

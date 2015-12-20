@@ -1,0 +1,15 @@
+
+
+- clean: 
+    - "~"
+
+- link:
+    ~/.dotfiles: ''
+    ~/.i3: 'i3/'
+    ~/.gitconfig: 'git/gitconfig'
+    ~/.hgrc: 'hg/hgrc'
+    ~/.tmux.conf: 'tmux/tmux.conf'
+    ~/.zshrc: 'zsh/zshrc'
+    ~/.oh-my-zsh/custom: 'zsh/custom'
+    ~/.vimrc: 'vim/vimrc'
+    ~/.vim: 'vim/vim'

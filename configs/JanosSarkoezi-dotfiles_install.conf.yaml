@@ -1,0 +1,41 @@
+- clean: ['~']
+
+- shell:
+    - [mkdir -p ~/.bin, Creating .bin directory]
+    - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.tmux.conf: tmux.conf
+
+    ~/.elinks:
+        path: elinks
+        create: true
+
+    ~/.fzf:
+        path: fzf 
+        create: true
+    ~/.fzf.bash: fzf.bash
+    ~/.fzf.zsh: fzf.zsh
+
+    ~/.oh-my-zsh:
+        path: oh-my-zsh
+        create: true
+
+    ~/.dotfiles/oh-my-zsh/custom/themes:
+        path: themes
+        create: true
+
+    ~/.vim:
+        path: vim
+        create: true
+    ~/.vimrc: vimrc
+    ~/.bin/vim-tmux-move.zsh: gist/tarruda/5158535/vim-tmux-move.zsh
+    ~/.bin/vim-tmux-xpaste.zsh: gist/tarruda/5158535/vim-tmux-xpaste.zsh
+    ~/.bin/vim-tmux-open.zsh: gist/tarruda/5158535/vim-tmux-open.zsh
+
+- shell:
+    - [~/.fzf/install --all, Installing FZF]
+    - [chmod u+x ~/.dotfiles/base16-gnome-terminal/base16-colors.dark.sh, Setting colors.dark.sh to executable]
+    - [~/.dotfiles/base16-gnome-terminal/base16-colors.dark.sh, Setting gnome-terminal color]
+    - [chmod u-x ~/.dotfiles/base16-gnome-terminal/base16-colors.dark.sh, Removing executability from colors.dark.sh]

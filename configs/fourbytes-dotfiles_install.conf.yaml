@@ -1,0 +1,29 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.rtorrent.rc: rtorrent.rc
+    ~/.xinitrc: xinitrc
+    ~/.Xresources: Xresources
+    ~/.zshrc: zsh/zshrc
+    ~/.ncmpcpp/config:
+      create: true
+      path: ncmpcpp/config
+    ~/.config/compton.conf:
+      create: true
+      path: compton.conf
+    ~/.config/bspwm:
+      create: true
+      path: bspwm
+    ~/.config/sxhkd:
+      create: true
+      path: sxhkd
+    ~/.config/term_colors:
+      create: true
+      path: term_colors
+    ~/.bin: bin
+
+- shell:
+  - [mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads, Creating 
+rtorrent directories]
+  - [git submodule update --init --recursive, Installing submodules]

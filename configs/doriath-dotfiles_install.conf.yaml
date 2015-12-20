@@ -1,0 +1,10 @@
+- clean: ['~']
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ['sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"', Installing oh-my-zsh]

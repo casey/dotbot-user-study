@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+   ~/.zshrc: zshrc
+   ~/.emacs.d/prelude-modules.el: emacs.d/prelude-modules.el
+   ~/.emacs.d/personal/custom.el: emacs.d/custom.el
+   ~/.gitconfig: gitconfig
+   ~/.config/ibus/rime: rime
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,125 @@
+# vim:set ft=config nowrap :
+- shell:
+  - ["export XDG_CACHE_HOME=$HOME/.cache && mkdir -p $XDG_CACHE_HOME/nvim/{undo,swap,backup}","Creating nvim cache directories"]
+  - ["export XDG_CONFIG_HOME=$HOME/.config && mkdir -p $XDG_CONFIG_HOME/nvim/{bundle,after}","Creating nvim config directories"]
+  #- ["git submodule add https://github.com/VundleVim/Vundle.vim.git vim/vundle", "Installing Vundle submodule"]
+
+- clean: ['~']
+
+- link:
+    #~/.dotfiles: ''
+    $XDG_CONFIG_HOME/systemd/user/tmux.service:
+      create: true
+      path: systemd/tmux.service
+    $XDG_CONFIG_HOME/nvim/ftplugin:
+      create: true
+      path: vim/ftplugin/
+    $XDG_CONFIG_HOME/nvim/after/ftplugin:
+      create: true
+      path: vim/after/ftplugin/
+    $XDG_CONFIG_HOME/nvim/bundle/snipmate.vim/snippets:
+      create: true
+      path: vim/snippets/
+    $XDG_CONFIG_HOME/nvim/bundle/Vundle.vim:
+      create: true
+      path: vim/vundle/
+    $XDG_CONFIG_HOME/ranger/rc.conf:
+      create: true
+      path: ranger/rc.conf
+    $XDG_CONFIG_HOME/ranger/rifle.conf:
+      create: true
+      path: ranger/rifle.conf
+    $XDG_CONFIG_HOME/dunst/dunstrc:
+      create: true
+      path: dunstrc
+    $XDG_CONFIG_HOME/mpd/mpd.conf:
+      create: true
+      path: mpd.conf
+    #$XDG_CONFIG_HOME/mpv/config:
+      #create: true
+      #path: mpv/config
+    #$XDG_CONFIG_HOME/mpv/encoding-profiles.conf:
+      #create: false
+      #path: mpv/encoding-profiles.conf
+    #$XDG_CONFIG_HOME/vlc/vlcrc:
+      #create: true
+      #path: vlcrc
+    ~/sync/.stignore:
+      create: true
+      path: stignore
+    ~/.w3m/config:
+      create: true
+      path: w3m.config
+    ~/.i3/config:
+      create: true
+      path: i3.config
+    #~/.ssh/config:
+      #create: false
+      #path: ssh.config
+    ~/.gnupg/gpg-agent.conf:
+      create: true
+      path: gpg-agent.conf
+    ~/.gnupg/gpg.conf:
+      create: true
+      path: gpg.conf
+    ~/.local/bin:
+      create: true
+      path: local/bin/
+    ~/.mplayer/config:
+      create: true
+      path: mplayer.config
+    ~/.mutt/gmail:
+      create: true
+      path: mutt/gmail
+    ~/.mutt/outlook:
+      create: true
+      path: mutt/outlook
+    ~/.mutt/yahoo:
+      create: true
+      path: mutt/yahoo
+    ~/.mutt/mailcap:
+      create: true
+      path: mutt/mailcap
+    ~/.zsh/prompt.zsh:
+      create: true
+      path: zsh/prompt.zsh
+    ~/.zsh/syntax.zsh:
+      create: true
+      path: zsh/syntax.zsh
+    ~/.newsbeuter/config:
+      create: true
+      path: newsbeuter/config
+    ~/.newsbeuter/urls:
+      create: true
+      path: newsbeuter/urls
+    ~/.Xresources: Xresources
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.inputrc: inputrc
+    ~/.muttrc: muttrc
+    ~/.mypwds.gpg: mypwds.gpg
+    ~/.nanorc: nanorc
+    ~/.nvimrc: nvimrc
+    ~/.profile: profile
+    ~/.rtorrent.rc: rtorrent.rc
+    ~/.tarsnaprc: tarsnaprc
+    ~/.tmux.conf: tmux.conf
+    ~/.urlview: urlview
+    ~/.xinitrc: xinitrc
+    ~/.xprofile: xprofile
+    ~/.zshrc: zshrc
+
+- shell:
+  - ["git submodule update --init --recursive", "Installing submodules"]
+  #- ["vim +PluginInstall +qall", "Installing nvim's plugins trough Vundle"]
+  #- ["mkdir -p ~/.config/mpd/playlists", "Creating mpd directory"]
+  #- ["touch ~/.config/mpd/{database,log,pid,state,sticker.sql}", "Creating mpd files"]
+  #- ["install -dm0 ~/{Desktop,.dropbox-dist}", "Creating an un(read/write)able directories"]
+  #- ["mkdir -p ~/.rtorrent/{session,watch,downloads}", "Creating rtorrent directories"]
+  #- ["mkdir -p ~/sync/{syncthing,dropbox}", "Creating sync directories"]
+  #- ["mkdir ~/{tex,literature,downloads,music,videos}", "Creating other directories"]
+  #- [git clone https://github.com/VundleVim/Vundle.vim.git "$XDG_CONFIG_HOME"/nvim/bundle/Vundle.vim", "Installing Vundle"]
+  #- ["", "\n\n\n\nalsaequal-mgr \t\tbc \t\t\tbriss \t\t\tcmus \ntmux \t\t\tcolordiff \t\tcommand-not-found \tcower \t\t\tcv \ndropbox \t\tdropbox-cli \t\tdtrx \t\t\tdunst \t\t\tdunst \nfbterm \t\t\tfeh \t\t\tfim \t\t\tgifsicle \t\thh \nhstr-bin \t\thtop \t\t\ti3 \t\t\ti3ipc-python-git \tinotify-tools \niptables \t\tlaptop-mode-tools \tledger \t\t\tlsof \t\t\tmagmatv \nmpc \t\t\tmpd \t\t\tmplayer \t\tmupdf \t\t\tmutt \nmutt-sidebar \t\tneovim-git \t\tneovim-symlinks \tnewsbeuter \t\tnodejs-livedown \nnumlockx \t\topenssh \t\topenssl \t\tpacaur \t\t\tpar \npdfcrack \t\tpotrace \t\tppl-addressbook \tpstoedit \t\tqpdf \nranger \t\t\trarcrack \t\tredshift \t\treflector \t\trenameutils \nrtorrent \t\truby \t\t\tsc \t\t\tsyncthing \t\tsyncthing-inotify \ntabview-git \t\ttaglib \t\t\ttarsnap \t\ttexlive-bibtexextra \ttexlive-core \ntexlive-genericextra \ttexlive-localmanager-gittexlive-music \t\ttexlive-pictures \ttexlive-plainextra \ntpp \t\t\tttf-dejavu \t\tttf-font-icons \t\tttf-inconsolata \tudiskie \nudisks \t\t\tunzip \t\t\turlview \t\turxvt \t\t\turxvt-url-picker \nw3m \t\t\twget \t\t\twikicurses \t\tworklog-git \t\twpa_supplicant \nxclip \t\t\txcwd-git \t\txdotool \t\txkeyboard-config \txlhtml \nxorg-xinit \t\txpdf \t\t\txterm \t\t\tyoutube-dl \nzip \t\t\tzsh\n\vYou may wish to install some of these packages?"]

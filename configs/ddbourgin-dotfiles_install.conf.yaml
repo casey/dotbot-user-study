@@ -1,0 +1,20 @@
+- clean: ['~']
+
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.oh-my-zsh: .oh-my-zsh/
+    ~/.ipython/profile_default/ipython_config.py: ipython_config.py
+    ~/.ipython/profile_default/ipython_notebook_config.py: ipython_notebook_config.py
+    ~/.matplotlib/matplotlibrc: matplotlibrc
+    ~/.tmux.conf: tmux.conf
+    ~/.tmuxstartup.sh: tmuxstartup.sh
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.dotfiles: ''
+    ~/.vim: vim/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,144 @@
+# vim:set ft=yaml :
+- clean: ['~']
+
+- shell:
+  - ["git submodule update --init --recursive", "Installing submodules"]
+
+- link:
+    $HOME/.fbtermrc: fbtermrc
+    $HOME/.nanorc: nanorc
+    $HOME/.ssh/config:
+      create: true
+      path: ssh.conf
+    $XDG_CONFIG_HOME/profile-cleaner.conf:
+      create: true
+      path: profile-cleaner.conf
+    $XDG_CONFIG_HOME/systemd/user:
+      create: true
+      path: systemd/
+    $XDG_DATA_HOME/bin:
+      create: true
+      path: bin/
+    $XDG_CONFIG_HOME/ls++/ls++.conf:
+      create: true
+      path: ls++.conf
+    $XDG_CONFIG_HOME/tmux/tmux.conf:
+      create: true
+      path: gitconfig
+    $XDG_CONFIG_HOME/git/config:
+      create: true
+      path: gitconfig
+    $XDG_DATA_HOME/sync/.stignore:
+      create: true
+      path: stignore
+    $XDG_CONFIG_HOME/git/ignore:
+      create: true
+      path: gitignore
+    $XDG_CONFIG_HOME/nvim/ftplugin:
+      create: true
+      path: nvim/ftplugin/
+    $XDG_CONFIG_HOME/nvim/dict:
+      create: true
+      path: nvim/dict/
+    $XDG_CONFIG_HOME/nvim/nvimrc:
+      create: true
+      path: nvim/nvimrc
+    $XDG_CONFIG_HOME/nvim/filetypes.vim:
+      create: true
+      path: nvim/filetypes.vim
+    $XDG_CONFIG_HOME/nvim/autoload/plug.vim:
+      create: true
+      path: nvim/plug/plug.vim
+    $ZDOTDIR/.zshrc:
+      create: true
+      path: zsh/zshrc
+    $ZDOTDIR/.zprofile:
+      create: true
+      path: zsh/zprofile
+    $ZDOTDIR/.zshenv:
+      create: true
+      path: zsh/zshenv
+    $ZDOTDIR/plugins:
+      create: true
+      path: zsh/plugins/
+    $XDG_CONFIG_HOME/pacman/makepkg.conf:
+      create: true
+      path: makepkg.conf
+    $XDG_CONFIG_HOME/mutt/muttrc:
+      create: true
+      path: mutt/muttrc
+    $XDG_CONFIG_HOME/mutt/gmail:
+      create: true
+      path: mutt/gmail
+    $XDG_CONFIG_HOME/mutt/mailcap:
+      create: true
+      path: mutt/mailcap
+    $XDG_CONFIG_HOME/mutt/outlook:
+      create: true
+      path: mutt/outlook
+    $XDG_CONFIG_HOME/mutt/yahoo:
+      create: true
+      path: mutt/yahoo
+    $XDG_DATA_HOME/orbment/plugins:
+      create: true
+      path: orbment/plugins/
+    $XDG_CONFIG_HOME/orbment/orbment.ini:
+      create: true
+      path: orbment/orbment.ini
+    $XDG_CONFIG_HOME/termite/config:
+      create: true
+      path: termite
+    $XDG_CONFIG_HOME/newsbeuter/config:
+      create: true
+      path: newsbeuter/config
+    $XDG_CONFIG_HOME/newsbeuter/urls:
+      create: true
+      path: newsbeuter/urls
+    $XDG_CONFIG_HOME/rtorrent/config.rc:
+      create: true
+      path: rtorrent.rc
+    $XDG_CONFIG_HOME/urxvt:
+      create: true
+      path: urxvt
+    $XDG_CONFIG_HOME/chromium-flags.conf:
+      create: true
+      path: chromium-flags.conf
+    $XDG_CONFIG_HOME/mpd/mpd.conf:
+      create: true
+      path: mpd/mpd.conf
+    $XDG_CONFIG_HOME/gnupg/gpg-agent.conf:
+      create: true
+      path: gnupg/gpg-agent.conf
+    $XDG_CONFIG_HOME/gnupg/gpg.conf:
+      create: true
+      path: gnupg/gpg.conf
+    $XDG_CONFIG_HOME/gnupg/dirmngr.conf:
+      create: true
+      path: gnupg/dirmngr.conf
+    $XDG_CONFIG_HOME/ranger/rc.conf:
+      create: true
+      path: ranger/rc.conf
+    $XDG_CONFIG_HOME/ranger/rifle.conf:
+      create: true
+      path: ranger/rifle.conf
+    $XDG_CONFIG_HOME/ranger/plugins/texas.py:
+      create: true
+      path: texas/texas.py
+    $XDG_CONFIG_HOME/youtube-dl/config:
+      create: true
+      path: youtube-dl.conf
+
+# - shell:
+  # - mkdir -p "${ZDOTDIR}/functions"
+  # - cp -T "${DOTFILES}/texas/texas.zsh" "${ZDOTDIR}/functions/texas"
+  # - cp "${DOTFILES}/texas/texas_init.zsh" "${ZDOTDIR}/plugins"
+
+- link:
+    $XDG_CONFIG_HOME/nvim/bundle/snipmate.vim/snippets:
+      create: true
+      path: nvim/snippets/
+
+  # - touch $XDG_CONFIG_HOME/mpd/{database,log,pid,state,sticker.sql}
+  #- mkdir -p "$XDG_CACHE_HOME/nvim/{backup,swap,undo}"
+  #- mkdir -p "$XDG_CONFIG_HOME/nvim/{autoload,ftplugin,bundle}"
+  #- mkdir -p "{$XDG_CONFIG_HOME,$XDG_DATA_HOME}"/newsbeuter

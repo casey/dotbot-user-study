@@ -1,0 +1,28 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.gvimrc: gvimrc
+    ~/.tmux: tmux/
+    ~/.tmux.conf: tmux.conf
+    ~/.zprezto: prezto
+    ~/.zpreztorc: zpreztorc
+    ~/.zprofile: zprofile
+    ~/.zshrc: zshrc
+    ~/.zshenv: zshenv
+    ~/.zlogin: zlogin
+    ~/.zlogout: zlogout
+    ~/.gitconfig: gitconfig
+
+- shell:
+    -
+      - "git submodule update --init --recursive --remote"
+      - "Installing submodules ..."
+    -
+      - "echo | vim +PluginInstall +qall"
+      - "Installing Vim plugins ..."
+    -
+      - "~/.vim/bundle/fonts/install.sh"
+      - "Installing patched fonts ..."

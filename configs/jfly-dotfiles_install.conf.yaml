@@ -1,0 +1,43 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ""
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.bashrc: bashrc
+    ~/.aliases: aliases
+    ~/.xmonad/xmonad.hs:
+        create: true
+        path: xmonad.hs
+    ~/.xmobarrc: xmobarrc
+    ~/.Xmodmap: Xmodmap
+    ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc
+    ~/.conkyrc: conkyrc
+    ~/bin: bin
+    ~/.config/roxterm.sourceforge.net:
+        create: true
+        path: roxterm.sourceforge.net
+    ~/.dir_colors: dir_colors
+    ~/.ssh/config:
+        create: true
+        path: ssh_config
+    /etc/systemd/logind.conf.d/no-suspend-on-lidswitch.conf:
+        create: true
+        path: no-suspend-on-lidswitch.conf
+    /etc/systemd/logind.conf.d/suspend-on-powerbutton.conf:
+        create: true
+        path: suspend-on-powerbutton.conf
+    /etc/X11/xorg.conf.d/20-yogart-intel.conf:
+        create: true
+        path: 20-yogart-intel.conf
+    /etc/X11/xorg.conf.d/20-trackpoint.conf:
+        create: true
+        path: 20-trackpoint.conf
+
+- shell:
+  -
+    - git update-submodules
+    - Install/update submodules

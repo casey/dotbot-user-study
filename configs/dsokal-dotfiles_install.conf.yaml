@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore: .gitignore_global
+    ~/.tmux.conf: tmux.conf
+    ~/.zprezto: prezto
+    ~/.zlogin: prezto/runcoms/zlogin
+    ~/.zlogout: prezto/runcoms/zlogout
+    ~/.zpreztorc: zpreztorc
+    ~/.zprofile: prezto/runcoms/zprofile
+    ~/.zshenv: prezto/runcoms/zshenv
+    ~/.zshrc: zshrc
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,77 @@
+- clean: ['~']
+
+- link:
+    ~/.gitconfig:
+        path: gitconfig
+        create: false
+        relink: false
+        force: false
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+        relink: false
+        force: false
+    ~/.vimrc:
+        path: vimrc
+        create: false
+        relink: false
+        force: false
+    ~/.zshrc:
+        path: zshrc
+        create: false
+        relink: false
+        force: false
+    ~/.Xmodmap:
+        path: Xmodmap
+        create: false
+        relink: false
+        force: false
+    ~/.Xresources:
+        path: Xresources
+        create: false
+        relink: false
+        force: false
+    ~/.xinitrc:
+        path: xinitrc
+        create: false
+        relink: false
+        force: false
+    ~/.i3:
+        path: i3/
+        create: true
+        relink: false
+        force: false
+    ~/.config/termite:
+        path: termite/
+        create: true
+        relink: false
+        force: false
+    ~/.oh-my-zsh/custom/themes:
+        path: zsh-themes
+        create: true
+        relink: false
+        force: false
+    ~/.dircolors:
+        path: dircolors
+        create: true
+        relink: false
+        force: false
+    ~/.vim/colors/molokai.vim:
+        path: vim/molokai/colors/molokai.vim
+        create: true
+        relink: false
+        force: false
+    /usr/share/dircolors/:
+        path: dircolors-solarized
+        create: true
+        relink: false
+        force: false
+    ~/.zshrc_local:
+        path: zshrc_local
+        create: true
+        relink: false
+        force: false
+
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,51 @@
+--- 
+- 
+  clean: 
+    - "~"
+- 
+  link: 
+    ~/.config/fontconfig/fonts.conf: 
+      force: true
+      path: conf/fonts.conf
+    ~/.config/xfce4/terminal/terminalrc: 
+      force: true
+      path: conf/terminalrc
+    ~/.fonts: 
+      force: true
+      path: fonts/
+    ~/.i3/config: 
+      force: true
+      path: conf/i3config
+    ~/.i3status.conf: 
+      force: true
+      path: conf/i3status.conf
+    ~/.pythonrc: 
+      force: true
+      path: conf/pythonrc
+    ~/.tmux.conf: 
+      force: true
+      path: conf/tmux.conf
+    ~/.vim: 
+      create: true
+      force: true
+      path: vim/
+    ~/.vimrc: 
+      force: true
+      path: conf/vimrc
+    ~/.zshenv: 
+      force: true
+      path: conf/zshenv
+    ~/.zshrc: 
+      force: true
+      path: conf/zshrc
+- 
+  shell: 
+    -
+      - "git submodule update --init --recursive"
+      - "installing submodules"
+    -
+      - "cd ~/.vim/bundle/vundle.vim && git pull || git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle.vim"
+      - "installing vundle"
+    - 
+      - "vim +PluginInstall +qall"
+      - "installing vim plugins"

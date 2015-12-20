@@ -1,0 +1,25 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.bash_profile:
+        force: true
+        path: bash/bash_profile
+    ~/.bashrc:
+        force: true
+        path: bash/bashrc
+    ~/.zshrc:
+        force: true
+        path: zsh/zshrc
+    ~/.vim_runtime: vim/vim_runtime/
+    ~/.vimrc:
+        force: true
+        path: vim/vimrc
+    ~/.gitconfig:
+        force: true
+        path: gitconfig
+    ~/.gitignore_global: gitignore_global
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - cp zsh/themes/*.zsh-theme oh-my-zsh/themes

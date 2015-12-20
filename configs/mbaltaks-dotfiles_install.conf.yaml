@@ -1,0 +1,19 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.bashrc: bashrc
+    ~/.bash_profile: bash_profile
+    ~/.vimrc: vimrc
+    ~/.vim: vim/
+    ~/.vim/autoload: vim-pathogen/autoload
+    ~/.inputrc: inputrc
+    ~/.editrc: editrc
+    ~/.termcap: termcap
+    ~/.gdbinit: gdbinit
+    ~/.lldbinit: lldbinit
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

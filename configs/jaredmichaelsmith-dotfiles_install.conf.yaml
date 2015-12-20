@@ -1,0 +1,24 @@
+#########################################
+# Dotbot configuration file
+# https://github.com/anishathalye/dotbot
+#
+# Author: Jared Smith
+# Contact: jared@jaredsmith.io
+########################################
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zprezto: zprezto/
+    ~/.extra: extra
+    ~/.ssh/config:
+        create: true
+        path: ssh/config
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [./install_zpreztorc, Installing zpreztorc]
