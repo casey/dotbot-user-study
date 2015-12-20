@@ -13,6 +13,14 @@ names = [
   'install.json',
   'install.conf',
   '.install.conf.yaml',
+  'config.yaml',
+  '.install.yaml',
+  'dotbot.yml',
+  'dotbot.yaml',
+  '.install.conf.json',
+  'install.conf.ymal',
+  'install.conf.yaml',
+  '.dotbot.conf.yaml',
 ]
 
 for line in sys.stdin:
