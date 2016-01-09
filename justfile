@@ -1,7 +1,7 @@
 .phony: repos configs
 
 default:
-	@echo 'Hi :)'
+	./main
 
 fetch:
 	./find-dotbot-repos | ./fetch-configs

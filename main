@@ -1,0 +1,33 @@
+#!/usr/bin/env python3.5
+
+import sys
+
+sys.path.insert(0, './pyyaml/lib3/')
+
+import yaml, glob
+
+config_paths = glob.glob('./configs/*')
+
+def p(s):
+  print(s, end="", file=sys.stderr, flush=True)
+
+p('parsing {} configs'.format(len(config_paths)))
+
+objects = {}
+bad = []
+
+for path in config_paths:
+  with open(path, 'r') as f:
+    try:
+      o = yaml.safe_load(f.read())
+    except (yaml.scanner.ScannerError, yaml.parser.ParserError):
+      bad.append(path)
+      p('x')
+      continue
+    p('.')
+    objects[path] = o
+p('\n')
+
+print('bad configs:')
+for path in bad:
+  print(path)

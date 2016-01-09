@@ -1,0 +1,28 @@
+#!/usr/bin/env python3.5
+
+import sys; sys.path.insert(0, './pyyaml/lib3/')
+
+import yaml, code
+
+if len(sys.argv) != 2:
+  print('usage: parse yaml_file', file=sys.stderr)
+  sys.exit(1)
+
+path  = sys.argv[1]
+f     = open(path)
+data  = f.read()
+lines = data.split('\n')
+
+try:
+  o = yaml.safe_load(data)
+except (yaml.scanner.ScannerError, yaml.parser.ParserError) as e:
+  m = e.problem_mark
+  for i in range(max(0, m.line-2), min(len(lines), m.line+2)):
+    line = lines[i]
+    if i == m.line:
+      print('>>>', line)
+    else:
+      print(line)
+  scanner_error = isinstance(e, yaml.scanner.ScannerError)
+  msg = 'scanner error' if scanner_error else 'parser error'
+  print('{}: {} at {}:{}'.format(msg, e.problem, m.line, m.column))
