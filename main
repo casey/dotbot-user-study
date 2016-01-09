@@ -27,7 +27,3 @@ for path in config_paths:
     p('.')
     objects[path] = o
 p('\n')
-
-print('bad configs:')
-for path in bad:
-  print(path)
