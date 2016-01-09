@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, './pyyaml/lib3/')
 
-import yaml, glob
+import yaml, glob, collections
 
 config_paths = glob.glob('./configs/*')
 
@@ -27,3 +27,43 @@ for path in config_paths:
     p('.')
     objects[path] = o
 p('\n')
+p('\n')
+
+bad = []
+p('checking for lists')
+for path in objects:
+  o = objects[path]
+  if not isinstance(o, list):
+    bad.append(path)
+    p('x')
+    continue
+  p('.')
+p('\n')
+p('\n')
+
+for path in bad:
+  del objects[path]
+
+p('checking for dicts')
+for path in objects:
+  o = objects[path]
+  for task in o:
+    if not isinstance(task, dict):
+      p('x')
+      continue
+    p('.')
+p('\n')
+p('\n')
+
+names = []
+expected = 'link clean shell'.split()
+unexpected = []
+for path in objects:
+  o = objects[path]
+  for task in o:
+    for key in task:
+      if key not in expected:
+        unexpected.append(key)
+        p('unexpected key: {} in {}\n'.format(key, path))
+      names.append(key)
+print(collections.Counter(names))
