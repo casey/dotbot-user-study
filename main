@@ -56,14 +56,17 @@ p('\n')
 p('\n')
 
 names = []
-expected = 'link clean shell'.split()
+expected = 'link clean shell aliases meta'.split()
 unexpected = []
 for path in objects:
   o = objects[path]
   for task in o:
     for key in task:
-      if key not in expected:
+      if key not in expected and not key.startswith('~'):
         unexpected.append(key)
         p('unexpected key: {} in {}\n'.format(key, path))
       names.append(key)
-print(collections.Counter(names))
+
+
+for name, count in collections.Counter(names).most_common():
+  print('{}: {}'.format(name, count))
