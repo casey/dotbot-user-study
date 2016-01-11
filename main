@@ -11,6 +11,11 @@ config_paths = glob.glob('./configs/*')
 def p(s):
   print(s, end="", file=sys.stderr, flush=True)
 
+def print_collection(l):
+  c = collections.Counter(l)
+  for name, count in c.most_common():
+    print('{0: <5} {1}'.format(count, name))
+
 p('parsing {} configs'.format(len(config_paths)))
 
 objects = {}
@@ -67,6 +72,25 @@ for path in objects:
         p('unexpected key: {} in {}\n'.format(key, path))
       names.append(key)
 
+print('tasks:')
+print_collection(names)
 
-for name, count in collections.Counter(names).most_common():
-  print('{}: {}'.format(name, count))
+shell_commands = []
+for path in objects:
+  o = objects[path]
+  for task in o:
+    for key in task:
+      if key == 'shell':
+        cmds = task[key]
+        for cmd in cmds:
+          if isinstance(cmd, str):
+            shell_commands.append(cmd)
+          elif isinstance(cmd, list):
+            if len(cmd) == 0:
+              pass
+            else:
+              shell_commands.append(cmd[0])
+print()
+
+print('shell commands:')
+print_collection(shell_commands)
