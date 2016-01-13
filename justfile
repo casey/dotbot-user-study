@@ -1,7 +1,7 @@
 .phony: repos configs
 
 default:
-	./main
+	./main | tee findings.md
 
 fetch:
 	./find-dotbot-repos | ./fetch-configs

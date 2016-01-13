@@ -8,6 +8,7 @@ import yaml, glob, collections
 
 config_paths = glob.glob('./configs/*')
 
+
 def p(s):
   print(s, end="", file=sys.stderr, flush=True)
 
@@ -15,6 +16,12 @@ def print_collection(l):
   c = collections.Counter(l)
   for name, count in c.most_common():
     print('{0: <5} {1}'.format(count, name))
+
+
+filenames = []
+
+for path in config_paths:
+  filenames.append(path.split("_")[-1])
 
 p('parsing {} configs'.format(len(config_paths)))
 
@@ -60,6 +67,12 @@ for path in objects:
 p('\n')
 p('\n')
 
+print('```')
+print('config filenames:')
+print_collection(filenames)
+print()
+
+
 names = []
 expected = 'link clean shell aliases meta'.split()
 unexpected = []
@@ -74,6 +87,25 @@ for path in objects:
 
 print('tasks:')
 print_collection(names)
+
+categories = {
+    'mkdir -p': ['mkdir -p'],
+    'git submodule update': [
+      'git submodule update',
+      'git update-submodules',
+      'git submodule init',
+      'git pull && git submodule update',
+    ],
+    'vim plugin': ['vim +Plugin'],
+    'brew install': ['brew install'],
+    'other': []
+}
+
+separated = {}
+for category in categories:
+  separated[category] = []
+
+other = []
 
 shell_commands = []
 for path in objects:
@@ -90,7 +122,29 @@ for path in objects:
               pass
             else:
               shell_commands.append(cmd[0])
-print()
 
+for cmd in shell_commands:
+  for category, examples in categories.items():
+    found = False
+    for example in examples:
+      if cmd.startswith(example):
+        separated[category].append(cmd)
+        found = True
+        break
+    if found:
+      break
+  else:
+    other.append(cmd)
+
+l = []
+for category, cmds in separated.items():
+  for cmd in cmds:
+    l.append(category)
+
+for cmd in other:
+  l.append('other')
+
+print()
 print('shell commands:')
-print_collection(shell_commands)
+print_collection(l)
+print('```')
