@@ -67,11 +67,16 @@ for path in objects:
 p('\n')
 p('\n')
 
+print('dotbot user study')
+print('=================')
+
+print()
 print('```')
 print('config filenames:')
 print_collection(filenames)
-print()
 
+print()
+print('({} failed to parse or were invalid)'.format(len(bad)))
 
 names = []
 expected = 'link clean shell aliases meta'.split()
@@ -85,27 +90,53 @@ for path in objects:
         p('unexpected key: {} in {}\n'.format(key, path))
       names.append(key)
 
+print()
 print('tasks:')
 print_collection(names)
 
 categories = {
-    'mkdir -p': ['mkdir -p'],
+    'chmod': ['chmod '],
+    'cp': ['cp '],
+    'mkdir': ['mkdir '],
+    'make': ['make '],
     'git submodule update': [
       'git submodule update',
+      'git submodule foreach pull',
       'git update-submodules',
       'git submodule init',
       'git pull && git submodule update',
+      'git submodule sync',
     ],
-    'vim plugin': ['vim +Plugin'],
-    'brew install': ['brew install'],
-    'other': []
+    'curl/wget': ['curl', 'wget'],
+    'touch': ['touch'],
+    'git clone': ['git clone'],
+    'git config': ['git config'],
+    'git pull': ['git pull'],
+    'vim plugin/bundle': [
+      'vim +Plugin',
+      'vim -f +Plugin',
+      'vim +Bundle',
+      'vim +NeoBundle',
+      'vim -c Plugin',
+      'vim -c "Plugin',
+      'vim -c "Bundle',
+    ],
+    'rm': ['rm '],
+    'source': ['source '],
+    'pip install': ['pip install'],
+    'gem install': ['gem install'],
+    'npm install': ['npm install'],
+    'brew install': ['brew install', 'brew cask install'],
+    'ln -s': ['ln -s'],
+    'sudo': ['sudo'],
+    'uncategorized': []
 }
 
 separated = {}
 for category in categories:
   separated[category] = []
 
-other = []
+uncategorized = []
 
 shell_commands = []
 for path in objects:
@@ -134,17 +165,24 @@ for cmd in shell_commands:
     if found:
       break
   else:
-    other.append(cmd)
+    uncategorized.append(cmd)
 
 l = []
 for category, cmds in separated.items():
   for cmd in cmds:
     l.append(category)
 
-for cmd in other:
-  l.append('other')
+for cmd in uncategorized:
+  l.append('uncategorized')
 
 print()
-print('shell commands:')
+print('shell command categories:')
 print_collection(l)
+print()
+print('uncategorized:')
+uncategorized.sort()
+for cmd in uncategorized:
+  cmd = cmd.strip()
+  if cmd:
+    print(cmd)
 print('```')
